@@ -269,6 +269,17 @@ def build_spot(spot: dict, data: dict, now: datetime, gcfg: dict, n_days: int = 
         w = cbibs["values"]["water_temp"]
         wt_cands.append({"v": w["v"], "at": w["at"], "src": f"CBIBS {cbibs['station']}",
                          "dist_mi": (st.get("cbibs") or {}).get("distance_mi"), "trend_72h": None})
+    for ex in data.get("extra") or []:
+        ed, edef = ex.get("data") or {}, ex.get("def") or {}
+        if ex["kind"] in ("usgs", "coops") and ed.get("water_temp"):
+            s = ed["water_temp"]
+            tag = f"USGS {ed.get('site')}" if ex["kind"] == "usgs" else f"CO-OPS {ed.get('station')}"
+            wt_cands.append({"v": s[-1][1], "at": s[-1][0], "src": tag,
+                             "dist_mi": edef.get("distance_mi"), "trend_72h": temp_trend(s, now)})
+        elif ex["kind"] == "cbibs" and ((ed.get("values") or {}).get("water_temp")):
+            w = ed["values"]["water_temp"]
+            wt_cands.append({"v": w["v"], "at": w["at"], "src": f"CBIBS {ed.get('station')}",
+                             "dist_mi": edef.get("distance_mi"), "trend_72h": None})
     wt = gcfg.get("water_temp", {})
     feats["water_temp"] = pick_water_temp(wt_cands, now, wt.get("max_station_dist_mi", 25), wt.get("max_age_h", 36))
 

@@ -6,6 +6,7 @@ outside the collectors (and even then run_log.json is written first).
 from __future__ import annotations
 
 import argparse
+import re
 import sys
 import time as _time
 import traceback
@@ -55,10 +56,29 @@ def collect_spot(http, spot, now, cache) -> dict:
         ck = (name, sid)
         if ck not in cache:
             if name == "coops":
-                cache[ck] = mod.fetch(http, sid, now)
+                cache[ck] = mod.fetch(http, sid, now, has=(st.get(name) or {}).get("has"))
             else:
                 cache[ck] = mod.fetch(http, sid)
         data[name] = cache[ck]
+    # extra stations named like coops_met, usgs_water_temp, usgs_flow, cbibs_alt
+    data["extra"] = []
+    for skey, sdef in st.items():
+        m = re.match(r"^(usgs|coops|cbibs)_.+", str(skey))
+        if not m or not isinstance(sdef, dict):
+            continue
+        kind = m.group(1)
+        sid = _sid(sdef, "id")
+        if not sid:
+            continue
+        ck = (kind, sid, "extra")
+        if ck not in cache:
+            if kind == "coops":
+                cache[ck] = coops.fetch(http, sid, now, has=sdef.get("has"))
+            elif kind == "usgs":
+                cache[ck] = usgs.fetch(http, sid)
+            else:
+                cache[ck] = cbibs.fetch(http, sid)
+        data["extra"].append({"kind": kind, "key": skey, "def": sdef, "data": cache[ck]})
     return data
 
 

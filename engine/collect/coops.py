@@ -28,14 +28,16 @@ def _data(http, station, product, key, extra):
     return d
 
 
-def fetch(http, station: str, now) -> dict:
+def fetch(http, station: str, now, has=None) -> dict:
+    has = set(has or [])
+    want = lambda *keys: (not has) or bool(has & set(keys))
     out = {"station": station, "hilo": [], "water_temp": [], "water_level": [], "air_pressure": [],
            "wind": [], "meta": {}, "ok": False}
     begin = (now.astimezone(ET) - timedelta(days=1)).strftime("%Y%m%d")
     end = (now.astimezone(ET) + timedelta(days=4)).strftime("%Y%m%d")
     try:
         d = _data(http, station, "predictions", "predictions",
-                  {"interval": "hilo", "datum": "MLLW", "begin_date": begin, "end_date": end})
+                  {"interval": "hilo", "datum": "MLLW", "begin_date": begin, "end_date": end}) if want("tide_predictions", "water_level") else None
         for p in (d or {}).get("predictions") or []:
             t = parse_time(p.get("t"), assume_tz=ET)
             if t is None:
@@ -46,6 +48,8 @@ def fetch(http, station: str, now) -> dict:
     except Exception as e:
         http.log.error(SRC, f"{station} predictions: {type(e).__name__}: {e}")
     for product in ("water_temperature", "water_level", "air_pressure"):
+        if not want({"water_temperature": "water_temp", "water_level": "water_level", "air_pressure": "barometric_pressure"}[product]):
+            continue
         try:
             extra = {"date": "recent"}
             if product == "water_level":
@@ -64,7 +68,7 @@ def fetch(http, station: str, now) -> dict:
         except Exception as e:
             http.log.error(SRC, f"{station} {product}: {type(e).__name__}: {e}")
     try:
-        d = _data(http, station, "wind", "wind", {"date": "recent"})
+        d = _data(http, station, "wind", "wind", {"date": "recent"}) if want("wind") else None
         for row in (d or {}).get("data") or []:
             t = parse_time(row.get("t"), assume_tz=ET)
             if t is None:
@@ -73,5 +77,5 @@ def fetch(http, station: str, now) -> dict:
                                 "gust_kt": to_float(row.get("g"))})
     except Exception as e:
         http.log.error(SRC, f"{station} wind: {type(e).__name__}: {e}")
-    out["ok"] = bool(out["hilo"] or out["water_temp"] or out["water_level"])
+    out["ok"] = bool(out["hilo"] or out["water_temp"] or out["water_level"] or out["air_pressure"] or out["wind"])
     return out
