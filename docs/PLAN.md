@@ -30,28 +30,29 @@ Code measures, Claude judges, the app just displays. The whole pipeline runs in 
 ```
 GitHub Actions  (03:30 ET, then every 3 hrs until 21:00)
 ┌──────────────────────────────────────────────────────────────┐
-│ 1 COLLECT   NWS · NWPS · Open-Meteo · USGS · CO-OPS · CBIBS   │
-│             · sun/moon · DNR report · advisories               │
-│ 2 FEATURES  pressure trend, fronts, flow vs ceiling, crest,    │
-│             temp trends, tide × light, wind × bank             │
-│ 3 GATES     safety, flow ceiling, legal, hours → hard stops   │
-│ 4 TIERS     candidates ranked Prime/Good/Fair/Poor (hidden)   │
-│ 5 JUDGE     Claude API + Forecaster prompt                     │
-│ 6 VALIDATE  schema + gate check in code, Validator prompt     │
-│             fail twice → code-built fallback card              │
-│ 7 PUBLISH   forecast/latest.json + candidates.json            │
-└───────────────────────────────┬──────────────────────────────┘
-                                │  delivery path picked in Phase 0
-┌───────────────────────────────▼──────────────────────────────┐
-│ 7 Fish app · Cast screen                                      │
-│  Cast   → shows latest forecast instantly, with its age       │
-│  Re-cast (chip changed) → page asks Claude (`sample`) using   │
-│           stored candidates; page code re-applies gates        │
-│  Log trip → trip.rec links back to the forecast               │
+│ 1 COLLECT   NWS · NWPS · Open-Meteo · USGS · CO-OPS · CBIBS  │
+│             sun/moon · DNR report · advisories               │
+│ 2 FEATURES  pressure trend, fronts, flow vs ceiling, crest,  │
+│             temp trends, tide × light, wind × bank           │
+│ 3 GATES     safety, flow ceiling, legal, hours → hard stops  │
+│ 4 TIERS     Prime / Good / Fair / Poor (hidden)              │
+│ 5 JUDGE     Claude API + Forecaster prompt                   │
+│ 6 VALIDATE  code checks + Validator prompt;                  │
+│             fail twice → code-built fallback card            │
+│ 7 PUBLISH   forecast/latest.json + candidates.json           │
+└──────────────────────────────┬───────────────────────────────┘
+                               │  delivery path picked in Phase 0
+┌──────────────────────────────▼───────────────────────────────┐
+│ 7 Fish app · Cast screen                                     │
+│ Cast     → latest forecast, instantly, with its age          │
+│ Re-cast  → page asks Claude (sample) on stored candidates;   │
+│            page code re-applies the gates                    │
+│ Log trip → trip.rec links back to the forecast               │
 └──────────────────────────────────────────────────────────────┘
 ```
 
 **Delivery path into the app** (Phase 0 tests these in order and keeps the first that works without manual approval):
+
 1. Page reads `latest.json` directly (from GitHub Pages or raw GitHub). Simplest, but the data is public, which would show your spots and schedule. Only if you're fine with that.
 2. Page reads it through your GitHub connector (the page's `mcp` capability). Private, no extra moving parts.
 3. A Claude scheduled task copies the JSON into the 7 Fish db. Only if it runs unattended with zero approval prompts.
