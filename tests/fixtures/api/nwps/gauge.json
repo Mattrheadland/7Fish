@@ -1,0 +1,51 @@
+{
+ "lid": "TEST1",
+ "usgsId": "01643000",
+ "reachId": "0",
+ "name": "Test River near Frederick",
+ "latitude": 39.3876,
+ "longitude": -77.3708,
+ "rfc": {
+  "abbreviation": "MARFC"
+ },
+ "flood": {
+  "stageUnits": "ft",
+  "flowUnits": "kcfs",
+  "categories": {
+   "action": {
+    "stage": 10.0,
+    "flow": -9999
+   },
+   "minor": {
+    "stage": 15.0,
+    "flow": -9999
+   },
+   "moderate": {
+    "stage": 20.0,
+    "flow": -9999
+   },
+   "major": {
+    "stage": 25.0,
+    "flow": -9999
+   }
+  }
+ },
+ "status": {
+  "observed": {
+   "primary": 3.1,
+   "primaryUnit": "ft",
+   "secondary": 1.49,
+   "secondaryUnit": "kcfs",
+   "floodCategory": "no_flooding",
+   "validTime": "2026-10-14T09:00:00+00:00"
+  },
+  "forecast": {
+   "primary": 3.0,
+   "primaryUnit": "ft",
+   "secondary": 1.4,
+   "secondaryUnit": "kcfs",
+   "floodCategory": "no_flooding",
+   "validTime": "2026-10-14T15:00:00+00:00"
+  }
+ }
+}

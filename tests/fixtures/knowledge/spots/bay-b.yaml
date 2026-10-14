@@ -1,0 +1,23 @@
+id: bay-b
+name: Bay B
+status: active
+lat: 39.0120
+lon: -76.3990
+region: middle-bay
+water_type: pier
+bank_faces_deg: 90
+luca_ok: false
+stations:
+  usgs: {id: null}
+  nwps: {lid: null}
+  coops: {id: "8575512", distance_mi: 3.0}
+  cbibs: {id: "AN", distance_mi: 4.0}
+flow_ceiling: {value: null, unit: cfs, source: n/a}
+wind_gust_limit_mph: 25
+species:
+  striped-bass: {presence: verified, quality: verified}
+access:
+  status: not_verified
+  hours: {open: "24h", close: "24h"}
+  after_dark: allowed
+jurisdiction: {water: tidal, state: MD, license: "Maryland tidal license", flags: ["Test flag"]}

@@ -1,0 +1,24 @@
+key: striped-bass
+name: Striped bass
+kid_friendly: false
+temp_bands_f:
+  - {band: inactive, max: 45}
+  - {band: slow, min: 45, max: 52}
+  - {band: active, min: 52, max: 60}
+  - {band: peak, min: 60, max: 68}
+  - {band: active, min: 68, max: 75}
+  - {band: stressed, min: 75}
+season:
+  middle-bay: {1: poor, 2: poor, 3: poor, 4: fair, 5: good, 6: fair, 7: poor, 8: poor, 9: fair, 10: good, 11: prime, 12: good, tag: reasoning}
+prefs:
+  light: {dawn: plus, day: minus, dusk: plus, night: plus, overcast: plus, tag: reasoning}
+  tide: {incoming: plus, outgoing: plus, slack: minus, tag: reasoning}
+  front: {pre_front_falling: plus, post_front_high_rising: minus, steady: neutral, tag: reasoning}
+methods:
+  - id: paddletail-jig
+    rig_line: "3/8 oz jighead, 4 in paddletail, 30 lb fluoro leader 24 in"
+    switch_to: cut-bait-bottom
+    switch_trigger: "No hits in 30 min"
+    gear_note: "Fits the Crossfire"
+  - id: cut-bait-bottom
+    rig_line: "6/0 circle, 2 oz egg sinker on a slide, 40 lb fluoro, menhaden"

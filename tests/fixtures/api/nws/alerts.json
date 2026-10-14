@@ -1,0 +1,27 @@
+{
+ "@context": [],
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "id": "urn:oid:test.1",
+   "type": "Feature",
+   "geometry": null,
+   "properties": {
+    "id": "urn:oid:test.1",
+    "areaDesc": "Frederick",
+    "sent": "2026-10-14T09:00:00+00:00",
+    "effective": "2026-10-14T09:00:00+00:00",
+    "onset": "2026-10-14T09:00:00+00:00",
+    "expires": "2026-10-14T21:00:00+00:00",
+    "ends": "2026-10-14T21:00:00+00:00",
+    "status": "Actual",
+    "messageType": "Alert",
+    "category": "Met",
+    "severity": "Minor",
+    "event": "Heat Advisory",
+    "headline": "Heat Advisory (test fixture)"
+   }
+  }
+ ],
+ "title": "Current watches, warnings, and advisories"
+}

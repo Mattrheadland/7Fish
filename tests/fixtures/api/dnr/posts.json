@@ -1,0 +1,24 @@
+[
+ {
+  "date": "2026-10-08T12:00:00",
+  "link": "https://news.maryland.gov/dnr/2026/10/08/maryland-fishing-report-test/",
+  "title": {
+   "rendered": "Maryland Fishing Report &#8211; October 8"
+  },
+  "content": {
+   "rendered": "<p>Welcome to the report. Anglers fishing the middle Bay are finding Striped bass along channel edges at dawn, with most fish under the slot. Water temperatures are falling. In the rivers, test catfish are biting cut bait below the riffles. Rockfish are also chasing bait near Bay Bridge pilings. Smallmouth bass are holding deep. Fisheries staff remind anglers to check regulations.</p>",
+   "protected": false
+  }
+ },
+ {
+  "date": "2026-10-01T12:00:00",
+  "link": "https://news.maryland.gov/dnr/2026/10/01/maryland-fishing-report-old/",
+  "title": {
+   "rendered": "Maryland Fishing Report &#8211; October 1"
+  },
+  "content": {
+   "rendered": "<p>Old.</p>",
+   "protected": false
+  }
+ }
+]

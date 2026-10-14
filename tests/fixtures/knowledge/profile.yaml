@@ -1,0 +1,34 @@
+# FOD standing profile used by the engine. Source: Matt's FOD project instructions.
+
+origin:
+  name: "Frederick, MD"
+  lat: 39.4143
+  lon: -77.4105
+  tz: America/New_York
+
+# Drive limits are minutes each way (engine estimate: haversine miles x 1.25 / 48 mph).
+trip_types:
+  quick: {max_drive_min: 35, fishing_min: 120, note: "about 2 h fishing, 20-30 min drive each way"}
+  half:  {max_drive_min: 95, fishing_min: 240, note: "4+ h fishing, 60-90 min each way"}
+  full:  {max_drive_min: 190, fishing_min: 420, note: "worth the drive, up to about 3 h each way, often bay or coast"}
+
+setup_overhead_min: 20   # bait, walk-in, rigging; counted in time away (reasoning)
+
+preferences:
+  - quality over numbers; success is catching the outing's target, keepers beat many small fish
+  - tidal rivers, the bay and the coast over ponds; rivers over ponds; conditions decide
+  - early mornings and fishing through the day; evenings fine; overnight occasional, only when clearly best
+  - avoid crowds and shoulder-to-shoulder banks
+  - proven tactics over experiments
+  - coastal ideal: productive morning with legal fish home by dinner
+
+adult_interests: [catfish, snakehead, walleye, pike, musky, gar, striped bass]   # a list, not a ranking
+lower_interest: [bass]   # especially pressured local bass; recommend only with compelling evidence
+
+luca:
+  note: "Matt's young son. Simple bait fishing, attainable target, clean clear bank, simple rigs, finish by sunset unless the spot is lit."
+  finish_by: sunset
+
+licenses:
+  - {name: "Maryland nontidal", status: "per Matt; not verified"}
+  - {name: "Maryland tidal", status: "per Matt; not verified"}

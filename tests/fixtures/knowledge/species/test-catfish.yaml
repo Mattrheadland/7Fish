@@ -1,0 +1,26 @@
+key: test-catfish
+name: Test catfish
+kid_friendly: true
+temp_bands_f:
+  - {band: inactive, max: 45, tag: reasoning}
+  - {band: slow, min: 45, max: 55, tag: reasoning}
+  - {band: active, min: 55, max: 70, tag: reasoning}
+  - {band: peak, min: 70, max: 84, tag: reasoning}
+  - {band: stressed, min: 84, tag: reasoning}
+season:
+  frederick-rivers: {1: poor, 2: poor, 3: fair, 4: good, 5: good, 6: prime, 7: prime, 8: good, 9: good, 10: good, 11: fair, 12: absent, tag: reasoning}
+prefs:
+  flow: {rising: plus, falling: neutral, high_muddy: minus, low_clear: neutral, tag: reasoning}
+  light: {dawn: plus, day: minus, dusk: plus, night: plus, overcast: plus, tag: reasoning}
+  front: {pre_front_falling: plus, post_front_high_rising: minus, steady: neutral, tag: reasoning}
+methods:
+  - id: cut-bait-slip-sinker
+    when: "test"
+    rig_line: "4/0 circle, 1 oz egg sinker, bead, swivel, 18 in 30 lb mono, cut bait"
+    switch_to: crawler-float
+    switch_trigger: "No bites in 30 min"
+    gear_note: "Fits the Crossfire"
+  - id: crawler-float
+    rig_line: "#4 baitholder under a slip float, nightcrawler"
+    switch_trigger: "n/a"
+unknown_future_key: {anything: goes}

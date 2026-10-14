@@ -1,0 +1,58 @@
+{
+ "stations": [
+  {
+   "stationShortName": "AN",
+   "stationLongName": "Annapolis",
+   "active": true,
+   "latitude": 38.963,
+   "longitude": -76.448,
+   "variable": [
+    {
+     "reportName": "Water Temperature",
+     "actualName": "sea_water_temperature",
+     "interval": 600,
+     "units": "C",
+     "group": "Water Quality",
+     "elevation": "-0.5",
+     "measurements": [
+      {
+       "time": "2026-10-14T08:40:00+00:00",
+       "value": 17.9,
+       "QA": "GOOD Value"
+      }
+     ]
+    },
+    {
+     "reportName": "Turbidity",
+     "actualName": "simple_turbidity",
+     "interval": "600",
+     "units": "NTU",
+     "group": "Water Quality",
+     "elevation": "-0.5",
+     "measurements": [
+      {
+       "time": "2026-10-14T08:40:00+00:00",
+       "value": "4.1",
+       "QA": "GOOD Value"
+      }
+     ]
+    },
+    {
+     "reportName": "Air Temperature",
+     "actualName": "air_temperature",
+     "interval": 600,
+     "units": "C",
+     "group": "Meteorological",
+     "elevation": "3.0",
+     "measurements": [
+      {
+       "time": "2026-10-14T08:40:00+00:00",
+       "value": 12.0,
+       "QA": "N/A"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

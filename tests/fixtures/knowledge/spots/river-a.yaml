@@ -1,0 +1,24 @@
+id: river-a
+name: River A
+status: active
+lat: 39.3876
+lon: -77.3708
+region: frederick-rivers
+water_type: river
+bank_faces_deg: 90
+luca_ok: true
+stations:
+  usgs: {id: "01643000", distance_mi: 0.5, has: [discharge, gage_height, water_temp]}
+  nwps: {lid: "TEST1", distance_mi: 0.5}
+  coops: {id: null}
+  cbibs: {id: null}
+flow_ceiling: {value: 3000, unit: cfs, source: matt}
+wind_gust_limit_mph: 30
+species:
+  test-catfish: {presence: verified, quality: not_verified, evidence: [{text: "Test evidence", date: "2026-09", tag: reasoning}]}
+access:
+  status: verified
+  parking: {text: "Gravel lot", tag: reasoning}
+  hours: {text: "sunrise to sunset", open: sunrise, close: sunset, tag: reasoning}
+  after_dark: prohibited
+jurisdiction: {water: nontidal, state: MD, license: "Maryland nontidal license", flags: []}

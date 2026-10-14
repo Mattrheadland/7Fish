@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "7Fish forecast card",
+  "type": "object",
+  "required": ["verdict", "headline", "play", "rig_line", "details", "source"],
+  "properties": {
+    "verdict": {"enum": ["GO", "GO IF", "SKIP"]},
+    "headline": {"type": "string", "maxLength": 140},
+    "condition": {"type": ["string", "null"], "description": "GO IF only: a check Matt can make himself before or on the drive"},
+    "play": {
+      "type": ["object", "null"],
+      "required": ["species_key", "species", "spot_id", "spot", "window_id", "window_text", "method"],
+      "properties": {
+        "species_key": {"type": "string"},
+        "species": {"type": "string"},
+        "spot_id": {"type": "string"},
+        "spot": {"type": "string"},
+        "window_id": {"type": "string", "description": "YYYY-MM-DD|dawn|day|dusk|night, must match a passing candidate"},
+        "window_text": {"type": "string", "description": "e.g. Thu Oct 15, 2026 · 6:45–10:15 AM ET"},
+        "method": {"type": "string"}
+      }
+    },
+    "rig_line": {"type": ["string", "null"]},
+    "details": {
+      "type": "object",
+      "properties": {
+        "named_target": {"type": ["string", "null"], "description": "Honest verdict on the requested target when one was named"},
+        "drivers": {"type": "array", "maxItems": 3, "items": {"type": "object", "required": ["text", "label"], "properties": {"text": {"type": "string"}, "label": {"enum": ["measured", "forecast", "modeled", "report", "reasoning", "not_found"]}, "src": {"type": "string"}}}},
+        "confidence": {"enum": ["high", "medium", "low"]},
+        "confidence_note": {"type": "string"},
+        "pqa": {"type": "object", "properties": {
+          "presence": {"type": "object", "properties": {"status": {"enum": ["verified", "not verified", "ruled out"]}, "note": {"type": "string"}}},
+          "quality": {"type": "object", "properties": {"status": {"enum": ["verified", "not verified", "ruled out"]}, "note": {"type": "string"}}},
+          "access": {"type": "object", "properties": {"status": {"enum": ["verified", "not verified", "ruled out"]}, "note": {"type": "string"}}}
+        }},
+        "rules": {"type": "array", "items": {"type": "object", "properties": {"text": {"type": "string"}, "checked_on": {"type": "string"}, "src": {"type": "string"}}}},
+        "rig": {"type": "object", "properties": {"primary": {"type": "string"}, "alternate": {"type": "string"}, "switch_trigger": {"type": "string"}, "gear_note": {"type": "string"}}},
+        "backup": {"type": ["object", "null"], "properties": {"text": {"type": "string"}, "spot_id": {"type": "string"}, "species_key": {"type": "string"}, "window_id": {"type": "string"}}},
+        "flips_it": {"type": "string"},
+        "time": {"type": "object", "properties": {"drive_min": {"type": "number"}, "fishing_min": {"type": "number"}, "away_min": {"type": "number"}}},
+        "skip": {"type": ["object", "null"], "properties": {"reason": {"type": "string"}, "closest_miss": {"type": "string"}}},
+        "uncertainty": {"type": "string"}
+      }
+    },
+    "source": {"enum": ["claude", "engine"]}
+  }
+}

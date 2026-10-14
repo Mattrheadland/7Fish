@@ -1,0 +1,73 @@
+# Gate thresholds the engine applies before anything is recommended.
+# All tunable. Matt's numbers beat defaults. Every default here is tag: reasoning unless noted.
+# The engine merges this file over built-in defaults, so a missing key falls back safely.
+
+alerts:
+  tag: reasoning
+  # NWS alert "event" names (exact text from api.weather.gov) that close a window at ANY spot
+  all_spots:
+    - Severe Thunderstorm Warning
+    - Severe Thunderstorm Watch
+    - Tornado Warning
+    - Tornado Watch
+    - Flood Warning
+    - Flash Flood Warning
+    - High Wind Warning
+    - Gale Warning
+    - Storm Warning
+    - Hurricane Warning
+    - Tropical Storm Warning
+  # Extra events that gate only these spot water_types
+  water_types:
+    pier: [Small Craft Advisory]
+    inlet: [Small Craft Advisory]
+  # Explicitly not gates (shown as context only)
+  not_gates:
+    - Heat Advisory
+    - Excessive Heat Warning   # comfort, not a hard stop; card should still mention it
+    - Wind Advisory            # handled by the per-spot gust limit instead
+    - Small Craft Advisory     # only gates pier/inlet via water_types above
+
+# Any hourly NWS shortForecast in the window containing one of these (case-insensitive) fails the window
+thunder_keywords: [thunder, t-storm, tstorm]
+
+wind:
+  tag: reasoning
+  default_gust_limit_mph: 30   # used when a spot has no wind_gust_limit_mph
+  near_limit_mph: 5            # gusts within this of the limit make a Fair window "GO IF"
+
+flow:
+  tag: reasoning
+  # When a spot's flow_ceiling is ask_matt / null, use the NWPS action stage as the ceiling
+  ceiling_fallback: nwps_action_stage
+  near_fraction: 0.85          # >= 85% of ceiling counts as "near"
+  # NWPS forecast categories that fail a window when no ceiling is set (lowest listed is the floor);
+  # minor flood or worse always fails.
+  block_categories: [action, minor, moderate, major]
+
+hours:
+  min_window_min: 60
+
+water_temp:
+  tag: reasoning
+  max_station_dist_mi: 25      # SPEC: measured within 25 mi, else not_found
+  max_age_h: 36                # older readings are not "current"
+
+clarity:
+  tag: reasoning
+  muddy_rain_48h_in: 0.75
+  clear_rain_48h_in: 0.10
+  muddy_flow_rise_48h: 0.30    # +30% flow in 48h
+  turbidity_muddy_ntu: 25      # CBIBS simple_turbidity overrides on Bay spots
+  turbidity_clear_ntu: 10
+
+pressure:
+  tag: reasoning
+  class_inhg_24h: 0.06         # rising / falling threshold
+  front_inhg_24h: 0.10         # fast change marks a front
+
+tide:
+  slack_min: 45                # ± minutes around a hi/lo counts as slack
+
+dnr:
+  fresh_days: 30               # report older than this is history, never the current bite

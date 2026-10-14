@@ -1,0 +1,9 @@
+id: ruled-c
+name: Ruled Out C
+status: ruled-out
+lat: 39.4
+lon: -77.4
+region: frederick-rivers
+water_type: river
+species:
+  test-catfish: {presence: verified}

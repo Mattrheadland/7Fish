@@ -1,0 +1,9 @@
+checked_on: 2026-10-14
+species:
+  striped-bass:
+    - area: "Chesapeake Bay (test)"
+      regions: [middle-bay]
+      harvest: [{start: "10-01", end: "12-15", size: "19-31 in", creel: "1 per person per day"}]
+      targeting_closed: [{start: "10-16", end: "10-16", note: "test closure day"}]
+      src: "https://example.test/regs"
+      tag: reasoning

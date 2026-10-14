@@ -1,0 +1,88 @@
+name: forecast
+
+on:
+  schedule:
+    # UTC. 07:30-22:30 UTC every 3 h ≈ 3:30 AM-6:30 PM ET (EDT); one hour earlier in EST.
+    - cron: '30 7,10,13,16,19,22 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'engine/**'
+      - 'knowledge/**'
+      - '.github/workflows/**'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: forecast
+  cancel-in-progress: false
+
+jobs:
+  forecast:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Install
+        run: pip install -r requirements.txt
+
+      - name: Tests
+        id: tests
+        run: python -m pytest -q
+
+      - name: Forecast run
+        id: run
+        if: steps.tests.outcome == 'success'
+        env:
+          CBIBS_KEY: ${{ secrets.CBIBS_KEY }}
+          USGS_API_KEY: ${{ secrets.USGS_API_KEY }}
+        run: python -m engine.run
+
+      - name: Record test failure in run log
+        if: always() && steps.tests.outcome == 'failure'
+        run: |
+          mkdir -p data
+          python - <<'EOF'
+          import json, datetime, pathlib
+          p = pathlib.Path("data/run_log.json")
+          try:
+              log = json.loads(p.read_text())
+          except Exception:
+              log = {}
+          log["tests_failed_at"] = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
+          log["note"] = "pytest failed; forecast not run; latest.json left unchanged"
+          p.write_text(json.dumps(log, indent=1))
+          EOF
+
+      - name: Commit data
+        if: always()
+        run: |
+          git config user.name "7Fish Bot"
+          git config user.email "7fish-bot@users.noreply.github.com"
+          if [ "${{ steps.run.outcome }}" = "success" ]; then
+            git add data/
+          else
+            git add data/run_log.json || true
+          fi
+          if git diff --cached --quiet; then
+            echo "nothing to commit"; exit 0
+          fi
+          git commit -m "data: forecast $(TZ=America/New_York date '+%Y-%m-%d %H:%M') ET [skip ci]"
+          for i in 1 2 3; do
+            git pull --rebase -X theirs origin main && git push origin HEAD:main && exit 0
+            sleep $((i * 5))
+          done
+          echo "push failed after 3 attempts"; exit 1
+      # A failed Tests step already marks the job failed; the always() steps above still
+      # commit run_log.json so the failure is visible in the repo.
