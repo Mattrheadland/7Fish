@@ -139,8 +139,52 @@ def build(latest: dict, kn) -> dict:
     return payload
 
 
+DOC_LIMIT = 240_000  # the 7 Fish database caps one document at 262,144 bytes; keep headroom
+
+
+def _size(obj) -> int:
+    return len(json.dumps(obj, separators=(",", ":"), ensure_ascii=False, default=str).encode())
+
+
+def split(payload: dict) -> dict:
+    """Four documents for the app's `forecast` collection. Every part carries generated_at so the
+    page only merges parts from the same run."""
+    g = payload.get("generated_at")
+    meta = {k: payload.get(k) for k in ("v", "generated_at", "run_time_et", "origin", "sources_ok", "dnr", "spots_listed", "kn")}
+    parts = {
+        "meta": meta,
+        "spots": {"generated_at": g, "spots": payload.get("spots")},
+        "cands": {"generated_at": g, "cands": payload.get("cands")},
+        "cards": {"generated_at": g, "cards": payload.get("cards")},
+    }
+    # shed candidates (lowest-ranked per day first) until the part fits
+    while _size(parts["cands"]) > DOC_LIMIT and parts["cands"]["cands"]:
+        rows = parts["cands"]["cands"]
+        by_day = {}
+        for r in rows:
+            by_day.setdefault(str(r.get("window", "")).split("|")[0], []).append(r)
+        biggest = max(by_day.values(), key=len)
+        drop = biggest[-1]
+        parts["cands"]["cands"] = [r for r in rows if r is not drop]
+    # shed hourly-ish window detail if spots is still too big
+    if _size(parts["spots"]) > DOC_LIMIT:
+        for sp in (parts["spots"]["spots"] or {}).values():
+            for w in sp.get("windows") or []:
+                (w.get("cond") or {}).pop("short", None)
+    for name, part in parts.items():
+        part["_bytes"] = _size(part)
+    return parts
+
+
 def write(out_dir, latest: dict, kn) -> int:
     payload = build(latest, kn)
     text = json.dumps(payload, separators=(",", ":"), ensure_ascii=False, default=str)
     Path(out_dir, "app.json").write_text(text)
-    return len(text.encode())
+    app_dir = Path(out_dir, "app")
+    app_dir.mkdir(parents=True, exist_ok=True)
+    sizes = {}
+    for name, part in split(json.loads(text)).items():
+        t = json.dumps(part, separators=(",", ":"), ensure_ascii=False)
+        Path(app_dir, f"{name}.json").write_text(t)
+        sizes[name] = len(t.encode())
+    return sizes
