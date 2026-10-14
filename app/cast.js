@@ -157,7 +157,8 @@ async function runCast(p, force) {
     S.cast = { status: "done", key, card: castEngineCard(fc, opt, pool, now, "Claude isn't available in this view, so this is the engine's read.") }; p.render(); return;
   }
   const ctl = new AbortController();
-  S.cast = { status: "running", key, ctl, t0: Date.now() }; p.render();
+  S.castAnim = CastScene.ok; S.cast = { status: "running", key, ctl, t0: Date.now() }; p.render();
+  if (S.castAnim) { S.castAnim = CastScene.start(p.body.querySelector("#castSceneSlot"), () => ctl.abort()); if (!S.castAnim) p.render(); } // no WebGL: plain panel
   const prompt = CAST_RULES + "\n\nDATA:\n" + JSON.stringify(castContext(fc, opt, pool, now));
   let card, note = null;
   try {
@@ -166,13 +167,15 @@ async function runCast(p, force) {
     if (bad) { note = `Claude's card failed a check (${bad}), so this is the engine's call.`; card = castEngineCard(fc, opt, pool, now, note); }
     else card.source = "claude";
   } catch (e) {
-    if (e && e.code === "cancelled") { S.cast = { status: "idle" }; p.render(); return; }
+    if (e && e.code === "cancelled") { CastScene.stop(); S.castAnim = false; S.cast = { status: "idle" }; p.render(); return; }
     if (e && ["not_granted", "sampling_disabled", "not_declared", "capability_disabled", "capability_removed"].includes(e.code)) S.ai = null;
     const why = { rate_limited: "Claude is busy or your usage limit is reached; try again later.", not_granted: "Claude wasn't allowed for this page.", invalid_json: "Claude's answer came back garbled.", session_expired: "Sign in again to use Claude." }[e && e.code] || "Claude couldn't answer this time.";
     card = castEngineCard(fc, opt, pool, now, why + " This is the engine's read.");
   }
   const rec = { key, card, at: new Date().toISOString(), generated_at: fc.generated_at, request: opt };
-  S.castCache[key] = rec; S.cast = { status: "done", ...rec }; p.render();
+  S.castCache[key] = rec;
+  if (S.castAnim && CastScene.running) await new Promise(res => CastScene.finish(card, res));
+  S.castAnim = false; S.cast = { status: "done", ...rec, fresh: true }; p.render();
   if (S.db && !S.sample) { try { await S.db.collection("casts").doc("c" + Date.now()).set({ ...rec, card: JSON.parse(JSON.stringify(card)) }); } catch (e) { } }
 }
 
@@ -242,7 +245,8 @@ function castPage() {
         <div class="ctl"><div class="lbl">When</div><div class="seg" id="cWhen"></div><div class="lbl">Trip</div><div class="seg" id="cTrip"></div>
         <div class="chips"><button class="chip" id="cTgt" aria-haspopup="menu">${esc(tgtLbl)}${I.caret}</button><button class="chip" id="cLuca" aria-pressed="${castOpt.luca}">With Luca</button></div></div>${fresh}</div>`;
       let h = hero("Cast", "Press it. Get a go, a go-if, or a skip.", extra, "7FISH FORECAST") + `<div class="wrap">`;
-      if (running) h += `<div class="thinking"><h3>Reading the water</h3><p>Claude is weighing ${fc ? castPool(fc, castOpt, now).length : 0} open windows against flow, temp, tides, reports and your log.</p><div class="bar"><i></i></div><button class="cap" id="castStop">Stop</button></div>`;
+      if (running && S.castAnim) h += `<div class="castscene-slot" id="castSceneSlot"></div>`;
+      else if (running) h += `<div class="thinking"><h3>Reading the water</h3><p>Claude is weighing ${fc ? castPool(fc, castOpt, now).length : 0} open windows against flow, temp, tides, reports and your log.</p><div class="bar"><i></i></div><button class="cap" id="castStop">Stop</button></div>`;
       else if (S.cast.status === "done" && S.cast.card) h += cardHTML(S.cast.card, fc) + (S.cast.cached ? `<div class="gf" style="text-align:center">Same data and settings as your last cast. <button class="sortb" id="castAgain" style="height:28px">Cast again</button></div>` : "");
       else if (fc) h += `<p class="emptycast">Set the slot, then press <b>Cast</b>. Claude reads ${Object.keys(fc.spots).length} spots, ${fc.cands.length} open windows and your trip log, then makes one call.</p>`;
       if (fc) h += waterNowHTML(fc);
@@ -256,6 +260,8 @@ function castPage() {
         menu(e.currentTarget, "Target", [["Any target", "any"], ...sp], castOpt.target, v => { castOpt.target = v; saveCastOpt(); S.cast = { status: "idle" }; p.render(); });
       };
       const go = q("#castGo"); if (go) go.onclick = () => { S.castOpen = false; runCast(p, false); };
+      const slot = q("#castSceneSlot"); if (slot) CastScene.mount(slot);
+      if (S.cast.fresh) { const vc = q(".vcard"); if (vc) vc.classList.add("pop"); S.cast.fresh = false; }
       const st = q("#castStop"); if (st) st.onclick = () => S.cast.ctl && S.cast.ctl.abort();
       const ag = q("#castAgain"); if (ag) ag.onclick = () => runCast(p, true);
       const mo = q("#castMore"); if (mo) mo.onclick = () => { S.castOpen = !S.castOpen; p.render(); };
