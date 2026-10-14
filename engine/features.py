@@ -228,7 +228,7 @@ def make_windows(days: list[dict], now: datetime, after_dark: str) -> list[dict]
 
 
 # ---------------------------------------------------------------- assemble
-def build_spot(spot: dict, data: dict, now: datetime, gcfg: dict, n_days: int = 3) -> dict:
+def build_spot(spot: dict, data: dict, now: datetime, gcfg: dict, n_days: int = 5) -> dict:
     """data keys: nws, om, usgs, nwps, coops, cbibs (any may be None)."""
     st = spot.get("stations") or {}
     nws, om = data.get("nws") or {}, data.get("om") or {}

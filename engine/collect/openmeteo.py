@@ -20,7 +20,7 @@ VARS = ["pressure_msl", "cloud_cover", "wind_speed_10m", "wind_gusts_10m", "wind
 def fetch(http, lat: float, lon: float) -> dict:
     params = {
         "latitude": f"{lat:.4f}", "longitude": f"{lon:.4f}",
-        "hourly": ",".join(VARS), "past_days": 3, "forecast_days": 4,
+        "hourly": ",".join(VARS), "past_days": 3, "forecast_days": 6,
         "timezone": "America/New_York", "temperature_unit": "fahrenheit",
         "wind_speed_unit": "mph", "precipitation_unit": "inch",
     }

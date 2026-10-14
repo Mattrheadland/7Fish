@@ -9,7 +9,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-MAX_CANDS = 160
+PER_DAY = 45  # keep the best candidates for every forecast day, so weekend casts have rows
 
 
 def _v(x):
@@ -107,8 +107,12 @@ def build(latest: dict, kn) -> dict:
                   "moon": f.get("moon"), "sun": sun[:3]},
             "windows": [_window(w) for w in s.get("windows") or []],
         }
-    cands = []
-    for c in (latest.get("candidates") or [])[:MAX_CANDS]:
+    cands, per_day = [], {}
+    for c in latest.get("candidates") or []:
+        day = str(c.get("window", "")).split("|")[0]
+        per_day[day] = per_day.get(day, 0) + 1
+        if per_day[day] > PER_DAY:
+            continue
         cands.append({k: c.get(k) for k in ("spot", "species", "window", "tier", "confidence", "confidence_note",
                                              "drive_min", "trips", "luca_ok", "reasons", "methods", "interest", "crowded")})
     used_species = {c["species"] for c in cands} | set((kn.species or {}).keys())
