@@ -2,8 +2,8 @@ name: forecast
 
 on:
   schedule:
-    # UTC. 07:30-22:30 UTC every 3 h ≈ 3:30 AM-6:30 PM ET (EDT); one hour earlier in EST.
-    - cron: '30 7,10,13,16,19,22 * * *'
+    # UTC, :17 past to dodge GitHub's top-of-hour congestion. ≈ 3:17 AM-6:17 PM EDT; an hour earlier in EST.
+    - cron: '17 7,10,13,16,19,22 * * *'
   workflow_dispatch:
   push:
     branches: [main]
