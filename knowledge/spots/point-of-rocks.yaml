@@ -1,0 +1,110 @@
+id: point-of-rocks
+name: Point of Rocks
+status: active
+lat: 39.2738
+lon: -77.5376
+approx: true
+region: upper-potomac
+water_type: river
+bank_faces_deg: 180
+bank_faces_note: {text: "Maryland bank is the north shore; angler faces roughly south across the Potomac. Read from map geometry, not surveyed.", tag: reasoning}
+luca_ok: false
+luca_note: {text: "Matt reports the bank is hard to work; ramp area plus current and rock make it a poor fit for a young child.", tag: reasoning}
+stations:
+  usgs:
+    id: "01638500"
+    name: "Potomac River at Point of Rocks, MD"
+    lat: 39.273583
+    lon: -77.543111
+    distance_mi: 0.3
+    has: [discharge, gage_height, water_temp, dissolved_oxygen, ph, specific_conductance, turbidity]
+    tag: documented
+    src: "https://waterdata.usgs.gov/monitoring-location/01638500/all-graphs"
+    coords_src: "https://www.waterqualitydata.us/provider/NWIS/USGS-MD/USGS-01638500/"
+  nwps:
+    lid: "PORM2"
+    name: "Potomac River at Point of Rocks"
+    usgs_id: "01638500"
+    distance_mi: 0.3
+    stages_ft: {action: 11, minor: 16, moderate: 20, major: 27}
+    tag: documented
+    src: "https://api.water.noaa.gov/nwps/v1/gauges/PORM2"
+    note: "water.noaa.gov/gauges/porm2 page itself was not retrievable; values from the NWPS API record for the same LID. MARFC forecast-point sheet (weather.gov/media/marfc/MARFC_FcstPt/POT/PointofRocks.pdf) still shows major 25 ft; NWS LWX raised major to 27 ft effective 2020-01-08 (weather.gov/lwx/PotomacChanges2019)."
+  coops: {id: null}
+  cbibs: {id: null}
+flow_ceiling: {value: null, unit: cfs, source: ask_matt}
+wind_gust_limit_mph: 30
+wind_gust_note: {text: "River bank default.", tag: reasoning}
+species:
+  smallmouth-bass:
+    presence: verified
+    quality: not_verified
+    evidence:
+      - {text: "C&O Canal Trust describes the Point of Rocks boat ramp area as 'a well-known destination for smallmouth bass fishing'. No catch, date, or size.", date: "undated (page published 2026-04)", tag: documented, src: "https://www.canaltrust.org/2026/04/a-day-in-point-of-rocks-maryland-an-itinerary"}
+      - {text: "MD DNR weekly report: upper Potomac stable, normal flows, good clarity, cooler water 'should make for good fishing for smallmouth bass'. Outlook for the whole upper river, not a catch at this spot.", date: "report published 2026-10-07; no catch date", tag: documented, src: "https://news.maryland.gov/dnr/2026/10/07/maryland-fishing-report-october-7-2/"}
+      - {text: "ICPRB: Point of Rocks to Monocacy/Nolands Ferry reach fishable from usual access points, smallmouth incl. 'the occasional 20-inch fish'. Historical.", date: "published 2022-08-26; no catch date", tag: documented, src: "https://www.potomacriver.org/?p=14679"}
+  channel-catfish:
+    presence: verified
+    quality: not_verified
+    quality_note: "Only historical (2015) size evidence; nothing current."
+    evidence:
+      - {text: "Angler report, shore fishing at Point of Rocks: one 31-inch channel catfish plus four smaller. Historical, not the current bite.", date: "catch: a Saturday night shortly before publish; published 2015-05-06", tag: documented, src: "https://dnrweb.dnr.state.md.us/fisheries/fishingreport/single-1.asp?ID=5060"}
+      - {text: "MD DNR: channel catfish distributed throughout the Potomac watershed.", date: "undated page", tag: documented, src: "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"}
+  walleye:
+    presence: not_verified
+    presence_note: "Reach-level DNR statement only; no site-specific record."
+    quality: not_verified
+    evidence:
+      - {text: "MD DNR: highest walleye densities 'from Dam 5 downstream to Point of Rocks' (Point of Rocks is the downstream end of that reach). No catch evidence here.", date: "undated page", tag: documented, src: "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"}
+  flathead-catfish:
+    presence: not_verified
+    presence_note: "Reach-level DNR statement only; no site-specific record."
+    quality: not_verified
+    evidence:
+      - {text: "MD DNR: flathead catfish (invasive) distributed from Dam 5 to DC, a reach that includes Point of Rocks. No site catch evidence.", date: "undated page", tag: documented, src: "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"}
+access:
+  status: not_verified
+  parking: {text: "NPS Point of Rocks Boat Ramp, 3703 Canal Rd, Point of Rocks MD 21777, C&O Canal mile 48.2; auto and boat-trailer parking, vault toilet. C&O Canal Trust also notes a small lot at the train station for day and overnight use.", tag: documented, src: "https://www.nps.gov/places/point-of-rocks-boat-ramp.htm"}
+  walk: {text: "not found. Ramp is beside the parking per NPS listing; walking route to any fishable bank away from the ramp not documented.", tag: reasoning}
+  stand: {text: "not found. A boat ramp is not a fishable bank. Matt: 'The bank is hard to work.'", tag: reasoning}
+  casting: {text: "not found", tag: reasoning}
+  landing: {text: "not found", tag: reasoning}
+  hours: {text: "C&O Canal NHP Compendium 2026: Seneca to Cumberland, parking lots and day-use areas close at dark (dark = 30 min after sunset to 30 min before sunrise), with exceptions for towpath users and 'Potomac River use (e.g. boating, fishing)'. That Point of Rocks (mile 48.2) lies in the Seneca-Cumberland segment is reasoning from mile markers. open/close set to daylight as a conservative default.", open: "sunrise", close: "sunset", tag: documented, src: "https://home.nps.gov/choh/learn/management/upload/CHOH-Supt-Compendium-2026-508a.pdf"}
+  after_dark: not_verified
+  after_dark_note: {text: "Compendium exception for Potomac River fishing appears to allow it, but the document does not name Point of Rocks in the dark-closure rule. Confirm with C&O Canal NHP before planning a night session.", tag: reasoning}
+jurisdiction:
+  water: nontidal
+  state: MD
+  license: "Maryland nontidal license (Matt's stated license; not verified here)"
+  flags:
+    - "Maryland-Virginia boundary is the low-water mark on the Virginia shore; Maryland owns the riverbed (Black-Jenkins award 1877). Source: https://en.wikipedia.org/wiki/Virginia_v._Maryland"
+    - "NPS: Maryland license required for 16+ in nontidal waters; regs follow the state where you fish. Fishing from the Virginia bank would be a separate question. Source: https://www.nps.gov/choh/planyourvisit/fishing.htm"
+    - "MD DNR asks anglers to remove and kill any blue and flathead catfish caught. Source: https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
+    - "Snakehead: do not release alive; report to MD DNR (NPS fishing page)."
+    - "C&O Canal NHP rules apply on parkland (Compendium 2026)."
+  tag: documented
+  src: "https://www.nps.gov/choh/planyourvisit/fishing.htm"
+crowding: "not found online. Busy put-in for multi-day river trips (C&O Canal Trust 2026-04). Matt's firsthand note is about bank difficulty, not crowding."
+hazards:
+  - "Current and rocky bottom on the mainstem Potomac (reasoning)."
+  - "Boat ramp traffic: trailer launch site designated in the 2026 Compendium (documented)."
+  - "Flooding: NWS action stage 11 ft, flood stage 16 ft at PORM2 (documented)."
+  - "Wading: Compendium says wading to fish follows MD law, which in restricted areas requires a USCG-approved PFD (documented)."
+  - "Active rail line and tunnel next to the site (C&O Canal Trust, documented)."
+matt_notes:
+  - {text: "The bank is hard to work.", src: Matt}
+sources:
+  - {url: "https://waterdata.usgs.gov/monitoring-location/01638500/all-graphs", title: "USGS 01638500 Potomac River at Point of Rocks, MD - all graphs", accessed: 2026-10-14}
+  - {url: "https://www.waterqualitydata.us/provider/NWIS/USGS-MD/USGS-01638500/", title: "WQP site record USGS-01638500", accessed: 2026-10-14}
+  - {url: "https://api.water.noaa.gov/nwps/v1/gauges/PORM2", title: "NWPS gauge PORM2", accessed: 2026-10-14}
+  - {url: "https://weather.gov/media/marfc/MARFC_FcstPt/POT/PointofRocks.pdf", title: "MARFC forecast point sheet, Point of Rocks", accessed: 2026-10-14}
+  - {url: "https://www.weather.gov/lwx/PotomacChanges2019", title: "NWS LWX Potomac flood category changes", accessed: 2026-10-14}
+  - {url: "https://www.nps.gov/places/point-of-rocks-boat-ramp.htm", title: "NPS Point of Rocks Boat Ramp", accessed: 2026-10-14}
+  - {url: "https://home.nps.gov/choh/learn/management/upload/CHOH-Supt-Compendium-2026-508a.pdf", title: "C&O Canal NHP Superintendent's Compendium 2026", accessed: 2026-10-14}
+  - {url: "https://www.nps.gov/choh/planyourvisit/fishing.htm", title: "C&O Canal NHP Fishing", accessed: 2026-10-14}
+  - {url: "https://www.canaltrust.org/2026/04/a-day-in-point-of-rocks-maryland-an-itinerary", title: "A Day in Point of Rocks, Maryland", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx", title: "MD DNR Potomac River (Upper Potomac) hotspot", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/10/07/maryland-fishing-report-october-7-2/", title: "Maryland Fishing Report Oct 7 2026", accessed: 2026-10-14}
+  - {url: "https://www.potomacriver.org/?p=14679", title: "ICPRB Potomac Fishing Report Aug 26 2022", accessed: 2026-10-14}
+  - {url: "https://dnrweb.dnr.state.md.us/fisheries/fishingreport/single-1.asp?ID=5060", title: "MD DNR angler report, Point of Rocks channel catfish 2015", accessed: 2026-10-14}
+  - {url: "https://en.wikipedia.org/wiki/Virginia_v._Maryland", title: "Virginia v. Maryland", accessed: 2026-10-14}

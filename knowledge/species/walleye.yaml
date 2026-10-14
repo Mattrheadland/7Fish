@@ -1,0 +1,89 @@
+key: walleye
+name: Walleye
+kid_friendly: false   # reasoning: thin river population, cold-season low-light fishing, jigging near bottom; not attainable for a young kid
+temp_bands_f:
+  - {band: slow, max: 40, tag: reasoning, note: "DNR says upper Potomac walleye remain active through winter (documented, https://dnr.maryland.gov/fisheries/pages/hotspots/potomac.aspx); DNR Feb 2012 log describes catches in frigid conditions. The 40°F edge is reasoning."}
+  - {band: active, min: 40, max: 43, tag: reasoning}
+  - {band: peak, min: 43, max: 54, tag: reasoning, note: "Documented: spawning usually starts at 7-9°C (45-48°F), most between 6-11°C (43-52°F); adults gather below dams to spawn in spring (USFWS HSI; DNR walleye summary). DNR March biologist logs (2013, 2014) report walleye catches with river temps 'in the 40s'. Calling this the peak angling band is reasoning."}
+  - {band: active, min: 54, max: 68, tag: reasoning, note: "USFWS HSI: adult growth ceases below 12°C (~54°F) - documented, but that is growth, not bite."}
+  - {band: active, min: 68, max: 75, tag: documented, src: "https://www.arlis.org/docs/vol1/AK_Heritage/FWS/OBS/82/FWS-OBS-82-10-56.pdf", note: "USFWS HSI: optimum adult growth 20-24°C (68-75°F). In a shallow clear river, daytime catches drop in summer (reasoning)."}
+  - {band: stressed, min: 75, tag: documented, src: "https://www.arlis.org/docs/vol1/AK_Heritage/FWS/OBS/82/FWS-OBS-82-10-56.pdf", note: "USFWS HSI: adults avoid temperatures above 24°C (~75°F) if possible; upper lethal 29-32°C (84-90°F)."}
+season:
+  upper-potomac: {1: fair, 2: good, 3: good, 4: fair, 5: fair, 6: poor, 7: poor, 8: poor, 9: poor, 10: fair, 11: good, 12: fair, tag: reasoning, note: "REAL BUT THIN. Presence documented: Cumberland to DC; highest concentration Dam 3 (Harpers Ferry)-Dam 5 (DNR summary 2019/20) and Dam 5 down to Point of Rocks (DNR hotspot page). Point of Rocks is the downstream edge of the dense reach; Noland's Ferry/Tuscarora mouth is just below it - presence likely, density lower (reasoning); no spot-specific walleye reports found for either. Quality documented: spring 2020 sample 10-28.5 in, avg 16.1 in, most fish 18-20 in, 14% over 20 in; DNR expected fewer 20+ in fish after the 2014-15 classes aged out. Recent bite documented: active Nov 2025, 'working' Mar 2026, active post-spawn May 2026 (DNR reports); good in deeper areas Dec 2021. No 2026 survey numbers found. Oct 2026 DNR reports did not mention walleye. Summer rated poor: avoidance above 75°F (HSI) plus no summer reports found. Spring regs (Jan 1-Apr 15 slot) handled by regs worker."}
+  upper-bay: {1: poor, 2: poor, 3: poor, 4: poor, 5: poor, 6: absent, 7: absent, 8: absent, 9: absent, 10: poor, 11: poor, 12: poor, tag: reasoning, note: "Only evidence: DNR Nov 12, 2025 says walleye were caught with smallmouth on the downriver side of the Conowingo Dam pool and lower Susquehanna. One report; not a dependable shore target. Summer marked absent as a practical target, not a survey result."}
+prefs:
+  flow: {rising: neutral, falling: plus, high_muddy: minus, low_clear: minus, tag: reasoning, note: "USFWS HSI (documented): walleye most abundant in moderately turbid water, feeding peaks at Secchi ~1-2 m (3-6.5 ft), sharply lower below 1 m or above 5 m. So stained-but-fishable water on a falling river = plus; very muddy or gin-clear low water = minus. Flow direction effects are reasoning."}
+  light: {dawn: plus, day: minus, dusk: plus, night: plus, overcast: plus, tag: documented, src: "https://www.arlis.org/docs/vol1/AK_Heritage/FWS/OBS/82/FWS-OBS-82-10-56.pdf", note: "HSI: feed most actively in low light; photosensitive, seek dim light or cover in bright clear water; adults move inshore at night to feed; spawning at night. DNR Dec 2021: Deep Creek walleye on jerkbaits in the evenings."}
+  front: {pre_front_falling: plus, post_front_high_rising: minus, steady: neutral, tag: reasoning, note: "No walleye front source found; conventional reasoning only."}
+methods:
+  - id: jig-softplastic-bottom
+    when: "Water 38-55°F (Nov-Apr), dawn/dusk/overcast, slower deeper water below riffles, current breaks and ledges; the default cold-water method"
+    rig_line: "3/8 oz round jighead (2/0) with 3.5-4 in white or chartreuse paddletail/grub, 20 lb braid to 3 ft 12 lb fluoro"
+    rig:
+      hook: "2/0 jighead hook, 60-90° eye"
+      weight: "3/8 oz round or stand-up jighead (1/4 oz in slack water, 1/2 oz in strong current) - heavy enough to tick bottom"
+      leader: "10-12 lb fluorocarbon, 3 ft (lighter than Matt's 30 lb inshore leader for clear cold water)"
+      hardware: "none; tie direct to jig (double uni or FG to braid)"
+      bait_or_lure: "3.5-4 in paddletail or curly-tail grub in white, pearl, chartreuse, or smoke; 3 in tube as a variant; optional live minnow tip"
+    switch_to: crankbait-jerkbait
+    switch_trigger: "Snagging every cast in rock, or fish seen chasing near the surface at dusk"
+    gear_note: "Workable on Matt's 7 ft Crossfire MH (20 lb braid) with the leader dropped to 10-12 lb; ideal is a 6'6\"-7' medium spinning rod with 10 lb braid. The unconfirmed 6'6\" Ugly Stik fits if the 17 lb leader is swapped lighter."
+    tag: documented
+    src: "https://news.maryland.gov/dnr/2026/03/11/maryland-fishing-report-march-11-2/"
+    note: "Documented: soft plastic jigs, tubes and swimbaits working for upper Potomac walleye (DNR Mar 11, 2026); jigs fished tight to the bottom (DNR biologist logs 2013, 2014); grubs and tubes (DNR Dec 2021). Jig weights, colors and leader specifics are reasoning."
+  - id: crankbait-jerkbait
+    when: "Low light, stained water, fish shallower at dusk/night or in late fall"
+    rig_line: "Suspending jerkbait 4.5 in (silver/black or clown) or small shallow crankbait, 20 lb braid to 3 ft 12 lb fluoro, #1 round snap"
+    rig:
+      hook: "Factory trebles"
+      weight: "none"
+      leader: "10-12 lb fluorocarbon, 3 ft"
+      hardware: "#1 round-nose snap (not a swivel) for action"
+      bait_or_lure: "4-4.5 in suspending jerkbait (silver/black, perch) or 2 in shallow-diving crankbait (crawfish, shad); slow twitch-pause in cold water"
+    switch_to: jig-softplastic-bottom
+    switch_trigger: "No hits in 30 min of low light, or bright sun on clear water"
+    gear_note: "Fits the Crossfire MH with a lighter leader."
+    tag: documented
+    src: "https://dnrweb.dnr.state.md.us/fisheries/fishingreport/single-1.asp?ID=7510"
+    note: "Documented: crankbaits or jigs depending on conditions (DNR biologist, upper Potomac, Mar 8, 2020); small crankbaits (DNR Nov 12, 2025; Dec 1, 2021); jerkbaits in the evening (Deep Creek, DNR Dec 2021). Sizes/colors are reasoning."
+  - id: live-minnow-jig-or-slip
+    when: "Coldest water, tough bite, slow eddies"
+    rig_line: "1/4 oz jighead or #2 octopus hook below a 1/4 oz split-shot/slip sinker, 3 ft 10 lb fluoro, lip-hooked 3 in shiner/fathead"
+    rig:
+      hook: "#2 octopus (or 1/4 oz plain jighead)"
+      weight: "1/4 oz egg slip sinker with a bead and small barrel swivel, or split shots 18 in up"
+      leader: "10 lb fluorocarbon, 2-3 ft"
+      hardware: "small barrel swivel + 5 mm bead if slip rig"
+      bait_or_lure: "Live 2.5-3.5 in minnow, lip-hooked"
+    switch_to: jig-softplastic-bottom
+    switch_trigger: "Minnows stolen by small fish, or need to cover water"
+    gear_note: "Fits the unconfirmed 6'6\" Ugly Stik or the Crossfire with a light leader. Minnow sourcing/transport rules not checked here."
+    tag: documented
+    src: "https://news.maryland.gov/dnr/2021/12/01/maryland-fishing-report-december-1/"
+    note: "Documented: live minnows for upper Potomac smallmouth/walleye (DNR Dec 1, 2021). Rig dimensions are reasoning."
+advisory: {url: "https://mde.maryland.gov/programs/marylander/fishandshellfish/Pages/fishconsumptionadvisory.aspx", note: "MDE page links species/county charts; walleye-specific upper Potomac meal advice not opened or verified.", tag: documented}
+notes:
+  - "Fishery honesty: DNR-documented and supported by stocking (avg 60,000 fingerlings/yr since 2014; hatchery fish ~50% of year-class strength, 2019/20 summary). It is a real fishery but a thin, low-confidence shore target downstream of Point of Rocks. Most DNR reports are boat- or wade-based; bank catches specifically not found."
+  - "Tidal Potomac omitted: only forum anecdotes (2013, 2017) of sparse walleye near Chain Bridge/below Great Falls, and one juvenile in the tidal Anacostia (DNR July 2026). Not a realistic target."
+  - "Monocacy omitted: DNR Monocacy page does not mention walleye; Angler's Log entries surfaced in search were not opened (not verified)."
+  - "Great Falls area is bank-only and dangerous; DC banks need a DC license (project rule)."
+  - "Regulations (size, creel, Jan 1-Apr 15 slot on the mainstem) are owned by rules/regs.yaml."
+sources:
+  - {url: "https://dnr.maryland.gov/fisheries/Documents/UpperPotomac_Walleye_Summary.pdf", title: "MD DNR - Upper Potomac Walleye Summary (2019, incl. spring 2020)", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/pages/hotspots/potomac.aspx", title: "MD DNR - Potomac River (Upper Potomac) hotspot", accessed: 2026-10-14}
+  - {url: "https://www.arlis.org/docs/vol1/AK_Heritage/FWS/OBS/82/FWS-OBS-82-10-56.pdf", title: "USFWS FWS/OBS-82/10.56 Habitat Suitability Index Models: Walleye", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/03/11/maryland-fishing-report-march-11-2/", title: "Maryland Fishing Report Mar 11, 2026", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/05/06/maryland-fishing-report-may-6/", title: "Maryland Fishing Report May 6, 2026", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2025/11/12/maryland-fishing-report-november-12/", title: "Maryland Fishing Report Nov 12, 2025", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2025/04/23/maryland-fishing-report-april-23", title: "Maryland Fishing Report Apr 23, 2025", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2021/12/01/maryland-fishing-report-december-1/", title: "Maryland Fishing Report Dec 1, 2021", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/10/07/maryland-fishing-report-october-7-2/", title: "Maryland Fishing Report Oct 7, 2026", accessed: 2026-10-14}
+  - {url: "https://dnrweb.dnr.state.md.us/fisheries/fishingreport/single-1.asp?ID=7510", title: "MD Angler's Log - DNR biologist, walleye, Mar 8, 2020", accessed: 2026-10-14}
+  - {url: "https://dnrweb.dnr.state.md.us/fisheries/fishingreport/single-1.asp?ID=2722", title: "MD Angler's Log - DNR biologist, walleye, Mar 25, 2013", accessed: 2026-10-14}
+  - {url: "https://dnrweb.dnr.state.md.us/fisheries/fishingreport/single-1.asp?ID=3830", title: "MD Angler's Log - DNR biologist, walleye, Mar 12, 2014", accessed: 2026-10-14}
+  - {url: "https://dnrweb.dnr.state.md.us/fisheries/fishingreport/single-1.asp?ID=3827", title: "MD Angler's Log - DNR biologist, Mar 11, 2014", accessed: 2026-10-14}
+  - {url: "https://dnrweb.dnr.state.md.us/fisheries/fishingreport/single-1.asp?ID=1233", title: "MD Angler's Log - DNR biologist, walleye, Feb 13, 2012", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Documents/Freshwater%20Reports/Freshwater_Monthly_Rept_July2026.pdf", title: "MD DNR Freshwater Monthly Report, July 2026", accessed: 2026-10-14}
+  - {url: "https://www.bassresource.com/bass-fishing-forums/topic/112373-tidal-potomac-walleye/", title: "BassResource forum - Tidal Potomac walleye (anecdotal)", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Pages/hotspots/monocacy.aspx", title: "MD DNR - Monocacy River hotspot", accessed: 2026-10-14}
+  - {url: "https://mde.maryland.gov/programs/marylander/fishandshellfish/Pages/fishconsumptionadvisory.aspx", title: "MDE Fish Consumption Advisory", accessed: 2026-10-14}

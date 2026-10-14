@@ -1,0 +1,96 @@
+key: northern-snakehead
+name: Northern snakehead (Chesapeake Channa)
+kid_friendly: false   # reasoning: weedless lures in thick grass, heavy line, toothy fish that must be killed; not a simple-bait young-kid target
+temp_bands_f:
+  - {band: inactive, max: 50, tag: reasoning, note: "Tolerates 32-85°F (MD DNR fact sheet) so cold is survivable, not lethal. DNR Dec 1, 2021 report: snakehead fishing slowed due to cold water and they generally become inactive this time of year. The 50°F edge itself is reasoning; a guide (Fish & Hunt Maryland) says they can be caught all winter with slow presentations."}
+  - {band: slow, min: 50, max: 60, tag: reasoning, note: "DNR Apr 23, 2025: more active in Dorchester creeks with Middle Bay water about 56°F, best on sunny creek sides in the afternoon (documented observation, https://news.maryland.gov/dnr/2025/04/23/maryland-fishing-report-april-23). Band edges are reasoning."}
+  - {band: active, min: 60, max: 72, tag: reasoning}
+  - {band: peak, min: 72, max: 85, tag: reasoning, note: "USGS Potomac study: spawning end of April through August, peak at the beginning of June when average temperatures reached 26°C (~79°F) (documented, https://www.usgs.gov/publications/individual-growth-and-reproductive-behavior-a-newly-established-population-northern). DNR Aug-Sept 2026 reports good snakehead fishing on tidal grass flats with Bay surface low 80s / upper 70s. 'Peak' bite label is reasoning."}
+  - {band: active, min: 85, tag: reasoning, note: "85°F is the top of the documented tolerance range (MD DNR fact sheet: 32-85°F); no documented bite-stress figure found. Air-breathing lets them handle low oxygen (documented)."}
+season:
+  tidal-potomac: {1: poor, 2: poor, 3: poor, 4: fair, 5: good, 6: prime, 7: good, 8: good, 9: good, 10: fair, 11: poor, 12: poor, tag: reasoning, note: "Presence documented: established in over 60 river miles of the Potomac (DNR); Mattawoman Creek named by DNR (2025) with snakeheads near lily pads and shore anglers able to fish upstream at Mattingly Park. Quality: size/catch data for Mattawoman not found. Spawning late Apr-Aug with early-June peak (USGS Potomac). Fishtalk: Chain Bridge-area creeks loaded in spring to mid-June then largely vacated by August, so spots shift. Nov-Mar rated poor: DNR says cold water slows the bite; guide says catchable slowly all winter. Oct 2026 DNR reports did not mention snakehead (not found)."}
+  upper-bay: {1: poor, 2: poor, 3: poor, 4: fair, 5: good, 6: prime, 7: good, 8: good, 9: good, 10: fair, 11: poor, 12: poor, tag: reasoning, note: "Documented: spawning in thick Susquehanna Flats grass May through July (DNR May 20, 2026); caught with largemouth on the Flats (May 6, 2026); feeding aggressively on tidal-river grass flats and the Flats in Sept 2026; just under 200 tagged in the upper Bay, Bush, Sassafras and Gunpowder (DNR Nov 2025); Conowingo fish lift took 2,000+ March-June 2024 and Conowingo Fisherman's Park has shore access (DNR 2025). Much of the Flats/Gunpowder grass is boat/kayak water; shore access is spot-level."}
+  middle-bay: {1: poor, 2: poor, 3: poor, 4: fair, 5: good, 6: good, 7: good, 8: good, 9: good, 10: fair, 11: poor, 12: poor, tag: reasoning, note: "Documented waters (Dorchester County creeks, Blackwater NWR causeway shore fishing on Key Wallace Dr) sit at or just south of this region's Choptank boundary and are a long drive from Frederick. Fishtalk: Blackwater anglers report catches every month, spring best, summer close behind."}
+prefs:
+  flow: {rising: unknown, falling: unknown, high_muddy: minus, low_clear: neutral, tag: reasoning, note: "No flow-response source found. DNR (2025) says heavy rain and flooding lower salinity and help them spread; that is distribution, not bite. Muddy floodwater over grass flats assumed a minus."}
+  light: {dawn: plus, day: neutral, dusk: plus, night: unknown, overcast: plus, tag: reasoning, note: "Not documented for rod-and-reel. DNR Apr 2025 (documented) names sunny creek sides in the afternoon in cool spring water, so midday is not dead in spring. Bowfishing is best after dark (Fishtalk) - that is a bowfishing note, not a rod-and-reel bite claim."}
+  tide: {incoming: neutral, outgoing: plus, slack: neutral, tag: reasoning, note: "No snakehead tide source found. Reasoning: falling water concentrates fish on grass edges and creek-channel drops, as DNR documents for tidal largemouth on low ebb."}
+  front: {pre_front_falling: unknown, post_front_high_rising: minus, steady: plus, tag: reasoning, note: "Guide (Fish & Hunt Maryland) says winter topwater works on about the third day of a warming trend; extended to stable warm weather = plus as reasoning."}
+methods:
+  - id: weedless-frog-grass
+    when: "Water 65°F+ (late May-Sept), dawn/dusk or overcast, over matted grass, lily pads and spatterdock; fry-ball guarding fish in June-July"
+    rig_line: "Hollow-body weedless frog 2.5 in (black or white), 65 lb braid tied direct with a Palomar, no leader"
+    rig:
+      hook: "Frog's built-in double hook (typically 4/0-5/0)"
+      weight: "none"
+      leader: "none - 50-65 lb braid tied direct; teeth and grass cut fluoro"
+      hardware: "none (no snap)"
+      bait_or_lure: "2.5 in hollow-body frog, black or white; pause after the blowup, reel down and set hard"
+    switch_to: chatterbait-paddletail-edge
+    switch_trigger: "Missed blowups twice on one fish, or no surface activity in 30 min, or grass not topped out"
+    gear_note: "Best on a 7-7.5 ft heavy casting rod with a baitcaster and 50-65 lb braid. Matt's (unconfirmed) Tatula/Tranx baitcaster fits only if he has a heavy casting rod - never on the Crossfire spinning blank; he likely lacks that rod. The Crossfire MH with 20 lb braid can throw a frog over sparse pads but will lose fish in heavy mats."
+    tag: reasoning
+    src: "https://news.maryland.gov/dnr/2026/08/26/maryland-fishing-report-august-26-2/"
+    note: "Documented: frogs/soft frogs and buzzbaits over grass (DNR Aug 26 & Sept 16, 2026; June 17, 2020); upsized bass tackle with heavy line and stiff rods; casting to fry balls (Fishtalk). Frog size/color and line specifics are reasoning."
+  - id: chatterbait-paddletail-edge
+    when: "Any water 55°F+, along outside grass edges, creek-channel drops and wood; best cold-water fallback when fish are not on top"
+    rig_line: "3/8 oz white chatterbait with a 4 in white paddletail trailer, 20 lb braid to 3 ft 40 lb fluoro via FG/double uni"
+    rig:
+      hook: "Chatterbait's 4/0-5/0 hook; alternative 5/0 weighted weedless swimbait hook (1/8-3/16 oz) for a Texas-rigged paddletail"
+      weight: "3/8 oz chatterbait (1/2 oz in wind or deeper edges)"
+      leader: "40 lb fluorocarbon, 3 ft (upgrade from Matt's usual 30 lb for teeth and grass)"
+      hardware: "none; tie direct to the lure"
+      bait_or_lure: "White or white/chartreuse chatterbait with 4 in white paddletail; or 4-5 in white paddletail weedless-rigged"
+    switch_to: live-minnow-float
+    switch_trigger: "Follows or short strikes without hookups, or water below about 55°F - slow down (slow-roll) or go to a live minnow"
+    gear_note: "Fits Matt's 7 ft Crossfire MH (20 lb braid) with the leader bumped to 40 lb; adequate on edges, under-gunned in thick mats."
+    tag: documented
+    src: "https://news.maryland.gov/dnr/2025/04/23/maryland-fishing-report-april-23"
+    note: "Documented: weedless white paddletails and chatterbaits with white plastics near grass (DNR Apr 23, 2025; May 10, 2023; Sept 16, 2026); slow-rolled paddletail/creature trailers on channel edges in cold water (Fish & Hunt Maryland guide). Weights and leader strength are reasoning."
+  - id: live-minnow-float
+    when: "Cold water (below ~60°F), short-striking fish, or open water off grass edges"
+    rig_line: "Size 4 circle or baitholder, 1/8 oz bullet sinker sliding above, 18-24 in under a large visible float, 20 lb fluoro, lip-hooked large minnow"
+    rig:
+      hook: "Size 4 circle or baitholder (documented); go 1/0 circle with large shiners (reasoning)"
+      weight: "1/8 oz bullet weight sliding above the hook"
+      leader: "20-30 lb fluorocarbon, about 3 ft"
+      hardware: "Large visible float set 18-24 in above the hook; vary float depths"
+      bait_or_lure: "Large live minnow (shiner or killifish/bull minnow) lip-hooked"
+    switch_to: chatterbait-paddletail-edge
+    switch_trigger: "Float sits 30 min untouched - go back to covering water with the chatterbait"
+    gear_note: "Fits the Crossfire MH or the unconfirmed 6'6\" Ugly Stik. Live-bait sourcing and any bait-transport rules for the water not checked here (regs worker)."
+    tag: documented
+    src: "https://fishandhuntmaryland.com/articles/can-northern-snakeheads-still-be-caught-winter"
+    note: "Documented: size 4 baitholder or circle, ~1/8 oz bullet weight above, 18-24 in under a large float (Butch Huber, Fish & Hunt Maryland, undated); large minnows under a bobber (DNR Apr 23, 2025; May 10, 2023); live minnows may draw a strike in cold water (DNR Dec 1, 2021); bull minnow lip-hooked to a dart (Fishtalk)."
+advisory: {url: "https://mde.maryland.gov/programs/marylander/fishandshellfish/Pages/fishconsumptionadvisory.aspx", note: "MDE page links species/county charts and a map; snakehead-specific meal advice not opened or verified. Check before eating.", tag: documented}
+notes:
+  - "Maryland DNR: kill any northern snakehead you catch - 'kill it and DO NOT put it back in the water' (fact sheet); DNR asks anglers to remove and kill snakehead and discourages catch-and-release; moving live snakehead to another body of water is illegal in Maryland, fines up to $2,500 (Invasive Fishes Program page). DNR (2015) also states possessing, importing or transporting live northern snakeheads violates Maryland and Virginia law and the federal Lacey Act. (documented: https://dnr.maryland.gov/fisheries/Pages/invasive-fish.aspx, https://dnr.maryland.gov/Invasives/Documents/Snakehead_Fact_Sheet.pdf, https://news.maryland.gov/dnr/2015/07/21/invasive-snakeheads-found-above-great-falls/)"
+  - "Report catches to the Maryland Invasive Species Tracker; tagged fish: measure, record location, call the tag number (DNR). FishMaryland invasive award threshold 30 in (background only)."
+  - "Cold-water honesty: Nov-Mar is a slow, low-confidence fishery. DNR says they generally go inactive in cold water; one guide says they can be caught all winter on slow presentations and live minnows. A winter blank is expected, not proof they are gone."
+  - "Upper Potomac / C&O Canal: snakeheads documented in the canal above Great Falls (2014-15) and at Dam 4 (DNR 2025, 'targeting may be difficult'). Not a realistic Frederick-area shore target; omitted from season."
+  - "Monocacy: DNR says anglers increasingly report snakeheads but none collected in standardized surveys. Not a realistic target; omitted from season."
+  - "Little Seneca Lake (Black Hill) is named by DNR as a snakehead water - boat/kayak access described; it is a reservoir, not one of the season regions. Park permit questions are a spot-level check."
+  - "Habitat: stagnant shallow ponds, swamps, slow streams with mud bottoms and aquatic vegetation; air-breathing (DNR). Tolerates moderate salinity (DNR 2025)."
+  - "Tidal Potomac mainstem PRFC/DC/VA jurisdiction questions belong to spot and regs files."
+sources:
+  - {url: "https://dnr.maryland.gov/fisheries/pages/snakehead.aspx", title: "MD DNR - Northern Snakehead (Chesapeake Channa)", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/Invasives/Documents/Snakehead_Fact_Sheet.pdf", title: "MD DNR / USFWS snakehead fact sheet", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Pages/invasive-fish.aspx", title: "MD DNR - Invasive Fishes Program", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2015/07/21/invasive-snakeheads-found-above-great-falls/", title: "MD DNR - Invasive snakeheads found above Great Falls (2015)", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2025/07/31/chasing-a-slippery-predator-eight-places-to-target-marylands-chesapeake-channa/", title: "MD DNR - Eight places to target Chesapeake Channa (2025)", accessed: 2026-10-14}
+  - {url: "https://www.usgs.gov/publications/individual-growth-and-reproductive-behavior-a-newly-established-population-northern", title: "USGS - Growth and reproductive behavior of Potomac northern snakehead", accessed: 2026-10-14}
+  - {url: "https://seagrant.psu.edu/wp-content/uploads/2023/10/PA-Sea-Grant-AIS-fact-sheet-Northern-Snakehead-2023.pdf", title: "PA Sea Grant - Northern snakehead fact sheet", accessed: 2026-10-14}
+  - {url: "https://fishtalkmag.com/blog/destination-snakehead-fishing-snakeheads-maryland", title: "FishTalk - Destination snakehead fishing", accessed: 2026-10-14}
+  - {url: "https://fishandhuntmaryland.com/articles/can-northern-snakeheads-still-be-caught-winter", title: "Fish & Hunt Maryland - Can snakeheads be caught in winter", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2021/12/01/maryland-fishing-report-december-1/", title: "Maryland Fishing Report Dec 1, 2021", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2025/04/23/maryland-fishing-report-april-23", title: "Maryland Fishing Report Apr 23, 2025", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2023/05/10/maryland-fishing-report-may-10/", title: "Maryland Fishing Report May 10, 2023", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2020/06/17/maryland-fishing-report-june-17/", title: "Maryland Fishing Report June 17, 2020", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/05/06/maryland-fishing-report-may-6/", title: "Maryland Fishing Report May 6, 2026", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/05/20/maryland-fishing-report-may-20-2/", title: "Maryland Fishing Report May 20, 2026", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/08/26/maryland-fishing-report-august-26-2/", title: "Maryland Fishing Report Aug 26, 2026", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/09/16/maryland-fishing-report-september-16-2/", title: "Maryland Fishing Report Sept 16, 2026", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/10/07/maryland-fishing-report-october-7-2/", title: "Maryland Fishing Report Oct 7, 2026", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Documents/Freshwater%20Reports/Freshwater_Monthly_Rept_November2025.pdf", title: "MD DNR Freshwater Monthly Report, Nov 2025", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Pages/hotspots/monocacy.aspx", title: "MD DNR - Monocacy River hotspot", accessed: 2026-10-14}
+  - {url: "https://mde.maryland.gov/programs/marylander/fishandshellfish/Pages/fishconsumptionadvisory.aspx", title: "MDE Fish Consumption Advisory", accessed: 2026-10-14}

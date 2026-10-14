@@ -1,0 +1,87 @@
+key: largemouth-bass
+name: Largemouth bass
+kid_friendly: false   # reasoning: the regional quality fishery (tidal grass, Susquehanna Flats) is lure fishing in cover, often boat water. Small pond bass on a worm can be kid-attainable, but that is a spot-level call, not this species card.
+temp_bands_f:
+  - {band: slow, max: 50, tag: documented, src: "https://www.srac.msstate.edu/pdfs/Fact Sheets/200 Largemouth Bass- Biology and Life History.pdf", note: "SRAC 200: most bass move less frequently when water is below 50°F. DNR Dec 2021: on sunny afternoons largemouth may move shallower."}
+  - {band: active, min: 50, max: 60, tag: reasoning}
+  - {band: peak, min: 60, max: 75, tag: documented, src: "https://www.srac.msstate.edu/pdfs/Fact Sheets/200 Largemouth Bass- Biology and Life History.pdf", note: "SRAC 200: nest sites chosen after water stabilizes above 60°F; spawning typically 65-75°F. DNR May 10, 2023: post-spawn bass hungry, 'about as good as it gets'. Labeling this the peak bite is reasoning."}
+  - {band: active, min: 75, max: 80, tag: reasoning}
+  - {band: stressed, min: 80, tag: documented, src: "https://www.srac.msstate.edu/pdfs/Fact Sheets/200 Largemouth Bass- Biology and Life History.pdf", note: "SRAC 200: bass move less frequently above 80°F. DNR Sept 2, 2026: feeding mostly at night in the shallows, seeking shade by day."}
+season:
+  tidal-potomac: {1: poor, 2: poor, 3: fair, 4: good, 5: good, 6: good, 7: fair, 8: fair, 9: good, 10: good, 11: fair, 12: poor, tag: reasoning, note: "Presence documented: DNR fall 2025 tidal bass survey of 54 Potomac sites (above Wilson Bridge to Nanjemoy) - the two highest-catch sites were both in Mattawoman Creek (31 and 33 bass). Size data not found. DNR (2025) says shore anglers can fish Mattawoman upstream at Mattingly Park; Smallwood/Sweden Point is a launch (a ramp is not a bank). Mainstem DC/VA/PRFC jurisdiction is spot-level. Months are reasoning from documented spawn temps and DNR seasonal reports."}
+  upper-bay: {1: poor, 2: poor, 3: fair, 4: good, 5: good, 6: good, 7: fair, 8: fair, 9: good, 10: good, 11: fair, 12: poor, tag: reasoning, note: "Documented: good fishing on the Susquehanna Flats May 2026 (buzzbaits, chatterbaits, frogs, weedless flukes, paddletails); largemouth with snakehead in Bush, Gunpowder, Patapsco grass beds (DNR May 20, 2026). Much of this is boat/kayak water; shore access is spot-level."}
+  frederick-rivers: {1: absent, 2: poor, 3: poor, 4: fair, 5: fair, 6: fair, 7: fair, 8: fair, 9: fair, 10: fair, 11: poor, 12: poor, tag: reasoning, note: "DNR says smallmouth and largemouth are the most targeted sportfish on the Monocacy, but no Monocacy largemouth survey or catch numbers found. Smallmouth is the main river bass (reasoning). Quality not found."}
+  middle-bay: {1: poor, 2: poor, 3: fair, 4: fair, 5: good, 6: fair, 7: fair, 8: fair, 9: fair, 10: fair, 11: poor, 12: poor, tag: reasoning, note: "DNR stocked ~21,800 largemouth into tidal rivers in June 2026 including the Choptank (July 2026 report). Shore-target evidence for this region not found; long drive from Frederick. Low confidence."}
+prefs:
+  flow: {rising: neutral, falling: neutral, high_muddy: minus, low_clear: minus, tag: reasoning, note: "No source; tidal/grass fishery is driven more by tide and temperature (reasoning)."}
+  light: {dawn: plus, day: minus, dusk: plus, night: plus, overcast: plus, tag: documented, src: "https://news.maryland.gov/dnr/2026/09/02/maryland-fishing-report-september-2/", note: "DNR Sept 2, 2026: feeding mostly at night in shallows, cool shade by day in summer; DNR June 2020: shallow lures early morning and evening. In cool spring/fall water DNR says they feed through the day (May 2023), so day=minus applies to summer."}
+  tide: {incoming: neutral, outgoing: plus, slack: minus, tag: documented, src: "https://news.maryland.gov/dnr/2023/05/10/maryland-fishing-report-may-10/", note: "DNR May 10, 2023: in tidal water target outside edges of spatterdock or thick grass during a low ebb tide. Incoming/slack values are reasoning."}
+  front: {pre_front_falling: plus, post_front_high_rising: minus, steady: neutral, tag: reasoning, note: "No source; conventional reasoning."}
+methods:
+  - id: weedless-paddletail-or-chatterbait
+    when: "Water 55-80°F, grass edges, spatterdock, wood and creek-mouth transitions; ebb tide in tidal water"
+    rig_line: "3/8 oz chatterbait with 4 in green-pumpkin or white trailer, or 4 in paddletail on a 4/0 weighted swimbait hook, 20 lb braid to 3 ft 20 lb fluoro"
+    rig:
+      hook: "Chatterbait's built-in hook, or 4/0 weighted weedless swimbait hook (1/8 oz)"
+      weight: "3/8 oz chatterbait; 1/8 oz hook weight for the swimbait"
+      leader: "20 lb fluorocarbon, 3 ft"
+      hardware: "none; tie direct"
+      bait_or_lure: "Chatterbait in white or green pumpkin with a 4 in paddletail trailer; 4 in paddletail in white or green pumpkin"
+    switch_to: soft-plastic-slow
+    switch_trigger: "Cold front, bright sun, or follows without bites - slow down"
+    gear_note: "Fits Matt's 7 ft Crossfire MH (20 lb braid) with the leader dropped to ~20 lb. A baitcaster on a MH casting rod is better in grass; never put the Tatula/Tranx on the Crossfire."
+    tag: documented
+    src: "https://news.maryland.gov/dnr/2026/05/20/maryland-fishing-report-may-20-2/"
+    note: "Documented: chatterbaits, weedless flukes, paddletails on the Susquehanna Flats (DNR May 20, 2026); paddletails, spinnerbaits, cranks in transition waters (Sept 2, 2026); spinnerbaits, lipless cranks, swimbaits, flukes, jerkbaits pre-spawn (Apr 23, 2025). Weights/colors are reasoning."
+  - id: soft-plastic-slow
+    when: "Cold water (below ~55°F), post-front, or bass holding on wood/drop-offs; also summer daytime shade"
+    rig_line: "5 in stick worm wacky-rigged on a 1/0 wacky hook, or 3/8 oz craw jig with a craw trailer, 20 lb braid to 4 ft 15 lb fluoro"
+    rig:
+      hook: "1/0 wacky/octopus hook (stick worm), or 3/8 oz football/finesse craw jig with 3/0 hook"
+      weight: "None for wacky (or 1/16 oz nail weight); 3/8 oz jig"
+      leader: "12-15 lb fluorocarbon, 4 ft"
+      hardware: "O-ring on the worm (optional)"
+      bait_or_lure: "5 in stick worm green pumpkin or watermelon; craw jig in green pumpkin/brown with matching craw trailer"
+    switch_to: weedless-paddletail-or-chatterbait
+    switch_trigger: "Warming afternoon or overcast with fish active - cover water"
+    gear_note: "Fits the Crossfire MH or the unconfirmed 6'6\" Ugly Stik."
+    tag: documented
+    src: "https://news.maryland.gov/dnr/2021/12/01/maryland-fishing-report-december-1/"
+    note: "Documented: craw jigs, small crankbaits and grubs around sunken wood and drop-offs in Dec (DNR 2021, Deep Creek); wacky-rigged soft plastics (DNR Sept 2, 2026; May 2023). Sizes/colors are reasoning."
+  - id: topwater-frog
+    when: "Water 65°F+, dawn/dusk/overcast, over matted grass and lily pads"
+    rig_line: "2.5 in hollow-body frog (black/white), 50-65 lb braid tied direct"
+    rig:
+      hook: "Frog's built-in double hook"
+      weight: "none"
+      leader: "none; 50-65 lb braid tied direct"
+      hardware: "none"
+      bait_or_lure: "2.5 in hollow-body frog, black or white; buzzbait 3/8 oz as alternate over sparse grass"
+    switch_to: weedless-paddletail-or-chatterbait
+    switch_trigger: "Sun high and no blowups in 20 min"
+    gear_note: "Best on a heavy casting rod with a baitcaster and 50-65 lb braid - Matt likely lacks the rod. The Crossfire MH with 20 lb braid is marginal in mats."
+    tag: documented
+    src: "https://news.maryland.gov/dnr/2026/09/02/maryland-fishing-report-september-2/"
+    note: "Documented: chatterbaits or soft frogs over deep grass (DNR Sept 2, 2026); plastic frogs over thick shallow grass (May 2023); buzzbaits, frogs on the Flats (May 2026). Sizes/colors are reasoning."
+advisory: {url: "https://mde.maryland.gov/programs/marylander/fishandshellfish/Pages/fishconsumptionadvisory.aspx", note: "MDE page links species/county charts; largemouth meal advice for Potomac/Mattawoman not opened or verified.", tag: documented}
+notes:
+  - "Profile flag: bass is lower interest for Matt, especially pressured local bass. Tidal largemouth often share water with snakehead, so a Mattawoman grass trip can serve both (reasoning)."
+  - "DNR stocks juvenile largemouth into tidal rivers (~21,800 in June 2026 into Choptank, Patuxent, Marshyhope, Tuckahoe; July 2026 report)."
+  - "Upper Potomac omitted: DNR Potomac hotspot page does not cover largemouth; smallmouth is the river's bass."
+  - "Regulations (tidal bass seasons, catch-and-release periods, tournament rules) owned by rules/regs.yaml."
+sources:
+  - {url: "https://www.srac.msstate.edu/pdfs/Fact Sheets/200 Largemouth Bass- Biology and Life History.pdf", title: "SRAC Publication 200 - Largemouth Bass Biology and Life History", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Documents/Freshwater%20Reports/Freshwater_Monthly_Rept_November2025.pdf", title: "MD DNR Freshwater Monthly Report, Nov 2025 (tidal bass survey)", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Documents/Freshwater%20Reports/Freshwater_Monthly_Rept_July2026.pdf", title: "MD DNR Freshwater Monthly Report, July 2026", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Pages/hotspots/monocacy.aspx", title: "MD DNR - Monocacy River hotspot", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2025/07/31/chasing-a-slippery-predator-eight-places-to-target-marylands-chesapeake-channa/", title: "MD DNR - Eight places to target Chesapeake Channa (Mattawoman shore access)", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/10/07/maryland-fishing-report-october-7-2/", title: "Maryland Fishing Report Oct 7, 2026", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/09/16/maryland-fishing-report-september-16-2/", title: "Maryland Fishing Report Sept 16, 2026", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/09/02/maryland-fishing-report-september-2/", title: "Maryland Fishing Report Sept 2, 2026", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/05/20/maryland-fishing-report-may-20-2/", title: "Maryland Fishing Report May 20, 2026", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/05/06/maryland-fishing-report-may-6/", title: "Maryland Fishing Report May 6, 2026", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2025/04/23/maryland-fishing-report-april-23", title: "Maryland Fishing Report Apr 23, 2025", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2023/05/10/maryland-fishing-report-may-10/", title: "Maryland Fishing Report May 10, 2023", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2021/12/01/maryland-fishing-report-december-1/", title: "Maryland Fishing Report Dec 1, 2021", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2020/06/17/maryland-fishing-report-june-17/", title: "Maryland Fishing Report June 17, 2020", accessed: 2026-10-14}
+  - {url: "https://mde.maryland.gov/programs/marylander/fishandshellfish/Pages/fishconsumptionadvisory.aspx", title: "MDE Fish Consumption Advisory", accessed: 2026-10-14}

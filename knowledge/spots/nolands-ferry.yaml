@@ -1,0 +1,111 @@
+id: nolands-ferry
+name: Noland's Ferry (mouth of Tuscarora Creek)
+status: active
+lat: 39.2438
+lon: -77.4750
+approx: true
+coords_note: {text: "Mouth of Tuscarora Creek (Potomac tributary, Frederick County MD). Wikipedia gives the mouth at 39.243436, -77.475265; C&O Canal Trust's Tuscarora Creek page (canal mile 44.0) maps it at 39.243845, -77.4750431. This is Matt's spot, not the Noland's Ferry ramp itself, which is at canal mile 44.6, about 0.4 mi away per the Canal Trust.", tag: documented, src: "https://en.wikipedia.org/wiki/Tuscarora_Creek_(Potomac_River_tributary)"}
+region: upper-potomac
+water_type: river
+bank_faces_deg: 160
+bank_faces_note: {text: "Maryland (north) bank of the Potomac; angler at the creek mouth faces roughly south-southeast toward the river. Read from map geometry, not surveyed.", tag: reasoning}
+luca_ok: false
+luca_note: {text: "Bank conditions at the creek mouth are not documented; mainstem current nearby. Not cleared for a young child.", tag: reasoning}
+stations:
+  usgs:
+    id: "01638500"
+    name: "Potomac River at Point of Rocks, MD"
+    distance_mi: 4.2
+    has: [discharge, gage_height, water_temp, dissolved_oxygen, ph, specific_conductance, turbidity]
+    tag: documented
+    src: "https://waterdata.usgs.gov/monitoring-location/01638500/all-graphs"
+    note: "Use this for Potomac flow and level at this spot: same river, about 4 mi upstream, no major tributary between (reasoning)."
+  usgs_nearest:
+    id: "01643580"
+    name: "Monocacy River near Dickerson, MD"
+    lat: 39.263397
+    lon: -77.435742
+    distance_mi: 2.5
+    has: [discharge, gage_height, water_temp, dissolved_oxygen, ph, specific_conductance, turbidity]
+    tag: documented
+    src: "https://waterdata.usgs.gov/monitoring-location/USGS-01643580/all-graphs"
+    coords_src: "https://www.waterqualitydata.us/provider/NWIS/USGS-MD/USGS-01643580/"
+    note: "Closest gauge by distance, but it measures the Monocacy, which joins the Potomac downstream of Tuscarora Creek. Use it only as a nearby water-temperature proxy."
+  nwps:
+    lid: "PORM2"
+    name: "Potomac River at Point of Rocks"
+    usgs_id: "01638500"
+    distance_mi: 4.2
+    stages_ft: {action: 11, minor: 16, moderate: 20, major: 27}
+    tag: documented
+    src: "https://api.water.noaa.gov/nwps/v1/gauges/PORM2"
+  coops: {id: null}
+  cbibs: {id: null}
+flow_ceiling: {value: null, unit: cfs, source: ask_matt}
+wind_gust_limit_mph: 30
+wind_gust_note: {text: "River bank default.", tag: reasoning}
+species:
+  smallmouth-bass:
+    presence: verified
+    quality: not_verified
+    evidence:
+      - {text: "ICPRB: the Point of Rocks to Monocacy/Nolands Ferry reach has fishable access points with smallmouth, incl. 'the occasional 20-inch fish'. Historical.", date: "published 2022-08-26; no catch date", tag: documented, src: "https://www.potomacriver.org/?p=14679"}
+      - {text: "ICPRB: anglers 'still taking some nice smallmouth bass'; Point of Rocks to Noland's Ferry dense grass suits wading or kayak. Historical.", date: "published 2022-09-02; no catch date", tag: documented, src: "https://www.potomacriver.org/news/potomac-fishing-report-sept-2-2022/"}
+      - {text: "MD DNR weekly: upper Potomac normal flows, good clarity, good smallmouth outlook. River-wide, not this spot.", date: "published 2026-10-07", tag: documented, src: "https://news.maryland.gov/dnr/2026/10/07/maryland-fishing-report-october-7-2/"}
+  channel-catfish:
+    presence: not_verified
+    presence_note: "River-wide DNR statement; no record at the creek mouth."
+    quality: not_verified
+    evidence:
+      - {text: "MD DNR: channel catfish distributed throughout the Potomac watershed.", date: "undated page", tag: documented, src: "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"}
+      - {text: "ICPRB: channel and flathead catfish taking live or cut bait 'from the Monocacy's mouth downstream' (downstream of this spot). Historical.", date: "published 2022-09-02", tag: documented, src: "https://www.potomacriver.org/news/potomac-fishing-report-sept-2-2022/"}
+  flathead-catfish:
+    presence: not_verified
+    presence_note: "Reach-level DNR statement (Dam 5 to DC); no record at the creek mouth."
+    quality: not_verified
+    evidence:
+      - {text: "MD DNR: flathead catfish (invasive) distributed from Dam 5 to DC.", date: "undated page", tag: documented, src: "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"}
+access:
+  status: not_verified
+  parking: {text: "NPS Nolands Ferry Boat Ramp, New Design Road, Tuscarora MD 21790, C&O Canal mile 44.6: auto and trailer parking, vault toilet. Canal Trust puts the ramp about 0.4 mi and the parking about 0.5 mi from the Tuscarora Creek point (mile 44.0).", tag: documented, src: "https://www.nps.gov/places/nolands-ferry-boat-ramp.htm"}
+  walk: {text: "Probably about 0.5 mi downstream along the towpath from the Noland's Ferry lot to the creek mouth (Canal Trust distances). The actual footpath from the towpath down to the bank at the mouth is not found.", tag: reasoning}
+  stand: {text: "not found. The ramp is not the fishing spot; standing room at the creek mouth is not documented.", tag: reasoning}
+  casting: {text: "not found", tag: reasoning}
+  landing: {text: "not found", tag: reasoning}
+  hours: {text: "C&O Canal NHP Compendium 2026: Seneca to Cumberland, parking lots and day-use areas close at dark (30 min after sunset to 30 min before sunrise), with exceptions incl. 'Potomac River use (e.g. boating, fishing)'. Mile 44 being in that segment is reasoning. Daylight default used.", open: "sunrise", close: "sunset", tag: documented, src: "https://home.nps.gov/choh/learn/management/upload/CHOH-Supt-Compendium-2026-508a.pdf"}
+  after_dark: not_verified
+jurisdiction:
+  water: nontidal
+  state: MD
+  license: "Maryland nontidal license (Matt's stated license; not verified here)"
+  flags:
+    - "Maryland owns the Potomac riverbed to the low-water mark on the Virginia shore (Black-Jenkins 1877). Source: https://en.wikipedia.org/wiki/Virginia_v._Maryland"
+    - "Do not confuse with other Tuscarora Creeks (e.g. the Monocacy tributary of the same name)."
+    - "MD DNR: remove and kill blue and flathead catfish; snakehead must not be released alive."
+    - "C&O Canal NHP rules apply on parkland."
+  tag: documented
+  src: "https://www.nps.gov/choh/planyourvisit/fishing.htm"
+crowding: "not found"
+hazards:
+  - "Mainstem current next to the creek mouth (reasoning)."
+  - "Dense summer grass in this reach, per ICPRB 2022 (documented, historical)."
+  - "Flooding: action 11 ft, flood 16 ft at PORM2 upstream (documented)."
+  - "Rail line between the towpath and MD 28 (NPS directions cross the tracks; documented at riverexplorer id=658)."
+matt_notes:
+  - {text: "Noland's Ferry means the mouth of Tuscarora Creek on the Potomac. It stays a live option; a poor ramp or bank elsewhere at Noland's doesn't rule it out.", src: Matt}
+sources:
+  - {url: "https://en.wikipedia.org/wiki/Tuscarora_Creek_(Potomac_River_tributary)", title: "Tuscarora Creek (Potomac River tributary)", accessed: 2026-10-14}
+  - {url: "https://canaltrust.org/?p=8036", title: "C&O Canal Trust: Tuscarora Creek, mile 44.0", accessed: 2026-10-14}
+  - {url: "https://www.nps.gov/places/nolands-ferry-boat-ramp.htm", title: "NPS Nolands Ferry Boat Ramp", accessed: 2026-10-14}
+  - {url: "https://www.riverexplorer.com/details.php?id=658", title: "Potomac River Guide entry incl. Nolands Ferry directions", accessed: 2026-10-14}
+  - {url: "https://waterdata.usgs.gov/monitoring-location/USGS-01643580/all-graphs", title: "USGS 01643580 Monocacy River near Dickerson", accessed: 2026-10-14}
+  - {url: "https://www.waterqualitydata.us/provider/NWIS/USGS-MD/USGS-01643580/", title: "WQP site record USGS-01643580", accessed: 2026-10-14}
+  - {url: "https://waterdata.usgs.gov/monitoring-location/01638500/all-graphs", title: "USGS 01638500 Potomac at Point of Rocks", accessed: 2026-10-14}
+  - {url: "https://api.water.noaa.gov/nwps/v1/gauges/PORM2", title: "NWPS gauge PORM2", accessed: 2026-10-14}
+  - {url: "https://home.nps.gov/choh/learn/management/upload/CHOH-Supt-Compendium-2026-508a.pdf", title: "C&O Canal NHP Compendium 2026", accessed: 2026-10-14}
+  - {url: "https://www.nps.gov/choh/planyourvisit/fishing.htm", title: "C&O Canal NHP Fishing", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx", title: "MD DNR Upper Potomac hotspot", accessed: 2026-10-14}
+  - {url: "https://www.potomacriver.org/?p=14679", title: "ICPRB fishing report Aug 26 2022", accessed: 2026-10-14}
+  - {url: "https://www.potomacriver.org/news/potomac-fishing-report-sept-2-2022/", title: "ICPRB fishing report Sept 2 2022", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/10/07/maryland-fishing-report-october-7-2/", title: "Maryland Fishing Report Oct 7 2026", accessed: 2026-10-14}
+  - {url: "https://en.wikipedia.org/wiki/Virginia_v._Maryland", title: "Virginia v. Maryland", accessed: 2026-10-14}

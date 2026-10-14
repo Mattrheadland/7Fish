@@ -1,0 +1,74 @@
+key: flathead-catfish
+name: Flathead catfish
+kid_friendly: false   # reasoning: big-fish, live-bait, night-and-wood fishery; heavy tackle; not an attainable young-kid target
+temp_bands_f:
+  - {band: inactive, max: 45, tag: reasoning, note: "MN DNR says flatheads go torpid in deep water in winter but gives no temperature; the 45°F edge is reasoning", src: "https://dnr.state.mn.us/fish/catfish/biology.html"}
+  - {band: slow, min: 45, max: 58, tag: reasoning}
+  - {band: active, min: 58, max: 70, tag: reasoning}
+  - {band: peak, min: 70, max: 84, tag: reasoning, note: "Spawning temps documented as about 70°F (NPS Obed), 72-75°F (MN DNR), 75-80°F late May-Aug (Chesapeake Bay Program). Labeling this band 'peak' bite is reasoning from summer catch reports, not a stated bite threshold."}
+  - {band: active, min: 84, tag: reasoning, note: "No documented upper stress figure found. DNR attributes the July 4, 2026 Potomac fish kill (mostly nongame) to low water and extreme heat, so very hot, low water is a caution, not a measured flathead limit."}
+season:
+  upper-potomac: {1: poor, 2: poor, 3: poor, 4: fair, 5: good, 6: prime, 7: prime, 8: good, 9: good, 10: fair, 11: poor, 12: poor, tag: reasoning, note: "Presence documented: DNR says flatheads range Dam 5 to Washington DC, abundance tripled 2016-2021 (Dam 3-Dam 5 survey >16 in: 7.5 to 22.5 fish/hr). Quality documented: 37 in reported below Dam 5 (July 2016); In-Fisherman (2019) reports fish over 30 lb Dickerson-Williamsport. Point of Rocks and Noland's Ferry lie inside the documented range but no spot-specific flathead reports were found. Month ratings are reasoning from documented spawn temps, summer catch reports (June 2022 Angler's Log) and winter torpor."}
+  frederick-rivers: {1: absent, 2: absent, 3: poor, 4: poor, 5: poor, 6: fair, 7: fair, 8: fair, 9: poor, 10: poor, 11: absent, 12: absent, tag: reasoning, note: "Monocacy: DNR says anglers increasingly report flatheads but DNR has not collected any in standardized Monocacy surveys. Presence is angler-reported only; quality not found. Most plausible near the Potomac confluence (reasoning). Winter months marked absent as a practical target, not as a survey result."}
+  upper-bay: {1: poor, 2: poor, 3: poor, 4: fair, 5: fair, 6: good, 7: good, 8: good, 9: good, 10: fair, 11: poor, 12: poor, tag: reasoning, note: "Evidence is from the Conowingo Dam pool / lower Susquehanna (just above the region's Susquehanna Flats edge): DNR Aug-Sep 2026 reports flatheads caught there with blue cats on fresh cut or live bait; In-Fisherman (2019) reports 10-25 lb fish taken on live bait. DNR says flatheads also occur in the Elk and Sassafras. Shore access at Conowingo Fisherman's Park is documented by DNR (2025) in a snakehead article; flathead shore catches there specifically not found."}
+prefs:
+  flow: {rising: unknown, falling: neutral, high_muddy: minus, low_clear: neutral, tag: reasoning, note: "No flow-response source found. High muddy water makes bank fishing unsafe and floats debris over holes (reasoning). DNR notes anglers at Conowingo should call the dam hotline (1-877-457-2525) for flow/gate info."}
+  light: {dawn: plus, day: minus, dusk: plus, night: plus, overcast: plus, tag: documented, src: "https://dnr.state.mn.us/fish/catfish/biology.html", note: "MN DNR: may feed more actively at night and forage shallow riffles; Chesapeake Bay Program: feeds at night, moves shallower at night. Dawn/dusk/overcast plus is reasoning; Fish & Hunt Maryland also says late evening through night best, dusk and dawn can produce."}
+  front: {pre_front_falling: unknown, post_front_high_rising: unknown, steady: neutral, tag: reasoning, note: "No source found on front response; stable summer weather assumed neutral."}
+methods:
+  - id: live-sunfish-three-way
+    when: "Water 65°F+ (June-Sept best), dusk into dark, deep slow pools and wooded eddies, below ledges and dams"
+    rig_line: "7/0 circle, 60 lb mono leader 24 in, 3-way swivel, 12 in 12 lb mono dropper to a 3 oz bank sinker, live 3-5 in sunfish hooked behind the dorsal"
+    rig:
+      hook: "7/0 circle (5/0 for 3-4 in bait, 8/0 for 5 in+); circle or octopus 5/0-8/0 is the documented range"
+      weight: "2-4 oz bank or no-roll sinker on a 10-14 in 12 lb mono dropper so a snagged sinker breaks off before the main rig; heaviest that holds in current"
+      leader: "60 lb abrasion-resistant mono, 18-24 in"
+      hardware: "3-way swivel rated 100 lb+; main line 50-65 lb braid tied direct to the 3-way"
+      bait_or_lure: "Live bluegill/green sunfish 3-5 in (or live small bullhead), hooked through the back just behind the dorsal fin or through both lips; cut sunfish/shad chunk as fallback"
+    switch_to: cut-bait-slip-sinker
+    switch_trigger: "No live bait available, or 45 min with no pickup at a hole; also move holes after 45-60 min dead"
+    gear_note: "Needs a 7-8 ft heavy rod and 50-65 lb braid. Matt's (unconfirmed) Rhino catfish setup with 65 lb braid is the right tool. The Crossfire MH (20 lb braid) is under-gunned for big flatheads in wood and rock; the 10 ft Penn surf rod is not for this river. A Tatula/Tranx baitcaster would fit only on a heavy casting rod, never on the Crossfire spinning blank."
+    tag: reasoning
+    src: "https://fishandhuntmaryland.com/articles/catching-flathead-catfish-maryland-tips-and-techniques"
+    note: "Documented parts: live bluegill/sunfish/shad/bullhead hooked through back or lips; 5/0-8/0 circle or octopus; 50-80 lb braid; 7-9 ft MH-H rod (Fish & Hunt Maryland). MN DNR: usually takes large live baitfish, generally avoids dead and stink baits. 3-way breakaway-dropper rig, sinker and leader specifics are reasoning for a rocky river. Bait collection, possession and transport rules for live sunfish not checked here (regs worker)."
+  - id: cut-bait-slip-sinker
+    when: "No live bait, or mixed channel/flathead water; dusk-night, summer"
+    rig_line: "5/0 circle, 50 lb mono leader 18 in, 80 lb barrel swivel, 8 mm bead, 2-3 oz egg or no-roll slide sinker, fresh cut sunfish/gizzard shad chunk or nightcrawler gob"
+    rig:
+      hook: "5/0 circle (4/0 for a crawler gob)"
+      weight: "2-3 oz egg or no-roll slip sinker; drop to 1-1.5 oz in slack eddies"
+      leader: "50 lb mono, 18 in"
+      hardware: "8 mm bead between sinker and 80 lb barrel swivel; main line 30-65 lb braid"
+      bait_or_lure: "Fresh-cut sunfish or gizzard shad chunk (palm size), or a gob of 3-4 nightcrawlers"
+    switch_to: live-sunfish-three-way
+    switch_trigger: "Only channel cats or small fish taking cut bait for an hour; catch sunfish for live bait and switch"
+    gear_note: "Fits the unconfirmed Rhino setup; workable on the Crossfire MH only in open water away from wood, with the 30 lb fluoro leader upgraded to 50 lb mono."
+    tag: reasoning
+    src: "https://dnr.state.mn.us/fish/catfish/biology.html"
+    note: "MN DNR documents gobs of nightcrawlers as a flathead bait and says flatheads generally avoid dead bait, so this is the weaker method. DNR Sept 2026 reports fresh cut or live bait working for flatheads/blues at Conowingo. A June 2022 upper Potomac Angler's Log flathead (1 lb) came on chicken liver at night. Rig dimensions are reasoning."
+advisory: {url: "https://mde.maryland.gov/programs/marylander/fishandshellfish/Pages/fishconsumptionadvisory.aspx", note: "MDE page links an interactive map and species/county charts. I did not open the charts; flathead-specific Potomac/Susquehanna meal advice not verified. Check before keeping.", tag: documented}
+notes:
+  - "Maryland DNR asks anglers to remove and kill any flathead catfish caught and discourages catch-and-release; moving live flathead catfish to another body of water is illegal in Maryland, fines up to $2,500. (documented: https://dnr.maryland.gov/fisheries/Pages/flat_cat/flathead_main.aspx)"
+  - "Habitat: deep rocky pools (MD DNR); deep sluggish pools with logs and submerged debris (PA Sea Grant); flatheads prey only on live fish (PA Sea Grant). Upper Potomac fish hold in long deep stretches and below dams (In-Fisherman 2019). (documented)"
+  - "Tidal Potomac omitted from season: DNR says only small populations in tidal Potomac tributaries; blue catfish are the tidal-Potomac catfish target. md-coast and middle-bay omitted: no shore-target evidence found."
+  - "FishMaryland Invasive Species Award threshold: 34 in (DNR). Background only."
+  - "Night fishing on the C&O Canal / river banks: after-dark access is a spot-level question, not verified here."
+sources:
+  - {url: "https://dnr.maryland.gov/fisheries/Pages/flat_cat/flathead_main.aspx", title: "MD DNR - Flathead Catfish", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Pages/invasive-fish.aspx", title: "MD DNR - Invasive Fishes Program", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/pages/hotspots/potomac.aspx", title: "MD DNR - Potomac River (Upper Potomac) hotspot", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Pages/hotspots/monocacy.aspx", title: "MD DNR - Monocacy River hotspot", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Documents/Freshwater%20Reports/Freshwater%20Fisheries%20Monthly%20Report%20%e2%80%93%20October%202021.pdf", title: "MD DNR Freshwater Fisheries Monthly Report, Oct 2021", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Documents/2016_Catfish_Summary.pdf", title: "MD DNR 2016 Catfish Summary", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Documents/Freshwater%20Reports/Freshwater_Monthly_Rept_July2026.pdf", title: "MD DNR Freshwater Monthly Report, July 2026", accessed: 2026-10-14}
+  - {url: "https://dnrweb.dnr.state.md.us/fisheries/fishingreport/single-1.asp?ID=8184", title: "MD Angler's Log - upper Potomac flatheads, June 2022", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/09/16/maryland-fishing-report-september-16-2/", title: "Maryland Fishing Report Sept 16, 2026", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/09/02/maryland-fishing-report-september-2/", title: "Maryland Fishing Report Sept 2, 2026", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2025/07/31/chasing-a-slippery-predator-eight-places-to-target-marylands-chesapeake-channa/", title: "MD DNR - eight places to target Chesapeake Channa (Conowingo shore access)", accessed: 2026-10-14}
+  - {url: "https://www.in-fisherman.com/editorial/back-east-state-of-flathead-nation/370074", title: "In-Fisherman - Back East: State of Flathead Nation (2019)", accessed: 2026-10-14}
+  - {url: "https://fishandhuntmaryland.com/articles/catching-flathead-catfish-maryland-tips-and-techniques", title: "Fish & Hunt Maryland - Catching flathead catfish", accessed: 2026-10-14}
+  - {url: "https://dnr.state.mn.us/fish/catfish/biology.html", title: "MN DNR - Catfish biology", accessed: 2026-10-14}
+  - {url: "https://www.chesapeakebay.net/discover/field-guide/entry/flathead-catfish", title: "Chesapeake Bay Program - Flathead catfish", accessed: 2026-10-14}
+  - {url: "https://www.nps.gov/obed/learn/nature/fish.htm", title: "NPS Obed - Fish", accessed: 2026-10-14}
+  - {url: "https://seagrant.psu.edu/wp-content/uploads/2023/09/PA-Sea-Grant-AIS-fact-sheet-Flathead-Catfish-2023.pdf", title: "PA Sea Grant - Flathead catfish fact sheet", accessed: 2026-10-14}
+  - {url: "https://mde.maryland.gov/programs/marylander/fishandshellfish/Pages/fishconsumptionadvisory.aspx", title: "MDE Fish Consumption Advisory", accessed: 2026-10-14}

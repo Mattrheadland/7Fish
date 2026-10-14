@@ -1,0 +1,112 @@
+key: bluefish
+name: Bluefish
+kid_friendly: false   # reasoning: sharp teeth, needs wire or heavy leader and pliers; surf/inlet settings
+temp_bands_f:
+  - {band: inactive, max: 54, tag: documented, src: "https://njscuba.net/wp-content/uploads/biology/pdf/usfws_bluefish_0182.pdf", note: "USFWS Biological Report 82(11.94) (Pottern et al. 1989): lower stress point about 12C (54F), fish swam constantly and showed little interest in food. Inshore fish generally gone below this (reasoning)"}
+  - {band: slow, min: 54, max: 58, tag: reasoning, note: "FishTalk surf writer starts fishing Assateague when water reaches 'the upper 50's' (src https://fishtalkmag.com/blog/bluefish-and-black-drum-surf)"}
+  - {band: active, min: 58, max: 64, tag: reasoning, note: "Between the 54F stress point and the documented 64-72F optimum"}
+  - {band: peak, min: 64, max: 72, tag: documented, src: "https://njscuba.net/wp-content/uploads/biology/pdf/usfws_bluefish_0182.pdf", note: "USFWS: minimum cruising speed maintained across 18-22C (64-72F), matching where most catches occur. FishTalk notes 'most say bluefish prefer 68-degrees'"}
+  - {band: active, min: 72, max: 86, tag: reasoning, note: "Between optimum and 30C upper stress point; DNR reported very good lower Bay bluefishing with Bay water in the low 80s (src https://news.maryland.gov/dnr/2025/08/06/maryland-fishing-report-august-6)"}
+  - {band: stressed, min: 86, tag: documented, src: "https://njscuba.net/wp-content/uploads/biology/pdf/usfws_bluefish_0182.pdf", note: "Upper stress point about 30C (86F); loss of equilibrium at 35C (95F)"}
+season:
+  middle-bay:
+    1: absent
+    2: absent
+    3: absent
+    4: absent
+    5: poor
+    6: fair
+    7: fair
+    8: fair
+    9: fair
+    10: poor
+    11: absent
+    12: absent
+    tag: reasoning
+    note: "DNR: bluefish 'made it to the middle bay region in the past week' (OTW report 2026-05-28). Summer reports are mostly trolling/chumming channel edges (DNR 2026-08-19, 2025-09-24) - boat fishing; smaller fish nearer shore. Matapeake lists bluefish among pier catches (src https://proptalk.com/see-bay-shoreline-fishing-hotspots). Shore quality weak; ratings are reasoning."
+  md-coast:
+    1: absent
+    2: absent
+    3: absent
+    4: fair
+    5: good
+    6: fair
+    7: fair
+    8: fair
+    9: good
+    10: good
+    11: fair
+    12: poor
+    tag: reasoning
+    note: "Spring surf run 'between the last week of April and first week of May' at Assateague (FishTalk, undated). DNR 2026-05-06: surf bluefish on cut bait, 'large but thin'. Fall: more abundant at Assateague beaches as fall begins (DNR 2025-09-24); OC surf on cut mullet 2025-11-19; surf and Route 50 Bridge on 2026-10-07. Summer night cut-bait drifts at inlet/Route 50 (DNR 2025-08-06). Ratings are reasoning."
+prefs:
+  light:  {dawn: plus, day: plus, dusk: plus, night: neutral, overcast: neutral, tag: documented, src: "https://njscuba.net/wp-content/uploads/biology/pdf/usfws_bluefish_0182.pdf", note: "USFWS: feeding peaks in early morning and continues through daylight; slow night cruising. Route 50 Bridge peaks early morning or sunset (FishTalk piers). DNR also reports night cut-bait drifts at the inlet producing"}
+  tide:   {incoming: plus, outgoing: plus, slack: minus, tag: documented, src: "https://fishtalkmag.com/blog/fishing-ocean-city-inlet", note: "Inlet schools move in and out on tidal changes; south jetty tip 'a favorite location to cast lures during a moving tide'. Slack = minus is reasoning"}
+  front:  {pre_front_falling: unknown, post_front_high_rising: unknown, steady: neutral, tag: reasoning, note: "Not found"}
+  wind:   {onshore_light: plus, strong: minus, tag: reasoning, note: "Surf fishability; not a documented bite effect"}
+methods:
+  - id: surf-cut-bait
+    when: "Ocean City/Assateague surf, late April-May and September-November, water roughly 58-72F"
+    rig_line: "Fish-finder or three-way: 4-5 oz pyramid, 60 lb mono shock, #1 barrel swivel, 12-18 in 40-60 lb single-strand wire or 60 lb mono bite leader, 5/0-8/0 circle or 8/0 J, red/orange float near hook, fresh menhaden or mullet chunk"
+    rig:
+      hook: "5/0-8/0 circle (Matt has 4/0-5/0); FishTalk uses 8/0-9/0 with menhaden chunks"
+      weight: "4-5 oz pyramid, more in heavy surf"
+      leader: "12-18 in light wire (FishTalk: 'a short piece of wire leader') or 60 lb mono if wire-shy; 60 lb mono shock to 30 lb braid"
+      hardware: "Three-way swivel or fish-finder slide + bead + barrel swivel; small bright red/orange/yellow float near the hook"
+      bait_or_lure: "Fresh cut menhaden ('fresh is best'), whole squid, or finger mullet (FishTalk); 'large cut mullet or menhaden' (DNR 2026-10-07)"
+    switch_to: metal-casting-jig
+    switch_trigger: "Blues seen breaking within casting range, or birds working bait"
+    gear_note: "Fits Matt's 10 ft Penn Pursuit IV with 60 lb shock and 4-5 oz pyramids. Buy wire leader material and 6/0-8/0 hooks"
+    tag: documented
+    src: "https://fishtalkmag.com/blog/bluefish-and-black-drum-surf"
+  - id: metal-casting-jig
+    when: "Breaking fish, inlet or jetty on a moving tide, dawn"
+    rig_line: "1-2 oz Hopkins/diamond jig with single J or inline hook, 12 in 40 lb fluoro bite tippet or short wire, snap-free loop knot"
+    rig:
+      hook: "Replace treble with single siwash/J (FishTalk)"
+      weight: "Jig only, 1 oz on the Crossfire, 2-3 oz on the surf rod"
+      leader: "40 lb fluorocarbon (Matt's standard for blues) or 6-12 in light wire"
+      hardware: "Small ball-bearing swivel optional"
+      bait_or_lure: "Silver diamond jig or Hopkins spoon, 1-3 oz; surface popper as alternative"
+    switch_to: surf-cut-bait
+    switch_trigger: "No visible surface activity for 20 min"
+    gear_note: "1 oz silver casting jigs already in Matt's inshore loadout; use the 40 lb leader for blues. Soft plastics and bucktails get shredded (DNR 2026-05-28; FishTalk)"
+    tag: documented
+    src: "https://fishtalkmag.com/blog/bluefish-and-black-drum-surf"
+  - id: inlet-jig-bucktail
+    when: "OC inlet and Route 50 Bridge, early morning or sunset, moving tide"
+    rig_line: "1/2-1 oz jighead with 4 in paddletail or Gotcha plug, 18 in 40 lb fluoro"
+    rig:
+      hook: "Jighead's own 2/0-4/0"
+      weight: "1/2-1 oz to match current (FishTalk piers warns current is strong)"
+      leader: "40 lb fluorocarbon, 18-24 in"
+      hardware: "None"
+      bait_or_lure: "Paddle-tail or straight-tail swimbait on a jighead, or a Gotcha plug (FishTalk piers); expect bite-offs"
+    switch_to: metal-casting-jig
+    switch_trigger: "More than two plastics bitten off in a half hour"
+    gear_note: "Fits Matt's 7 ft Crossfire; bring a pier/drop net at the bridge (FishTalk)"
+    tag: documented
+    src: "https://www.fishtalkmag.com/blog/7-top-delmarva-piers-and-bridges-beginner-anglers"
+advisory:
+  url: "https://mde.maryland.gov/programs/marylander/fishandshellfish/Pages/fishconsumptionadvisory.aspx"
+  note: "The MDE landing page does not mention bluefish; check the species chart. Saltwater origin is not proof of clean fish"
+  tag: documented
+notes:
+  - "Temperature is 'probably the single most important environmental parameter' for bluefish distribution and feeding; photoperiod triggers long-range migration (USFWS 1989). [documented]"
+  - "Spring 'chopper' blues average 8-10 lb in the Assateague surf; small snappers stay all summer (FishTalk, undated). [documented]"
+  - "Omitted regions: tidal-potomac (DNR 2025-09-24 notes bluefish below Route 301 Bridge to the mouth, a boat bite far from Frederick), upper-bay (not found in any report opened), freshwater regions (n/a). [reasoning]"
+  - "Chesapeake Bay Program bluefish page was not retrievable (permission timeout). [not found]"
+sources:
+  - {url: "https://njscuba.net/wp-content/uploads/biology/pdf/usfws_bluefish_0182.pdf", title: "USFWS Biological Report 82(11.94) Species Profile: Bluefish (Pottern, Huish & Kerby 1989), mirror copy", accessed: 2026-10-14}
+  - {url: "https://fishtalkmag.com/blog/bluefish-and-black-drum-surf", title: "FishTalk: Bluefish and black drum in the surf (undated)", accessed: 2026-10-14}
+  - {url: "https://fishtalkmag.com/blog/fishing-ocean-city-inlet", title: "FishTalk: Fishing the Ocean City inlet (undated, c. 2018)", accessed: 2026-10-14}
+  - {url: "https://www.fishtalkmag.com/blog/7-top-delmarva-piers-and-bridges-beginner-anglers", title: "FishTalk: 7 top Delmarva piers and bridges (undated)", accessed: 2026-10-14}
+  - {url: "https://proptalk.com/see-bay-shoreline-fishing-hotspots", title: "PropTalk: Bay shoreline fishing hotspots (2025-03-10)", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/10/07/maryland-fishing-report-october-7-2/", title: "MD DNR Fishing Report 2026-10-07", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/08/19/maryland-fishing-report-august-19-2/", title: "MD DNR Fishing Report 2026-08-19", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/05/06/maryland-fishing-report-may-6/", title: "MD DNR Fishing Report 2026-05-06", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2025/11/19/maryland-fishing-report-november-19/", title: "MD DNR Fishing Report 2025-11-19", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2025/09/24/maryland-fishing-report-september-24/", title: "MD DNR Fishing Report 2025-09-24", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2025/08/06/maryland-fishing-report-august-6", title: "MD DNR Fishing Report 2025-08-06", accessed: 2026-10-14}
+  - {url: "https://onthewater.com/fishing-reports/2026/05/maryland-and-chesapeake-bay-fishing-report-may-28-2026", title: "On The Water MD report 2026-05-28", accessed: 2026-10-14}
+  - {url: "https://mde.maryland.gov/programs/marylander/fishandshellfish/Pages/fishconsumptionadvisory.aspx", title: "MDE Fish Consumption Advisory", accessed: 2026-10-14}

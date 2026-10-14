@@ -1,0 +1,121 @@
+key: blue-catfish
+name: Blue catfish
+kid_friendly: false   # reasoning: abundant and bait-eating, but the tidal Potomac/Bay-river banks that hold them need 3-6 oz sinkers in current, heavy rods, and fish routinely 15-20 lb+ (DNR 2024-04-17). An adult can hand a hooked small blue to a child; not a simple kid-run target
+temp_bands_f:
+  - {band: inactive, max: 40, tag: reasoning, note: "No documented feeding cutoff found. DNR describes blues as good winter targets in deep channels (OTW 2024-12-19; DNR winter preview 2023-12-20), so the inactive band is set low"}
+  - {band: slow, min: 40, max: 50, tag: reasoning, note: "Winter: fish 'seek out deeper waters in the channels of the tidal rivers' middle to upper sections' (DNR 2023-12-20) - harder to reach from shore"}
+  - {band: active, min: 50, max: 70, tag: reasoning, note: "DNR 2024-03-27: tidal Potomac water 'mid-50s' and blues 'becoming more active along channel edges'. DNR 2026-10-07: cooling water making them more active. Range bounds are reasoning"}
+  - {band: peak, min: 70, max: 84, tag: documented, src: "https://potomacriver.org/wp-content/uploads/2024/10/Walsh_ICPRB-2024_Walsh.pdf", note: "Walsh (ICPRB 2024): spawning when 'Water temps reach 70-84F', ~80F ideal; adults 'feed heavily prior to and after spawning'. Pre/post-spawn feeding window, not a measured bite optimum; spawning fish themselves move to shallow small tributaries"}
+  - {band: stressed, min: 84, tag: reasoning, note: "No documented upper stress figure found; summer fish move downriver (DNR bcat page) and low-oxygen zones in the Potomac (Indian Head to Colonial Beach, DNR 2026-08-19) are reasoning-based negatives"}
+season:
+  tidal-potomac:
+    1: good
+    2: good
+    3: good
+    4: prime
+    5: good
+    6: fair
+    7: fair
+    8: fair
+    9: good
+    10: good
+    11: good
+    12: good
+    tag: reasoning
+    note: "Large concentrations Wilson Bridge south to the Route 301 Bridge; 'Fishing from shore... with large circle hooks and cut bait is the ticket' (DNR 2023-03-29). Below Wilson Bridge good in winter (DNR blue catfish page). Pre-spawn aggressive feeding in May (DNR 2026-05-06). Large populations down to the Wilson Bridge, more active as water cools (DNR 2026-10-07). Fletcher's Cove (DC water, separate license) lists blues in spring (PropTalk 2025-03-10). Month ratings are reasoning."
+  upper-bay:
+    1: fair
+    2: fair
+    3: good
+    4: good
+    5: good
+    6: good
+    7: good
+    8: good
+    9: good
+    10: good
+    11: good
+    12: fair
+    tag: reasoning
+    note: "Lower Susquehanna (Conowingo pool to mouth, Havre de Grace) and Chester River (Crumpton) repeatedly reported good year-round; 'very good' in upper Bay tidal rivers 2026-10-07; 'in numbers... north of the Patapsco' May 2026. DNR believes 2018-19 wet years spread them through the upper Bay. Month ratings are reasoning."
+  middle-bay:
+    1: fair
+    2: fair
+    3: good
+    4: good
+    5: fair
+    6: fair
+    7: fair
+    8: fair
+    9: fair
+    10: fair
+    11: fair
+    12: fair
+    tag: reasoning
+    note: "Choptank (Dover Bridge to Denton) and Tuckahoe Creek reported repeatedly (DNR 2026-03-18, 2026-08-19, OTW 2025-09-11). Matapeake pier: blue and channel cats 'may also be in the mix' when salinity is low (FishTalk). Kent Narrows Bridge catch pictured (DNR 2024-04-08). Main-Bay shore spots are salinity-dependent; ratings are reasoning."
+prefs:
+  flow:   {rising: unknown, falling: unknown, high_muddy: unknown, low_clear: unknown, tag: reasoning, note: "Low salinity pushes big fish down tidal rivers (DNR 2024-04-17); decreased Conowingo flow improved fishing (DNR 2025-09-24). Not enough to rate a general flow direction"}
+  light:  {dawn: plus, day: neutral, dusk: plus, night: plus, overcast: neutral, tag: reasoning, note: "No blue-specific light preference found; catfish feeding peaks around sunset/sunrise per SRAC for channel catfish. Potomac charter/boat reports show day bites in deep holes"}
+  tide:   {incoming: plus, outgoing: plus, slack: neutral, tag: reasoning, note: "Moving water carries scent; not documented for blues in sources opened"}
+  front:  {pre_front_falling: unknown, post_front_high_rising: unknown, steady: neutral, tag: reasoning, note: "Not found"}
+methods:
+  - id: cut-bait-slide
+    when: "Year-round from tidal-river banks with deep channel or outside bend within casting range; best on moving water"
+    rig_line: "7/0-8/0 circle, 18-24 in 50 lb mono leader, #3/0 barrel swivel, 8 mm bead, 3-6 oz no-roll or pyramid on fish-finder slide, fresh menhaden or gizzard shad chunk"
+    rig:
+      hook: "7/0-10/0 inline circle (Potomac guide uses 8/0-10/0; DNR suggests 8/0 circle for the Choptank)"
+      weight: "3-6 oz no-roll or pyramid on a slide, enough to hold in tidal current from shore (Modoski uses 3-6 oz from a boat; DNR: bank or pyramid sinkers from shore)"
+      leader: "50 lb mono or fluoro, 18-24 in (DNR: shorten in swift current)"
+      hardware: "Fish-finder slide or sinker slider, 8 mm bead, heavy barrel swivel; optional 2 in slit cork float and rattle ahead of the hook (DNR)"
+      bait_or_lure: "Fresh menhaden, gizzard shad, white perch, eel or market fish chunk; frozen bunker in cold water (Modoski)"
+    switch_to: chicken-liver-light
+    switch_trigger: "Only small fish or crabs stripping cut bait in 30 min, or fishing a slower tributary bank"
+    gear_note: "Best on a heavy 8-10 ft catfish/surf rod with 50-65 lb braid. Matt's Rhino catfish setup with 65 lb braid (unconfirmed) or his 10 ft Penn Pursuit IV fit; the Crossfire MH is undergunned for big blues. His 4/0-5/0 circles are small for big blues - buy 7/0-8/0"
+    tag: documented
+    src: "https://onthewater.com/fishing-the-patomac-river-for-blue-cats"
+  - id: chicken-liver-light
+    when: "Smaller tidal creeks and slower banks, eating-size fish (under ~10 lb), spring and fall"
+    rig_line: "5/0 circle, 18 in 30 lb mono, barrel swivel, bead, 1-2 oz egg or bank sinker slide, chicken liver or cut shad"
+    rig:
+      hook: "4/0-5/0 circle (DNR minimum guidance: about 1/0, avoid small hooks)"
+      weight: "1-2 oz egg or bank sinker on a slide in slack water; DNR: '1 to half-ounce' sinkers usually fine, pyramid in strong current"
+      leader: "30 lb mono, 18-24 in; weight about 2 ft above bait (DNR quoting Wilson)"
+      hardware: "Barrel swivel, bead"
+      bait_or_lure: "Chicken liver, wild shrimp, nightcrawlers, cut sunfish or white perch (DNR 2024-04-08)"
+    switch_to: cut-bait-slide
+    switch_trigger: "Current lifts the sinker, or only dinks after 30 min and a deep channel is in range"
+    gear_note: "Fits Matt's 7 ft Crossfire or 6'6\" Ugly Stiks (unconfirmed) with his 4/0-5/0 circles. Bait must stay fresh; H Mart is Matt's cut-bait source"
+    tag: documented
+    src: "https://news.maryland.gov/dnr/2024/04/08/join-the-hunt-how-to-catch-a-blue-catfish-in-maryland/"
+advisory:
+  url: "https://mde.maryland.gov/programs/marylander/fishandshellfish/Pages/fishconsumptionadvisory.aspx"
+  note: "MDE links a Blue Catfish Fact Sheet (2022). DNR blue catfish page: remove red meat and silver skin; one to two catfish meals per month generally considered safe except Baltimore County and City; fish under 10 lb tend to be edible once fat and red meat are removed. Verify the current MDE chart for the specific water before keeping"
+  tag: documented
+notes:
+  - "Invasive. DNR: no catch limit, harvest encouraged; illegal to transport live blue catfish to another water (DNR upper Potomac page). Regs file owns the legal detail. [documented]"
+  - "Adults survive salinity up to 17 psu for up to 3 days (Walsh, ICPRB 2024). [documented]"
+  - "A blue was landed below Great Falls in 2021 (DNR 2024-04-08 caption). That is downstream of the upper-potomac region (Harpers Ferry-Great Falls); no evidence found of blues above Great Falls, so upper-potomac and frederick-rivers are omitted. [documented catch; omission reasoning]"
+  - "Shore access to the tidal Potomac channel is limited; most Potomac reports are boat-based (Modoski fishes 'almost exclusively' from a boat). Spot files must verify a bank that reaches deep water. [reasoning]"
+  - "Bait theft by blue crabs in saltier water; fish farther up tidal rivers to avoid them (DNR 2024-07-24). [documented]"
+sources:
+  - {url: "https://potomacriver.org/wp-content/uploads/2024/10/Walsh_ICPRB-2024_Walsh.pdf", title: "Walsh, ICPRB 2024 blue catfish presentation", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Pages/blue-catfish/bcat_fishing.aspx", title: "MD DNR Blue Catfish Fishing", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2024/04/08/join-the-hunt-how-to-catch-a-blue-catfish-in-maryland/", title: "MD DNR: Join the hunt - how to catch a blue catfish (2024-04-08)", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2024/04/04/blue-catfish-are-taking-over-in-maryland-waters-as-state-officials-and-fishing-community-work-to-contain-the-spread/", title: "MD DNR: Blue catfish are taking over (2024-04-04)", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx", title: "MD DNR Upper Potomac hotspot page", accessed: 2026-10-14}
+  - {url: "https://onthewater.com/fishing-the-patomac-river-for-blue-cats", title: "On The Water: Fishing the Potomac River for Blue Cats (Modoski, 2019-02-25)", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/10/07/maryland-fishing-report-october-7-2/", title: "MD DNR Fishing Report 2026-10-07", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/08/19/maryland-fishing-report-august-19-2/", title: "MD DNR Fishing Report 2026-08-19", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/05/06/maryland-fishing-report-may-6/", title: "MD DNR Fishing Report 2026-05-06", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/03/18/maryland-fishing-report-march-18-2/", title: "MD DNR Fishing Report 2026-03-18", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2025/09/24/maryland-fishing-report-september-24/", title: "MD DNR Fishing Report 2025-09-24", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2024/07/24/maryland-fishing-report-july-24-2/", title: "MD DNR Fishing Report 2024-07-24", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2024/04/17/maryland-fishing-report-april-17-2/", title: "MD DNR Fishing Report 2024-04-17", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2024/03/27/maryland-fishing-report-march-27-2", title: "MD DNR Fishing Report 2024-03-27", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2023/12/20/maryland-fishing-report-winter-preview-2023-24/", title: "MD DNR Winter Preview 2023-24", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2023/03/29/maryland-fishing-report-march-29/", title: "MD DNR Fishing Report 2023-03-29", accessed: 2026-10-14}
+  - {url: "https://onthewater.com/fishing-reports/2024/12/maryland-chesapeake-bay-fishing-report-december-19-2024", title: "On The Water MD report 2024-12-19", accessed: 2026-10-14}
+  - {url: "https://onthewater.com/fishing-reports/2025/09/maryland-and-chesapeake-bay-fishing-report-september-11-2025", title: "On The Water MD report 2025-09-11", accessed: 2026-10-14}
+  - {url: "https://www.fishtalkmag.com/blog/7-top-delmarva-piers-and-bridges-beginner-anglers", title: "FishTalk: 7 top Delmarva piers and bridges (undated)", accessed: 2026-10-14}
+  - {url: "https://proptalk.com/see-bay-shoreline-fishing-hotspots", title: "PropTalk: Bay shoreline fishing hotspots (2025-03-10)", accessed: 2026-10-14}
+  - {url: "https://mde.maryland.gov/programs/marylander/fishandshellfish/Pages/fishconsumptionadvisory.aspx", title: "MDE Fish Consumption Advisory", accessed: 2026-10-14}

@@ -1,0 +1,143 @@
+id: smallwood
+name: Smallwood State Park
+status: active
+lat: 38.5573
+lon: -77.1867
+approx: true
+region: tidal-potomac
+water_type: tidal-river
+bank_faces_deg: null
+bank_faces_note: {text: "Piers and shoreline sit along Mattawoman Creek at Sweden Point; which pier Matt uses and its facing are unknown. Left null.", tag: reasoning}
+luca_ok: false
+luca_note: {text: "State park with piers is promising for a kid, but Matt found dock space limited and hard to get, so not cleared. Reconsider with Matt.", tag: reasoning}
+stations:
+  usgs:
+    id: "01655480"
+    name: "Potomac River at Indian Head, MD"
+    lat: 38.60095
+    lon: -77.18192
+    distance_mi: 3.0
+    has: [tidal_water_level]
+    has_note: "Only current parameter is estuary water-surface elevation (NAVD88). No discharge, no water temperature. Gage height discontinued 1990."
+    tag: documented
+    src: "https://waterdata.usgs.gov/nwis/uv?site_no=01655480"
+  usgs_flow:
+    id: "01658000"
+    name: "Mattawoman Creek near Pomonkey, MD"
+    lat: 38.59627
+    lon: -77.05603
+    distance_mi: 7.6
+    has: [discharge, gage_height]
+    tag: documented
+    src: "https://waterdata.usgs.gov/monitoring-location/USGS-01658000/all-graphs"
+    coords_src: "https://snoflo.org/report/flow/md/mattawoman-creek-near-pomonkey/"
+    note: "Nontidal headwater gauge 12.6 mi above the creek mouth; useful as a rain/runoff signal, not as conditions at the park."
+  nwps:
+    lid: "IHDM2"
+    name: "Potomac River at Indian Head (IN MLLW)"
+    distance_mi: 3.0
+    stages_ft: null
+    stages_note: "NWPS lists no flood categories (all -9999). Observed tide height only, no forecast series seen."
+    tag: documented
+    src: "https://api.water.noaa.gov/nwps/v1/gauges/IHDM2"
+  coops:
+    id: "8579381"
+    name: "Indian Head, Md."
+    lat: 38.6017
+    lon: -77.185
+    distance_mi: 3.1
+    type: subordinate
+    reference_station: "8594900"
+    water_temp: false
+    water_temp_note: "Prediction-only subordinate station; no sensors. Nearest CO-OPS water temperature is 8594900 Washington (sensor E1 Water Temperature listed), 23.6 mi upstream."
+    tag: documented
+    src: "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/8579381.json?type=tidepredictions"
+  coops_water_temp:
+    id: "8594900"
+    name: "Washington, DC (Potomac River)"
+    distance_mi: 23.6
+    has: [water_level, water_temp, air_temp, wind, pressure]
+    tag: documented
+    src: "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/8594900/sensors.json"
+    note: "Within 25 mi but upstream in a different reach; treat its water temperature as a rough proxy, not a reading at Smallwood."
+  cbibs:
+    id: null
+    note: "Upper Potomac CBIBS buoy (UP, NDBC 44061) at 38.788, -77.036 is 17.9 mi away but ERDDAP lists it as 'Historic CBIBS', with data ending 2017-08-14 (gov-ndbc-44061) / 2016-12-05 (cbibs_historic_up). It is not on the 2026 CBIBS list. Nearest active buoy, Potomac (38.0334, -76.3375), is 58.6 mi away. None usable."
+    tag: documented
+    src: "https://erddap.sensors.ioos.us/erddap/info/gov-ndbc-44061/index.html"
+flow_ceiling: {value: null, unit: cfs, source: ask_matt}
+wind_gust_limit_mph: 30
+wind_gust_note: {text: "Default. Piers over open tidal creek water; Matt may want a lower limit.", tag: reasoning}
+species:
+  largemouth-bass:
+    presence: verified
+    quality: not_verified
+    quality_note: "Only historical (2018) count evidence, no sizes."
+    evidence:
+      - {text: "MD DNR park page lists largemouth bass among species for pier and shoreline fishing.", date: "undated page", tag: documented, src: "https://dnr.maryland.gov/publiclands/Pages/southern/smallwood.aspx"}
+      - {text: "Angler report: waded the gravel beach at Smallwood and caught about 14-17 largemouth; no sizes. Historical.", date: "catch ~2018-05-02; published 2018-05-03", tag: documented, src: "https://dnrweb.dnr.state.md.us/fisheries/fishingreport/single-1.asp?ID=6817"}
+  white-perch:
+    presence: verified
+    quality: not_verified
+    evidence:
+      - {text: "MD DNR park page lists white and yellow perch.", date: "undated page", tag: documented, src: "https://dnr.maryland.gov/publiclands/Pages/southern/smallwood.aspx"}
+  blue-catfish:
+    presence: verified
+    quality: not_verified
+    evidence:
+      - {text: "Park page lists 'catfish' (species not stated). Fish and Hunt Maryland lists blue catfish for Mattawoman Creek.", date: "undated pages", tag: documented, src: "https://fishandhuntmaryland.com/articles/mattawoman-creek"}
+      - {text: "Angler report: five blue catfish, upper Mattawoman near Rt 225, launched from Mattingly Park (likely boat; not at Smallwood). Historical.", date: "catch 2022-06-01; published 2022-06-06", tag: documented, src: "https://dnrweb.dnr.state.md.us/fisheries/fishingreport/single-1.asp?ID=8181"}
+      - {text: "MD DNR weekly: 'plenty of blue catfish', large populations in the lower Potomac to the Wilson Bridge. River-wide.", date: "published 2026-10-07", tag: documented, src: "https://news.maryland.gov/dnr/2026/10/07/maryland-fishing-report-october-7-2/"}
+  northern-snakehead:
+    presence: verified
+    quality: not_verified
+    evidence:
+      - {text: "Fish and Hunt Maryland lists northern snakehead for Mattawoman Creek.", date: "undated page", tag: documented, src: "https://fishandhuntmaryland.com/articles/mattawoman-creek"}
+      - {text: "ICPRB: Mattawoman lily and spatterdock stands producing largemouth and snakeheads. Historical.", date: "published 2022-08-26", tag: documented, src: "https://www.potomacriver.org/?p=14679"}
+access:
+  status: not_verified
+  parking: {text: "Smallwood State Park, 2750 Sweden Point Road, Marbury MD 20658. Day use $3/vehicle weekdays, $3/person weekends and holidays (+$2 non-residents).", tag: documented, src: "https://dnr.maryland.gov/publiclands/Pages/southern/smallwood.aspx"}
+  walk: {text: "not found. Park map labels a Fishing Pier near the entrance area, but the walking distance from parking is not given.", tag: documented, src: "https://dnr.maryland.gov/publiclands/Documents/Smallwood_map.pdf"}
+  stand: {text: "DNR: 'several stationary piers and a shoreline from which to fish'; an accessible fishing pier is listed. Matt: docks are limited and space was hard to find.", tag: documented, src: "https://dnr.maryland.gov/publiclands/Pages/southern/smallwood.aspx"}
+  casting: {text: "not found", tag: reasoning}
+  landing: {text: "not found. Fixed piers likely need a long-handled net to land a big catfish or snakehead (reasoning).", tag: reasoning}
+  hours: {text: "'5 a.m. to sunset, April to October'; '7 a.m. to sunset, November to March'.", open: "05:00", close: "sunset", tag: documented, src: "https://dnr.maryland.gov/publiclands/Pages/southern/smallwood.aspx"}
+  hours_note: "From 2026-11-01 opening moves to 07:00 (documented, same page)."
+  after_dark: not_verified
+  after_dark_note: {text: "DNR: 'Certain activities are permitted outside regular park hours (e.g., fishing, boat launch)' and asks visitors to check with the park first. Allowed in principle; conditions unconfirmed.", tag: documented, src: "https://dnr.maryland.gov/publiclands/Pages/southern/smallwood.aspx"}
+jurisdiction:
+  water: tidal
+  state: MD
+  license: "Maryland Chesapeake Bay & Coastal Sport License (park page says required 16+). Matt states he holds MD tidal; not verified here."
+  flags:
+    - "Tidal Mattawoman Creek, Maryland. Not on the PRFC mainstem, so no PRFC question at the park (reasoning)."
+    - "State park day-use fee applies."
+    - "Snakehead must not be released alive in MD; blue catfish are invasive (DNR asks anglers to remove them)."
+  tag: documented
+  src: "https://dnr.maryland.gov/publiclands/Pages/southern/smallwood.aspx"
+crowding: "Matt (firsthand): docks limited and hard to find space. Bass tournaments launch from the marina (DNR page)."
+hazards:
+  - "Marina and boat-ramp traffic; ramps closed for triathlons 2027-04-24 and 2027-06-13 (documented)."
+  - "Tidal water level swings; no flood stages published for IHDM2 (documented)."
+  - "Pier edges; wading the gravel beach is soft-bottom tidal water (reasoning)."
+matt_notes:
+  - {text: "The docks are limited and it was hard to find fishing space last time.", src: Matt}
+sources:
+  - {url: "https://dnr.maryland.gov/publiclands/Pages/southern/smallwood.aspx", title: "MD DNR Smallwood State Park", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/publiclands/pages/southern/smallwood/marina.aspx", title: "Smallwood State Park - Sweden Point Marina", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/publiclands/Pages/southern/Smallwood/Accessibility.aspx", title: "Smallwood accessibility", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/publiclands/Documents/Smallwood_map.pdf", title: "Smallwood park map", accessed: 2026-10-14}
+  - {url: "https://waterdata.usgs.gov/nwis/uv?site_no=01655480", title: "USGS 01655480 Potomac River at Indian Head", accessed: 2026-10-14}
+  - {url: "https://waterdata.usgs.gov/monitoring-location/USGS-01658000/all-graphs", title: "USGS 01658000 Mattawoman Creek near Pomonkey", accessed: 2026-10-14}
+  - {url: "https://snoflo.org/report/flow/md/mattawoman-creek-near-pomonkey/", title: "Snoflo Mattawoman Creek near Pomonkey", accessed: 2026-10-14}
+  - {url: "https://api.water.noaa.gov/nwps/v1/gauges/IHDM2", title: "NWPS gauge IHDM2", accessed: 2026-10-14}
+  - {url: "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/8579381.json?type=tidepredictions", title: "CO-OPS 8579381 Indian Head", accessed: 2026-10-14}
+  - {url: "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/8594900/sensors.json", title: "CO-OPS 8594900 sensors", accessed: 2026-10-14}
+  - {url: "https://erddap.sensors.ioos.us/erddap/info/gov-ndbc-44061/index.html", title: "ERDDAP Upper Potomac historic CBIBS 44061", accessed: 2026-10-14}
+  - {url: "https://erddap.sensors.ioos.us/erddap/info/cbibs_historic_up/index.html", title: "ERDDAP Upper Potomac historic CBIBS", accessed: 2026-10-14}
+  - {url: "https://buoybay.noaa.gov/node/158", title: "CBIBS 2026 buoy snapshot", accessed: 2026-10-14}
+  - {url: "https://fishandhuntmaryland.com/articles/mattawoman-creek", title: "Fish and Hunt Maryland: Mattawoman Creek", accessed: 2026-10-14}
+  - {url: "https://dnrweb.dnr.state.md.us/fisheries/fishingreport/single-1.asp?ID=6817", title: "MD DNR angler report, Smallwood 2018", accessed: 2026-10-14}
+  - {url: "https://dnrweb.dnr.state.md.us/fisheries/fishingreport/single-1.asp?ID=8181", title: "MD DNR angler report, Mattawoman 2022", accessed: 2026-10-14}
+  - {url: "https://www.potomacriver.org/?p=14679", title: "ICPRB fishing report Aug 26 2022", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/10/07/maryland-fishing-report-october-7-2/", title: "Maryland Fishing Report Oct 7 2026", accessed: 2026-10-14}

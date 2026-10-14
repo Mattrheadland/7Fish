@@ -1,0 +1,10 @@
+id: marshall-hall
+name: Marshall Hall
+status: ruled-out
+lat: 38.6877
+lon: -77.1055
+region: tidal-potomac
+water_type: tidal-river
+matt_notes:
+  - {text: "The bank floods out when the tide comes in.", src: Matt}
+reason: {text: "Ruled out by Matt from firsthand experience: the bank floods on the incoming tide, leaving nowhere to stand.", src: Matt}

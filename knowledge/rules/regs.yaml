@@ -1,0 +1,236 @@
+checked_on: 2026-10-14
+notes:
+  - "These pages could not be opened this session (permission timeouts): dnr.maryland.gov/fisheries regulations pages (striped-bass.aspx, sportfish.aspx), the eRegulations Maryland guide, the PRFC site, and the NOAA CO-OPS station home pages. The rules below come from the DNR 2026 striped bass maps page, DNR news releases, DNR public notices, and COMAR text on regs.maryland.gov."
+  - "COMAR pages on regs.maryland.gov did not display an effective date. Where a COMAR section conflicts with a 2026 DNR release, the release is treated as current and the conflict is flagged."
+  - "Tidal Potomac mainstem is under the Potomac River Fisheries Commission (PRFC), not MD DNR. No PRFC page was opened, so every tidal-Potomac-mainstem entry below carries a warning."
+species:
+  striped-bass:
+    - area: "Chesapeake Bay and tidal tributaries (MD), excluding Susquehanna Flats, Lower Susquehanna River and Northeast River"
+      regions: [upper-bay, middle-bay]
+      harvest:
+        - {start: "05-01", end: "05-15", size: "19-24 in", creel: "1 per person per day", note: "Only in listed areas: Bay from Brewerton Channel to the VA line, with exclusions. Spawning rivers and areas off limits. No stinger hooks; barbless hooks and max 6 lines when trolling."}
+        - {start: "05-16", end: "05-31", size: "19-24 in", creel: "1 per person per day", note: "Only downstream of the Hart-Miller Island Dike/Tolchester line to the MD/VA line, with exceptions. Spawning areas off limits."}
+        - {start: "06-01", end: "07-31", size: "19-24 in", creel: "1 per person per day", note: "All areas. Circle-hook rules apply."}
+        - {start: "09-01", end: "12-05", size: "19-24 in", creel: "1 per person per day", note: "All areas. Circle-hook rules apply."}
+      catch_and_release_only:
+        - {start: "01-01", end: "02-28", note: "All areas. No eels as bait."}
+        - {start: "03-01", end: "04-30", note: "Only Bay mainstem downstream of the Abbey Point-Worton Point line to the VA line (incl. Tangier and Pocomoke Sounds). Spawning rivers and areas closed."}
+        - {start: "12-06", end: "12-31", note: "All areas. No eels as bait."}
+      targeting_closed:
+        - {start: "08-01", end: "08-31", note: "'All areas closed to striped bass fishing ... Attempting to catch striped bass is illegal.' COMAR 08.02.15.12I(5): may not target (catch, attempt to catch, harm, harass or pursue) striped bass in the Bay or its tidal tributaries. Catch-and-release is not allowed either."}
+        - {start: "03-01", end: "05-31", note: "Spawning rivers and areas only: Choptank, Chester, Manokin, Nanticoke, Patuxent, Transquaking, Wicomico rivers, plus the Upper Bay spawning area incl. Susquehanna Flats (COMAR 08.02.15.12I(2); DNR 2026-03-31 release). Exact boundaries are on the DNR maps."}
+      gear: "Circle-hook rules apply year-round per DNR. No stinger (trailing) hooks Mar-Apr. Barbless hooks and max 6 lines when trolling Mar-Apr. No eels as bait during catch-and-release periods."
+      src: "https://dnr.maryland.gov/fisheries/Pages/sb_reg_maps.aspx"
+      src_also: ["https://news.maryland.gov/dnr/2026/03/12/maryland-set-to-adopt-changes-to-chesapeake-bay-recreational-striped-bass-season/", "https://news.maryland.gov/dnr/?p=47043", "https://regs.maryland.gov/us/md/exec/comar/08.02.15.12", "https://regs.maryland.gov/us/md/exec/comar/08.02.15.09"]
+      tag: documented
+    - area: "Susquehanna Flats, Lower Susquehanna River, Northeast River (MD)"
+      regions: [upper-bay]
+      harvest:
+        - {start: "06-01", end: "07-31", size: "19-24 in", creel: "1 per person per day", note: "Circle hooks"}
+        - {start: "09-01", end: "12-05", size: "19-24 in", creel: "1 per person per day", note: "Circle hooks"}
+      catch_and_release_only:
+        - {start: "01-01", end: "03-31", note: "No eels as bait Jan-Feb. March: no stinger hooks; barbless hooks and max 6 lines when trolling."}
+        - {start: "12-06", end: "12-31", note: "No eels as bait"}
+      targeting_closed:
+        - {start: "04-01", end: "05-31", note: "Closed to striped bass fishing upstream of the Abbey Point-Worton Point line"}
+        - {start: "08-01", end: "08-31", note: "Closed, no targeting"}
+      src: "https://dnr.maryland.gov/fisheries/Pages/sb_reg_maps.aspx"
+      tag: documented
+    - area: "Maryland tributaries of the tidal Potomac (e.g., Mattawoman) — MD DNR waters"
+      regions: [tidal-potomac]
+      harvest:
+        - {start: "05-01", end: "07-31", size: "19-24 in", creel: "1 per person per day", note: "DNR maps page says Potomac tributaries downstream of the Nice Memorial Bridge (US 301) are excluded from the general May closures and listed as open. Tributaries upstream of US 301 are assumed to follow the general Bay table (Jun 1 opening); not verified."}
+        - {start: "09-01", end: "12-05", size: "19-24 in", creel: "1 per person per day", note: ""}
+      targeting_closed:
+        - {start: "08-01", end: "08-31", note: "Bay and tidal tributaries closed to targeting"}
+      src: "https://dnr.maryland.gov/fisheries/Pages/sb_reg_maps.aspx"
+      tag: reasoning
+      warning: "May 1 harvest start for tributaries upstream of US 301 is not verified. Read the DNR maps for the exact tributary boundaries."
+    - area: "Potomac River tidal mainstem (PRFC jurisdiction)"
+      regions: [tidal-potomac]
+      harvest: []
+      targeting_closed: []
+      src: "https://dnr.maryland.gov/fisheries/Pages/sb_reg_maps.aspx"
+      tag: reasoning
+      warning: "PRFC rules not found. The PRFC site (prfc.us / potomacriver.org) was not opened. DNR says Potomac mainstem rules come from PRFC. Treat as unknown; do not recommend harvest on the mainstem until PRFC 2026 rules are confirmed. An empty harvest list here means unknown, not catch-and-release."
+    - area: "Atlantic Ocean, coastal bays and tributaries (MD), incl. Ocean City Inlet"
+      regions: [md-coast]
+      harvest:
+        - {start: "01-01", end: "12-31", size: "28-31 in slot", creel: "1 per person per day", note: "DNR 2026 releases: 'The ocean recreational fishery is open year-round with a 28-31 inch slot limit and a coastwide daily bag limit of one fish.'"}
+      targeting_closed: []
+      src: "https://news.maryland.gov/dnr/2026/03/12/maryland-set-to-adopt-changes-to-chesapeake-bay-recreational-striped-bass-season/"
+      src_also: ["https://news.maryland.gov/dnr/?p=47043", "https://regs.maryland.gov/us/md/exec/comar/08.02.15.11"]
+      tag: documented
+      warning: "COMAR 08.02.15.11 as displayed on regs.maryland.gov shows an older rule (28-38 in or 44+ in, 2 per day). That conflicts with the DNR 2026 release, which is used here. Confirm on the DNR striped bass page before keeping a fish."
+    - area: "Nontidal waters (MD) — streams and rivers incl. Monocacy and upper Potomac"
+      regions: [frederick-rivers, upper-potomac]
+      harvest: []
+      targeting_closed: []
+      note: "COMAR 08.02.11.04: striped bass in nontidal streams and rivers: Closed, none permitted. Nontidal lakes and ponds: open year-round, 2 per day (only 1 over 30 in), 18 in minimum. Whether 'closed' bars catch-and-release targeting is not stated."
+      src: "https://regs.maryland.gov/us/md/exec/comar/08.02.11.04"
+      tag: documented
+  white-perch:
+    - area: "Nontidal waters (MD)"
+      regions: [frederick-rivers, upper-potomac]
+      harvest: [{start: "01-01", end: "12-31", size: "no minimum", creel: "no daily limit", note: "COMAR 08.02.11.04"}]
+      targeting_closed: []
+      src: "https://regs.maryland.gov/us/md/exec/comar/08.02.11.04"
+      tag: documented
+    - area: "Chesapeake Bay and tidal tributaries (MD)"
+      regions: [upper-bay, middle-bay, tidal-potomac]
+      harvest: [{start: "01-01", end: "12-31", size: "not found", creel: "not found", note: "COMAR 08.02.05.04 sets an 8 in minimum, but only for white perch caught other than by hook and line. A recreational hook-and-line size or creel limit was not found."}]
+      targeting_closed: []
+      src: "https://regs.maryland.gov/us/md/exec/comar/08.02.05.04"
+      tag: reasoning
+      warning: "Tidal recreational white perch limits not found in an opened official source. Year-round season is reasoning (fishandhuntmaryland.com says open year-round). Confirm before harvest."
+  bluefish:
+    - area: "All Maryland waters (Bay, tidal, Atlantic, coastal bays)"
+      regions: [upper-bay, middle-bay, tidal-potomac, md-coast]
+      harvest: [{start: "01-01", end: "12-31", size: "8 in minimum", creel: "5 per person per day (shore or private boat); 7 on for-hire boats", note: "Public notice effective 12:01 a.m. January 1, 2026. No closed season."}]
+      targeting_closed: []
+      src: "https://dnr.maryland.gov/fisheries/Documents/Public_Notices/PubNotBluefishRec_Effective1-1-2026.pdf"
+      tag: documented
+      warning: "Tidal Potomac mainstem is PRFC water; PRFC bluefish rules not found."
+  blue-catfish:
+    - area: "Maryland tidal waters"
+      regions: [upper-bay, middle-bay, tidal-potomac]
+      harvest: [{start: "01-01", end: "12-31", size: "none", creel: "none", note: "DNR 2026-07-29 report: 'there are no size limits or creel limits associated with blue catfish.' DNR 2024-04-08: 'no offseason and no creel limit for blue catfish.'"}]
+      targeting_closed: []
+      transport: "Illegal to transport live blue catfish into another body of water (fine up to $2,500). DNR asks anglers to remove and kill blue catfish they catch; catch and release discouraged."
+      src: "https://news.maryland.gov/dnr/2026/07/29/maryland-fishing-report-july-29-2/"
+      src_also: ["https://news.maryland.gov/dnr/?p=41277", "https://dnr.maryland.gov/fisheries/Pages/invasive-fish.aspx"]
+      tag: documented
+      warning: "Applies to MD waters. On the tidal Potomac mainstem PRFC rules were not checked."
+    - area: "Nontidal waters (MD)"
+      regions: [frederick-rivers, upper-potomac]
+      harvest: [{start: "01-01", end: "12-31", size: "not found", creel: "not found", note: "COMAR 08.02.11.04 lists only channel catfish creel; blue catfish not addressed."}]
+      targeting_closed: []
+      transport: "Live transport to another water is illegal (DNR invasive fishes page)."
+      src: "https://regs.maryland.gov/us/md/exec/comar/08.02.11.04"
+      tag: reasoning
+      warning: "Nontidal blue catfish limit not found; likely none, but unconfirmed."
+  channel-catfish:
+    - area: "Nontidal waters (MD)"
+      regions: [frederick-rivers, upper-potomac]
+      harvest: [{start: "01-01", end: "12-31", size: "no minimum", creel: "5 per day / 10 possession", note: "COMAR 08.02.11.04"}]
+      targeting_closed: []
+      src: "https://regs.maryland.gov/us/md/exec/comar/08.02.11.04"
+      tag: documented
+    - area: "Maryland tidal waters"
+      regions: [upper-bay, middle-bay, tidal-potomac]
+      harvest: [{start: "01-01", end: "12-31", size: "not found", creel: "not found", note: ""}]
+      targeting_closed: []
+      src: "not found"
+      tag: reasoning
+      warning: "Tidal channel catfish limits not found in an opened official source."
+  flathead-catfish:
+    - area: "All Maryland waters"
+      regions: [upper-bay, middle-bay, tidal-potomac, frederick-rivers, upper-potomac]
+      harvest: [{start: "01-01", end: "12-31", size: "not found", creel: "not found", note: "Not addressed in COMAR 08.02.11.04. DNR asks anglers to remove and kill flathead catfish; catch and release discouraged."}]
+      targeting_closed: []
+      transport: "Illegal to transport live flathead catfish into another body of water (fine up to $2,500)."
+      src: "https://dnr.maryland.gov/fisheries/Pages/invasive-fish.aspx"
+      tag: reasoning
+      warning: "Size and creel limits not found. The transport ban and kill request are documented on the DNR invasive fishes and catfish pages."
+  northern-snakehead:
+    - area: "All Maryland waters (tidal and nontidal)"
+      regions: [upper-bay, middle-bay, tidal-potomac, frederick-rivers, upper-potomac]
+      harvest: [{start: "01-01", end: "12-31", size: "none", creel: "none", note: "COMAR 08.02.11.04: not subject to season, creel or size limit (nontidal). DNR snakehead FAQ: 'no seasons, no size limits and no creel limits.'"}]
+      targeting_closed: []
+      possession: "COMAR 08.02.19.06D: 'an individual may only possess a snakehead if, immediately upon capture, the snakehead is killed.' Live possession, transport, import or introduction is prohibited (08.02.19.06A-C). DNR FAQ: fish you don't keep may be released only immediately and directly back into the water they came from. DNR asks anglers to kill all snakehead; fine up to $2,500 for live transport."
+      src: "https://regs.maryland.gov/us/md/exec/comar/08.02.19.06"
+      src_also: ["https://regs.maryland.gov/us/md/exec/comar/08.02.11.04", "https://stg-dnr.maryland.gov/fisheries/Documents/SHQ_A-fishing.pdf", "https://dnr.maryland.gov/fisheries/Pages/invasive-fish.aspx"]
+      tag: documented
+      warning: "The FAQ is dated 4/19 and was served from a DNR staging host (stg-dnr). PRFC rules for the tidal Potomac mainstem were not checked."
+  walleye:
+    - area: "Nontidal waters (MD), statewide"
+      regions: [frederick-rivers, upper-potomac]
+      harvest: [{start: "01-01", end: "12-31", size: "15 in minimum", creel: "5 per day / 10 possession", note: "COMAR 08.02.11.04. Deep Creek Lake and Youghiogheny (below Rt 42) closed Mar 1 to Apr 15 — n/a here."}]
+      targeting_closed: []
+      src: "https://regs.maryland.gov/us/md/exec/comar/08.02.11.04"
+      tag: documented
+    - area: "Potomac River mainstem, nontidal (MD)"
+      regions: [upper-potomac]
+      harvest:
+        - {start: "01-01", end: "04-15", size: "15-20 in slot", creel: "5 per day / 10 possession", note: "COMAR 08.02.11.04 Potomac mainstem special slot"}
+        - {start: "04-16", end: "12-31", size: "15 in minimum", creel: "5 per day / 10 possession", note: "Statewide rule"}
+      targeting_closed: []
+      src: "https://regs.maryland.gov/us/md/exec/comar/08.02.11.04"
+      tag: documented
+    - area: "Maryland tidal waters"
+      regions: [upper-bay, middle-bay, tidal-potomac]
+      harvest: [{start: "01-01", end: "12-31", size: "15 in minimum", creel: "5 per day", note: "COMAR 08.02.05.28. Recreational open year-round."}]
+      targeting_closed: []
+      src: "https://regs.maryland.gov/us/md/exec/comar/08.02.05.28"
+      tag: documented
+      warning: "Tidal Potomac mainstem is PRFC; not checked."
+  smallmouth-bass:
+    - area: "Nontidal waters (MD), statewide"
+      regions: [frederick-rivers, upper-potomac]
+      harvest: [{start: "06-16", end: "02-28", size: "12 in minimum", creel: "5 per day / 10 possession, combined with largemouth", note: "Open season June 16 through the last day of February (02-29 in leap years). Mar 1 to Jun 15 is closed season: fish caught must be returned to the water immediately (COMAR 08.02.11.04), so it is catch-and-release only."}]
+      targeting_closed: []
+      src: "https://regs.maryland.gov/us/md/exec/comar/08.02.11.04"
+      tag: documented
+    - area: "Catch-and-return areas: Potomac River from Dam No. 2 (Seneca Breaks) up to the Monocacy mouth; Monocacy River from the Potomac up to Buckeystown Dam"
+      regions: [upper-potomac, frederick-rivers]
+      harvest: []
+      targeting_closed: []
+      note: "COMAR 08.02.11.03C: catch-and-return year-round; release bass immediately and do not possess bass inside the area."
+      src: "https://regs.maryland.gov/us/md/exec/comar/08.02.11.03"
+      tag: documented
+    - area: "Maryland tidal waters"
+      regions: [upper-bay, middle-bay, tidal-potomac]
+      harvest:
+        - {start: "03-01", end: "06-15", size: "15 in minimum", creel: "5 (black bass combined)", note: "COMAR 08.02.05.19"}
+        - {start: "06-16", end: "02-28", size: "12 in minimum", creel: "5 (black bass combined)", note: "COMAR 08.02.05.19. Rod or hook and line only."}
+      targeting_closed: []
+      src: "https://regs.maryland.gov/us/md/exec/comar/08.02.05.19"
+      tag: documented
+      warning: "Tidal Potomac mainstem is PRFC; not checked."
+  largemouth-bass:
+    - area: "Nontidal waters (MD), statewide"
+      regions: [frederick-rivers, upper-potomac]
+      harvest: [{start: "06-16", end: "02-28", size: "12 in minimum", creel: "5 per day / 10 possession, combined with smallmouth", note: "Mar 1 to Jun 15 closed season, catch-and-release only. Exceptions: slot lakes such as Little Seneca Lake (5 bass aggregate, none 11 to under 15 in, 1 over 15 in) per COMAR 08.02.11.03A."}]
+      targeting_closed: []
+      src: "https://regs.maryland.gov/us/md/exec/comar/08.02.11.04"
+      src_also: ["https://regs.maryland.gov/us/md/exec/comar/08.02.11.03"]
+      tag: documented
+    - area: "Catch-and-return areas: Potomac (Dam No. 2 to Monocacy mouth); Monocacy (Potomac to Buckeystown Dam)"
+      regions: [upper-potomac, frederick-rivers]
+      harvest: []
+      targeting_closed: []
+      note: "COMAR 08.02.11.03C: release immediately; no possession."
+      src: "https://regs.maryland.gov/us/md/exec/comar/08.02.11.03"
+      tag: documented
+    - area: "Maryland tidal waters"
+      regions: [upper-bay, middle-bay, tidal-potomac]
+      harvest:
+        - {start: "03-01", end: "06-15", size: "15 in minimum", creel: "5 (black bass combined)", note: "COMAR 08.02.05.19"}
+        - {start: "06-16", end: "02-28", size: "12 in minimum", creel: "5 (black bass combined)", note: "COMAR 08.02.05.19"}
+      targeting_closed: []
+      src: "https://regs.maryland.gov/us/md/exec/comar/08.02.05.19"
+      tag: documented
+      warning: "Tidal Potomac mainstem is PRFC; not checked."
+licenses:
+  - {name: "Chesapeake Bay & Coastal Sport Fishing License", covers: "Chesapeake Bay and its tidal tributaries, Maryland Atlantic Ocean waters, coastal bays and their tributaries", cost: "$15 resident annual; $6 resident 7-day", src: "https://dnr.maryland.gov/Pages/service_fishing_license.aspx", tag: documented}
+  - {name: "Free Chesapeake Bay & Coastal Sport Registration", covers: "Eligible anglers only, e.g., in designated free fishing areas such as Ocean City's 2nd to 4th St bulkhead and 125th St Northside Park", src: "https://oceancitymd.gov/oc/?p=12516", tag: documented}
+sources:
+  - {url: "https://dnr.maryland.gov/fisheries/Pages/sb_reg_maps.aspx", title: "MD DNR — 2026 Striped Bass Regulations Maps", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/03/12/maryland-set-to-adopt-changes-to-chesapeake-bay-recreational-striped-bass-season/", title: "DNR — Maryland Set to Adopt Changes to Chesapeake Bay Recreational Striped Bass Season (2026-03-12)", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/?p=47043", title: "DNR — Maryland's 2026 Striped Bass Season Opens for Catch-and-Release Fishing in April (2026-03-31)", accessed: 2026-10-14}
+  - {url: "https://regs.maryland.gov/us/md/exec/comar/08.02.15.09", title: "COMAR 08.02.15.09", accessed: 2026-10-14}
+  - {url: "https://regs.maryland.gov/us/md/exec/comar/08.02.15.11", title: "COMAR 08.02.15.11", accessed: 2026-10-14}
+  - {url: "https://regs.maryland.gov/us/md/exec/comar/08.02.15.12", title: "COMAR 08.02.15.12", accessed: 2026-10-14}
+  - {url: "https://regs.maryland.gov/us/md/exec/comar/08.02.11.03", title: "COMAR 08.02.11.03", accessed: 2026-10-14}
+  - {url: "https://regs.maryland.gov/us/md/exec/comar/08.02.11.04", title: "COMAR 08.02.11.04", accessed: 2026-10-14}
+  - {url: "https://regs.maryland.gov/us/md/exec/comar/08.02.05.04", title: "COMAR 08.02.05.04", accessed: 2026-10-14}
+  - {url: "https://regs.maryland.gov/us/md/exec/comar/08.02.05.19", title: "COMAR 08.02.05.19", accessed: 2026-10-14}
+  - {url: "https://regs.maryland.gov/us/md/exec/comar/08.02.05.28", title: "COMAR 08.02.05.28", accessed: 2026-10-14}
+  - {url: "https://regs.maryland.gov/us/md/exec/comar/08.02.19.06", title: "COMAR 08.02.19.06 Snakehead Prohibitions", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Documents/Public_Notices/PubNotBluefishRec_Effective1-1-2026.pdf", title: "DNR Public Notice — Recreational Bluefish, effective 2026-01-01", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Pages/invasive-fish.aspx", title: "DNR — Invasive Fishes Program", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov:443/fisheries/pages/catfish.aspx", title: "DNR — Catfish (We Need Your Help)", accessed: 2026-10-14}
+  - {url: "https://stg-dnr.maryland.gov/fisheries/Documents/SHQ_A-fishing.pdf", title: "DNR Snakehead FAQ (4/19)", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/?p=41277", title: "DNR — Join the Hunt: How to Catch a Blue Catfish in Maryland (2024-04-08)", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/07/29/maryland-fishing-report-july-29-2/", title: "Maryland Fishing Report — July 29, 2026", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/Pages/service_fishing_license.aspx", title: "DNR — Sport Fishing & Crabbing Licenses", accessed: 2026-10-14}

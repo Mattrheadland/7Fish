@@ -1,0 +1,12 @@
+id: loch-raven
+name: Loch Raven Reservoir
+status: ruled-out
+lat: 39.443
+lon: -76.553
+region: null
+region_note: "Baltimore County reservoir; it fits none of the schema region keys."
+water_type: reservoir
+water_type_note: "The schema enum has no lake/reservoir value; 'reservoir' is used for accuracy."
+matt_notes:
+  - {text: "Bad fishing.", src: Matt}
+reason: {text: "Ruled out by Matt from firsthand experience: bad fishing.", src: Matt}

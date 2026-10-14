@@ -1,0 +1,148 @@
+key: striped-bass
+name: Striped bass
+kid_friendly: false   # reasoning: lure casting or heavy cut-bait rigs, current, rocks and piers; not a simple-bait, attainable target for a young child
+temp_bands_f:
+  - {band: inactive, max: 45, tag: reasoning, note: "DNR says striped bass may stop feeding once water drops into the 40s (src https://news.maryland.gov/dnr/2022/11/30/maryland-fishing-report-november-30/); the 45 cut point itself is reasoning"}
+  - {band: slow, min: 45, max: 50, tag: documented, src: "https://www.chesapeakebay.net/files/documents/parham_where_are_the_fish_gittalk6242019.pdf", note: "Parham (MD DNR) slide: 'Reduced activity levels <50F'"}
+  - {band: active, min: 50, max: 68, tag: reasoning, note: "Between the documented reduced-activity (<50F) and preferred (68-72F) figures. DNR reported a good shallow shoreline bite in the upper and middle Bay with water around 68-69F on 2026-10-07 (src https://news.maryland.gov/dnr/2026/10/07/maryland-fishing-report-october-7-2/)"}
+  - {band: peak, min: 68, max: 72, tag: documented, src: "https://www.chesapeakebay.net/files/documents/parham_where_are_the_fish_gittalk6242019.pdf", note: "'Preferred water temperatures 68F-72F'. This is a habitat preference, not a measured bite rate"}
+  - {band: active, min: 72, max: 76, tag: reasoning, note: "Above preferred range, below the ~76F avoidance figure"}
+  - {band: stressed, min: 76, tag: documented, src: "https://www.bayjournal.com/archives/low-oxygen-high-temperatures-made-rockfish-feel-like-fish-out-of-water/article_ea96513d-0152-51f8-a3f0-5537b836dc02.html", note: "Bay Journal (c. 2004): adults 'try to avoid water warmer than 25 degrees Celsius (about 76 degrees Fahrenheit)'. Parham and Eyes on the Bay give 84F as the maximum suitable / avoid figure (src https://eyesonthebay.dnr.maryland.gov/eyesonthebay/Step4_Temperature.cfm). DNR called low-80s Bay water 'a stressful time for cool-water game fish such as striped bass' (src https://news.maryland.gov/dnr/2025/08/06/maryland-fishing-report-august-6)"}
+season:
+  # Fish availability to a SHORE angler only. Legal closures and C&R-only periods live in rules/regs.yaml and override these words.
+  tidal-potomac:
+    1: poor
+    2: poor
+    3: fair
+    4: good
+    5: good
+    6: fair
+    7: poor
+    8: poor
+    9: fair
+    10: fair
+    11: fair
+    12: poor
+    tag: reasoning
+    note: "Spring spawning fish in the tidal Potomac (DNR: 'spawning in the tidal Potomac for the past week', report 2024-04-17, src https://news.maryland.gov/dnr/2024/04/17/maryland-fishing-report-april-17-2/). Fall fish hold on main-channel edges from the Route 301 Bridge south, mostly a boat/jig bite (src https://news.maryland.gov/dnr/2022/11/30/maryland-fishing-report-november-30/). Shore ratings are reasoning. DC banks (Fletcher's) and PRFC mainstem rules are separate jurisdictions; spawning-season and summer closures come from regs."
+  upper-bay:
+    1: poor
+    2: poor
+    3: fair
+    4: fair
+    5: good
+    6: good
+    7: fair
+    8: poor
+    9: fair
+    10: good
+    11: good
+    12: fair
+    tag: reasoning
+    note: "DNR 2026-10-07: shallow upper Bay shorelines and lower tidal rivers producing on poppers and paddletails in water under 10 ft; Baltimore piers/bulkheads and rocky shorelines produced on soft plastics in Nov 2025 (src https://news.maryland.gov/dnr/2025/11/19/maryland-fishing-report-november-19/). Summer heat and low oxygen squeeze fish (DNR 2026-08-19). Month ratings are reasoning."
+  middle-bay:
+    1: poor
+    2: poor
+    3: poor
+    4: fair
+    5: good
+    6: good
+    7: fair
+    8: poor
+    9: good
+    10: prime
+    11: good
+    12: fair
+    tag: reasoning
+    note: "DNR 2026-10-07: most consistent middle Bay fishing is on shorelines and lower tidal rivers at morning and evening with poppers, paddletails, jerkbaits. Kent Narrows: 'one of the very best opportunities to catch stripers from a pier in the Middle Bay', bite picks up around sunset with current (src https://www.fishtalkmag.com/blog/7-top-delmarva-piers-and-bridges-beginner-anglers). Aug 2025: middle Bay bite 'tends to shut down once the sun clears the horizon'. Month ratings are reasoning."
+  md-coast:
+    1: poor
+    2: poor
+    3: fair
+    4: good
+    5: good
+    6: fair
+    7: poor
+    8: fair
+    9: fair
+    10: good
+    11: good
+    12: good
+    tag: reasoning
+    note: "Inlet/Route 50 Bridge soft-plastic and bucktail bite reported in Oct 2026, Nov 2025, Dec 2024, May 2026; surf cut-bait fish in spring (mostly over-slot) and Nov 2025 ('first of the southerly migrations'). Jan 2025 inshore 'quiet' (src https://onthewater.com/fishing-reports/2025/01/maryland-chesapeake-bay-fishing-report-january-30-2025). Many inlet fish under the coastal minimum per DNR; check regs. Month ratings are reasoning."
+prefs:
+  flow:   {rising: unknown, falling: unknown, high_muddy: minus, low_clear: neutral, tag: reasoning, note: "Tidal/coastal species here; river-flow effects not documented in sources opened. Heavy muddy runoff assumed negative for a sight-feeding lure bite"}
+  light:  {dawn: plus, day: minus, dusk: plus, night: plus, overcast: plus, tag: documented, src: "https://onthewater.com/fishing-reports/2025/09/maryland-and-chesapeake-bay-fishing-report-september-11-2025", note: "Morning and evening on a running tide 'the best time to fish'; overcast extends those hours (OTW 2025-09-11). Middle Bay summer bite shuts down after sunrise (DNR 2025-08-06). Ocean City backwater fish 'most consistent after dark' under bridge and dock lights (src https://onthewater.com/fishing-reports/2026/05/maryland-and-chesapeake-bay-fishing-report-may-28-2026)"}
+  tide:   {incoming: plus, outgoing: plus, slack: minus, tag: documented, src: "https://onthewater.com/fishing-reports/2025/09/maryland-and-chesapeake-bay-fishing-report-september-11-2025", note: "Bay Bridge fish on 'a good running tide'. OC inlet: striped bass 'stage along this bank' on outgoing at the south jetty (boat-only) (src https://fishtalkmag.com/blog/fishing-ocean-city-inlet); OTW 2025-10-23 says incoming may fish better when the bay side is stirred up. Slack = minus is reasoning"}
+  front:  {pre_front_falling: unknown, post_front_high_rising: unknown, steady: neutral, tag: reasoning, note: "No source opened gives a pressure effect; leave to local reports"}
+  wind:   {onshore_light: plus, strong: minus, tag: reasoning, note: "OTW 2025-10-23 notes wind made Bay Bridge conditions difficult; light onshore wind pushing bait to a bank is reasoning"}
+methods:
+  - id: paddletail-jig
+    when: "Shallow shorelines, rocks, piers, inlet and bridge lights; dawn/dusk or night on a moving tide; water roughly 50-72F"
+    rig_line: "3/8-1/2 oz round jighead (3/0-4/0), 4-5 in white or chartreuse paddletail, 24-30 in 30 lb fluoro tied direct to 20 lb braid (FG knot)"
+    rig:
+      hook: "Jighead's own 3/0-4/0 hook; 3/8 oz in calm shallows, 1/2-3/4 oz in inlet/bridge current"
+      weight: "Jighead only (3/8-3/4 oz)"
+      leader: "30 lb fluorocarbon, 24-30 in, FG or double-uni to braid; no swivel"
+      hardware: "None; loop knot optional for more tail action"
+      bait_or_lure: "4-5 in paddletail, white/pearl or chartreuse (DNR lists white and chartreuse as popular colors, src https://news.maryland.gov/dnr/2022/11/30/maryland-fishing-report-november-30/). Boat anglers use 5-6 in on 3/4-1 oz (OTW 2025-10-23); shore sizing is reasoning"
+    switch_to: topwater-popper
+    switch_trigger: "Low light, flat calm, fish or bait busting on top in under 10 ft of water"
+    gear_note: "Fits Matt's 7 ft Daiwa Crossfire Inshore MH with 20 lb braid and 30 lb leader; he owns 1/4-3/8 oz jigheads and 4 in paddletails. Buy 1/2-3/4 oz heads for inlet/bridge current"
+    tag: documented
+    src: "https://news.maryland.gov/dnr/2026/10/07/maryland-fishing-report-october-7-2/"
+  - id: topwater-popper
+    when: "First and last light on shallow shorelines, points and rocks, water under 10 ft"
+    rig_line: "4-5 in white or bone popper or walk-the-dog plug (~1/2-3/4 oz), loop knot to 24 in 30 lb fluoro"
+    rig:
+      hook: "Plug's trebles; swap to single inline hooks if releasing many fish (reasoning)"
+      weight: "None"
+      leader: "30 lb fluorocarbon, 24 in, non-slip loop knot to the plug"
+      hardware: "None"
+      bait_or_lure: "Popper or spook-style walker, 4-5 in, white/bone (color reasoning). DNR and Eastern Shore Light Tackle report poppers/spooks working in shallows (DNR 2026-10-07; OTW 2026-05-28)"
+    switch_to: paddletail-jig
+    switch_trigger: "Sun up and swirls stop, or fish short-strike twice without hooking up"
+    gear_note: "Fits the 7 ft Crossfire. Matt has no topwater listed in his loadout; buy one or two"
+    tag: documented
+    src: "https://onthewater.com/fishing-reports/2026/05/maryland-and-chesapeake-bay-fishing-report-may-28-2026"
+  - id: cut-bait-circle
+    when: "Ocean City surf (big menhaden chunks), inlet/Route 50 Bridge drifts, or pier bases with live spot; moving tide, dusk/night"
+    rig_line: "Surf: 6/0-8/0 non-offset inline circle, 40-50 lb fluoro 24-30 in, #1 barrel swivel, bead, fish-finder slide, 4-5 oz pyramid, 60 lb mono shock; fresh menhaden chunk"
+    rig:
+      hook: "Non-offset inline circle, 6/0-8/0 for menhaden chunks (size reasoning); 5/0 for live spot"
+      weight: "Surf: 4-5 oz pyramid on a fish-finder slide. Inlet/bridge drift: 1-3 oz egg or bank sinker, just enough to tick bottom (reasoning)"
+      leader: "40-50 lb fluorocarbon, 24-30 in; 60 lb mono shock leader on the surf rod"
+      hardware: "Fish-finder slide, 6-8 mm bead, #1 barrel swivel"
+      bait_or_lure: "Fresh menhaden chunk or head (DNR: surf anglers using 'large menhaden baits'); live spot at Bay piers (DNR 2026-10-07)"
+    switch_to: paddletail-jig
+    switch_trigger: "Bait repeatedly stolen by skates/rays with no striper runs in 45 min, or fish showing on top"
+    gear_note: "Surf version fits Matt's 10 ft Penn Pursuit IV (30 lb braid, 60 lb shock, 4-5 oz pyramids). His circles are #1 and 4/0-5/0; 6/0-8/0 for big chunks would need buying. Surf weights do not transfer to Bay piers or rivers. Bait-hook rules: see rules/regs.yaml"
+    tag: documented
+    src: "https://news.maryland.gov/dnr/2022/11/30/maryland-fishing-report-november-30/"
+advisory:
+  url: "https://mde.maryland.gov/programs/marylander/fishandshellfish/Pages/fishconsumptionadvisory.aspx"
+  note: "Species- and location-specific meal advice is in MDE's linked charts and interactive map, not on the landing page. Check before keeping any fish"
+  tag: documented
+notes:
+  - "Optimum spawning temperatures 57-68 degrees (scale not stated, Fahrenheit implied) per DNR 2026-02-05 (src https://news.maryland.gov/dnr/2026/02/05/secretarys-message-cold-winter-could-boost-prospects-for-striped-bass/); Parham gives 60-64F. Spawning context only. [documented]"
+  - "Summer 'striped bass squeeze': fish caught between warm surface water and low-oxygen bottom water; oxygen avoidance <3 mg/L (src https://eyesonthebay.dnr.maryland.gov/eyesonthebay/Step4_Temperature.cfm). Expect weak shore fishing and high release mortality in Bay summer heat. [documented]"
+  - "Coastal and Bay fish are the same species; coastal migrants run larger. Size limits differ by area; regs file owns them. [reasoning]"
+  - "Not found: any source giving bite rate by barometric pressure. [n/a]"
+  - "Chesapeake Bay Program field-guide page for striped bass was not retrievable (permission timeout). [not found]"
+sources:
+  - {url: "https://www.chesapeakebay.net/files/documents/parham_where_are_the_fish_gittalk6242019.pdf", title: "Parham, Where are the fish (MD DNR / CBP GIT talk, 2019)", accessed: 2026-10-14}
+  - {url: "https://www.bayjournal.com/archives/low-oxygen-high-temperatures-made-rockfish-feel-like-fish-out-of-water/article_ea96513d-0152-51f8-a3f0-5537b836dc02.html", title: "Bay Journal: Low oxygen, high temperatures made rockfish feel like fish out of water", accessed: 2026-10-14}
+  - {url: "https://eyesonthebay.dnr.maryland.gov/eyesonthebay/Step4_Temperature.cfm", title: "MD DNR Eyes on the Bay: Temperature", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/02/05/secretarys-message-cold-winter-could-boost-prospects-for-striped-bass/", title: "MD DNR Secretary's Message, 2026-02-05", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/10/07/maryland-fishing-report-october-7-2/", title: "MD DNR Fishing Report 2026-10-07", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2025/11/19/maryland-fishing-report-november-19/", title: "MD DNR Fishing Report 2025-11-19", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2025/08/06/maryland-fishing-report-august-6", title: "MD DNR Fishing Report 2025-08-06", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2024/04/17/maryland-fishing-report-april-17-2/", title: "MD DNR Fishing Report 2024-04-17", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2022/11/30/maryland-fishing-report-november-30/", title: "MD DNR Fishing Report 2022-11-30", accessed: 2026-10-14}
+  - {url: "https://onthewater.com/fishing-reports/2026/05/maryland-and-chesapeake-bay-fishing-report-may-28-2026", title: "On The Water MD report 2026-05-28", accessed: 2026-10-14}
+  - {url: "https://onthewater.com/fishing-reports/2025/10/maryland-and-chesapeake-bay-fishing-report-october-23-2025", title: "On The Water MD report 2025-10-23", accessed: 2026-10-14}
+  - {url: "https://onthewater.com/fishing-reports/2025/09/maryland-and-chesapeake-bay-fishing-report-september-11-2025", title: "On The Water MD report 2025-09-11", accessed: 2026-10-14}
+  - {url: "https://onthewater.com/fishing-reports/2025/01/maryland-chesapeake-bay-fishing-report-january-30-2025", title: "On The Water MD report 2025-01-30", accessed: 2026-10-14}
+  - {url: "https://fishtalkmag.com/blog/fishing-ocean-city-inlet", title: "FishTalk: Fishing the Ocean City inlet (undated, c. 2018)", accessed: 2026-10-14}
+  - {url: "https://www.fishtalkmag.com/blog/7-top-delmarva-piers-and-bridges-beginner-anglers", title: "FishTalk: 7 top Delmarva piers and bridges (undated)", accessed: 2026-10-14}
+  - {url: "https://mde.maryland.gov/programs/marylander/fishandshellfish/Pages/fishconsumptionadvisory.aspx", title: "MDE Fish Consumption Advisory", accessed: 2026-10-14}

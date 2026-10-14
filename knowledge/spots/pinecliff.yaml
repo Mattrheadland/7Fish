@@ -1,0 +1,116 @@
+id: pinecliff
+name: Pinecliff Park
+status: active
+lat: 39.3717
+lon: -77.3895
+approx: true
+region: frederick-rivers
+water_type: river
+bank_faces_deg: 90
+bank_faces_note: {text: "Park is on the west bank of the Monocacy; angler faces roughly east toward the river. Read from map geometry, not surveyed.", tag: reasoning}
+luca_ok: false
+luca_note: {text: "Developed county park, but the river bank, ramp area, and crowding (Matt) are not confirmed as a clean, safe kid bank.", tag: reasoning}
+stations:
+  usgs:
+    id: "01643000"
+    name: "Monocacy River at Jug Bridge near Frederick, MD"
+    lat: 39.402778
+    lon: -77.366111
+    distance_mi: 2.5
+    has: [discharge, gage_height]
+    has_note: "No water temperature listed on the USGS page."
+    tag: documented
+    src: "https://waterdata.usgs.gov/monitoring-location/01643000/all-graphs/"
+    coords_src: "https://api.water.noaa.gov/nwps/v1/gauges/FDKM2"
+  usgs_water_temp:
+    id: "01643580"
+    name: "Monocacy River near Dickerson, MD"
+    distance_mi: 7.9
+    has: [discharge, gage_height, water_temp, dissolved_oxygen, ph, specific_conductance, turbidity]
+    tag: documented
+    src: "https://waterdata.usgs.gov/monitoring-location/USGS-01643580/all-graphs"
+    note: "Nearest Monocacy gauge with water temperature; downstream of the spot."
+  nwps:
+    lid: "FDKM2"
+    name: "Monocacy River near Frederick at Interstate 70"
+    usgs_id: "01643000"
+    distance_mi: 2.5
+    stages_ft: {action: 13, minor: 15, moderate: 17, major: 20}
+    tag: documented
+    src: "https://api.water.noaa.gov/nwps/v1/gauges/FDKM2"
+    note: "water.noaa.gov/gauges/fdkm2 page not retrievable; values from the NWPS API record. MARFC sheet (weather.gov/media/marfc/Category/POT/Frederick.pdf) agrees on 15/17/20."
+  coops: {id: null}
+  cbibs: {id: null}
+flow_ceiling: {value: null, unit: cfs, source: ask_matt}
+wind_gust_limit_mph: 30
+wind_gust_note: {text: "River bank default.", tag: reasoning}
+species:
+  smallmouth-bass:
+    presence: verified
+    quality: not_verified
+    evidence:
+      - {text: "MD DNR: smallmouth and largemouth bass are the most targeted sportfish in the Monocacy. River-wide, not this spot.", date: "undated page", tag: documented, src: "https://dnr.maryland.gov/fisheries/Pages/hotspots/monocacy.aspx"}
+      - {text: "MD DNR weekly: the Monocacy 'also holds good populations of smallmouth bass'. Historical by now.", date: "published 2026-09-02", tag: documented, src: "https://news.maryland.gov/dnr/2026/09/02/maryland-fishing-report-september-2/"}
+  largemouth-bass:
+    presence: verified
+    quality: not_verified
+    evidence:
+      - {text: "MD DNR lists largemouth among the most targeted Monocacy sportfish. River-wide.", date: "undated page", tag: documented, src: "https://dnr.maryland.gov/fisheries/Pages/hotspots/monocacy.aspx"}
+  channel-catfish:
+    presence: verified
+    quality: not_verified
+    quality_note: "Only historical (2015) size evidence; nothing current."
+    evidence:
+      - {text: "MD DNR: channel catfish in most sections, most common in the lower reaches.", date: "undated page", tag: documented, src: "https://dnr.maryland.gov/fisheries/Pages/hotspots/monocacy.aspx"}
+      - {text: "Angler report: 15 lb catfish (species not stated) 'below Pinecliff Park'. Historical.", date: "catch 2015-04-25; published 2015-05-12", tag: documented, src: "https://dnrweb.dnr.state.md.us/fisheries/fishingreport/single-1.asp?ID=5100"}
+  flathead-catfish:
+    presence: not_verified
+    presence_note: "Angler reports only; DNR has not collected flatheads in standardized Monocacy surveys."
+    quality: not_verified
+    evidence:
+      - {text: "MD DNR: angler reports of flathead catfish and northern snakehead have increased, but 'the division has not collected these species from the Monocacy River in standardized surveys to date'.", date: "undated page", tag: documented, src: "https://dnr.maryland.gov/fisheries/Pages/hotspots/monocacy.aspx"}
+  northern-snakehead:
+    presence: not_verified
+    presence_note: "Angler reports only; not in DNR surveys."
+    quality: not_verified
+    evidence:
+      - {text: "Same DNR statement as flathead: angler reports, not survey-confirmed.", date: "undated page", tag: documented, src: "https://dnr.maryland.gov/fisheries/Pages/hotspots/monocacy.aspx"}
+access:
+  status: not_verified
+  parking: {text: "Frederick County park, 8350 Pinecliff Park Road, Frederick MD 21704; paved concrete boat ramp. Parking size not found.", tag: documented, src: "https://www.riverexplorer.com/details.php?id=1310"}
+  walk: {text: "not found", tag: reasoning}
+  stand: {text: "not found. The ramp is not a fishing bank. Matt has fished here; the bank itself is not described online.", tag: reasoning}
+  casting: {text: "not found", tag: reasoning}
+  landing: {text: "not found", tag: reasoning}
+  hours: {text: "Potomac River Guide (riverexplorer) says 'The park is open from 8am-10:30pm.' Third-party listing, undated; not confirmed on a Frederick County page. County FAQ: no vehicles after official closing time without a permit.", open: "08:00", close: "22:30", tag: documented, src: "https://www.riverexplorer.com/details.php?id=1310"}
+  after_dark: not_verified
+  after_dark_note: {text: "If the 10:30 pm closing is right, an evening session after sunset is possible until close, but this is not confirmed by the county. County FAQ says fishing on the Monocacy follows DNR rules.", tag: reasoning, src: "https://recreater.com/m/faq?cat=18"}
+  works_note: {text: "Frederick County RFP 25-320 (proposals due 2026-04-13) to rebuild the Pinecliff boat ramp: new ramp, kayak launch, retaining wall, accessible route. The listing gives no closure dates; construction may affect access now.", tag: documented, src: "https://www.nationgraph.com/rfps/rfp-8f948054-25-320-cp-pinecliff-boat-ramp-rehabilita"}
+jurisdiction:
+  water: nontidal
+  state: MD
+  license: "Maryland nontidal license (Matt's stated license; not verified here)"
+  flags:
+    - "MD DNR: bass catch-and-release applies from Buckeystown Dam down to the Potomac (downstream of this spot; check current regs)."
+    - "Frederick County park rules; fishing on the Monocacy follows DNR rules (county FAQ)."
+  tag: documented
+  src: "https://dnr.maryland.gov/fisheries/Pages/hotspots/monocacy.aspx"
+crowding: "Crowded per Matt (firsthand). Busy multi-use county park with sports fields and lodge (riverexplorer)."
+hazards:
+  - "Flooding: FDKM2 (Jug Bridge, 2.5 mi upstream) action 13 ft, flood 15 ft (documented)."
+  - "Ramp construction under a 2026 county contract (documented RFP; status not verified)."
+  - "Shallow, rocky river; slippery rock if wading (reasoning)."
+matt_notes:
+  - {text: "Pinecliff has been crowded.", src: Matt}
+sources:
+  - {url: "https://www.riverexplorer.com/details.php?id=1310", title: "Potomac River Guide: Pinecliff Park/Monocacy River", accessed: 2026-10-14}
+  - {url: "https://recreater.com/m/faq?cat=18", title: "Frederick County Parks FAQ", accessed: 2026-10-14}
+  - {url: "https://www.nationgraph.com/rfps/rfp-8f948054-25-320-cp-pinecliff-boat-ramp-rehabilita", title: "RFP 25-320 Pinecliff Boat Ramp Rehabilitation", accessed: 2026-10-14}
+  - {url: "https://www.nps.gov/articles/000/plan-your-own-adventure-on-the-monocacy-river-water-trail.htm", title: "NPS Monocacy River Water Trail", accessed: 2026-10-14}
+  - {url: "https://waterdata.usgs.gov/monitoring-location/01643000/all-graphs/", title: "USGS 01643000 Monocacy at Jug Bridge", accessed: 2026-10-14}
+  - {url: "https://waterdata.usgs.gov/monitoring-location/USGS-01643580/all-graphs", title: "USGS 01643580 Monocacy near Dickerson", accessed: 2026-10-14}
+  - {url: "https://api.water.noaa.gov/nwps/v1/gauges/FDKM2", title: "NWPS gauge FDKM2", accessed: 2026-10-14}
+  - {url: "https://www.weather.gov/media/marfc/Category/POT/Frederick.pdf", title: "MARFC flood categories, Monocacy at Jug Bridge", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Pages/hotspots/monocacy.aspx", title: "MD DNR Monocacy River hotspot", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/09/02/maryland-fishing-report-september-2/", title: "Maryland Fishing Report Sept 2 2026", accessed: 2026-10-14}
+  - {url: "https://dnrweb.dnr.state.md.us/fisheries/fishingreport/single-1.asp?ID=5100", title: "MD DNR angler report, catfish below Pinecliff 2015", accessed: 2026-10-14}

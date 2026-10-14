@@ -1,0 +1,140 @@
+key: channel-catfish
+name: Channel catfish
+kid_friendly: true   # reasoning: eats nightcrawlers/chicken liver on a simple bottom rig, common in the Monocacy and upper Potomac, usually 11-16 in (DNR 2016 survey), manageable on light-medium gear
+temp_bands_f:
+  - {band: inactive, max: 45, tag: reasoning, note: "SRAC: metabolic rate halves for each 18F (10C) drop; no documented feeding cutoff found"}
+  - {band: slow, min: 45, max: 60, tag: reasoning, note: "Cool-water slowdown inferred from the SRAC metabolic rule; bounds are reasoning"}
+  - {band: active, min: 60, max: 75, tag: reasoning, note: "Between slow band and documented spawning range"}
+  - {band: peak, min: 75, max: 85, tag: documented, src: "https://www.srac.msstate.edu/pdfs/Fact Sheets/180 Channel Catfish- Life History and Biology.pdf", note: "SRAC Pub 180: optimum growth at about 85F (29.4C); spawning 75-85F, ~80F optimum. Growth optimum is a proxy for feeding, not a measured bite rate; spawning fish (roughly late spring-early summer, reasoning) may bite less while guarding nests"}
+  - {band: stressed, min: 85, tag: reasoning, note: "SRAC gives no lethal upper limit; above the growth optimum treated as declining (reasoning). Nontidal Maryland rivers rarely reach this (reasoning)"}
+season:
+  frederick-rivers:
+    1: poor
+    2: poor
+    3: poor
+    4: fair
+    5: good
+    6: good
+    7: good
+    8: good
+    9: good
+    10: fair
+    11: poor
+    12: poor
+    tag: reasoning
+    note: "DNR Monocacy page: channel catfish 'inhabit most sections of the river' and are most often caught in the lower reaches. Bass are C&R from Buckeystown Dam down; check regs. Shallow, paddle-craft river; turbidity 'very high' during runoff. Month ratings are reasoning."
+  upper-potomac:
+    1: poor
+    2: poor
+    3: poor
+    4: fair
+    5: good
+    6: good
+    7: good
+    8: good
+    9: good
+    10: fair
+    11: poor
+    12: poor
+    tag: reasoning
+    note: "DNR: 'found in good numbers throughout the upper Potomac', Cumberland to DC; 2016 summer survey stock-size rate 109/hr (10-yr high), avg 14.3 in, largest just under 25 in (src https://dnr.maryland.gov/fisheries/Documents/2016_Catfish_Summary.pdf). Population 'fairly stable', 40-60 per electrofishing hour (DNR hotspot page). Flathead also present Dam 5 to DC. Lifejacket required on the water Nov 15-May 15 (wading/boat; see regs). Month ratings are reasoning."
+  tidal-potomac:
+    1: poor
+    2: poor
+    3: fair
+    4: fair
+    5: fair
+    6: fair
+    7: fair
+    8: fair
+    9: fair
+    10: fair
+    11: poor
+    12: poor
+    tag: reasoning
+    note: "Channel and white catfish 'found in every tidal river', holding in deeper channels of upper tidal sections in winter (OTW 2025-01-30). Blues dominate Potomac catches; channel cats are incidental. Fletcher's (DC) lists channel catfish. Ratings are reasoning."
+  upper-bay:
+    1: poor
+    2: poor
+    3: fair
+    4: fair
+    5: fair
+    6: good
+    7: good
+    8: good
+    9: good
+    10: good
+    11: fair
+    12: poor
+    tag: reasoning
+    note: "Blue and channel catfish 'dominate the lower Susquehanna' (DNR 2026-08-19); mixed with blues moving shallower next to channels in the lower Susquehanna and Chester as water cools (DNR 2026-10-07). Ratings are reasoning."
+  middle-bay:
+    1: poor
+    2: poor
+    3: fair
+    4: fair
+    5: fair
+    6: good
+    7: good
+    8: good
+    9: good
+    10: fair
+    11: poor
+    12: poor
+    tag: reasoning
+    note: "Channel catfish 'found in all middle Bay tidal rivers' (DNR 2026-08-19); Choptank near Denton and 'plenty of channel catfish' from Denton south (DNR 2024-04-17, 2024-07-24). Main-Bay piers only at low salinity (FishTalk Matapeake). Ratings are reasoning."
+prefs:
+  flow:   {rising: plus, falling: neutral, high_muddy: minus, low_clear: neutral, tag: reasoning, note: "SRAC: do well in muddy water but prefer clear; DNR Monocacy page warns turbidity gets very high during runoff. A first rise is a common catfish trigger (reasoning, not sourced); flood-stage water is a safety minus"}
+  light:  {dawn: plus, day: minus, dusk: plus, night: plus, overcast: plus, tag: documented, src: "https://www.srac.msstate.edu/pdfs/Fact Sheets/180 Channel Catfish- Life History and Biology.pdf", note: "SRAC: most movement and feeding occurs at night, around sunset and sunrise; by day they shelter in deep holes near logs or rocks. Overcast = plus is reasoning"}
+  tide:   {incoming: plus, outgoing: plus, slack: neutral, tag: reasoning, note: "Applies to tidal regions only; not documented"}
+  front:  {pre_front_falling: unknown, post_front_high_rising: unknown, steady: neutral, tag: reasoning, note: "Not found"}
+methods:
+  - id: bottom-slide-bait
+    when: "Rivers: dusk into dark, deep holes, outside bends, and below riffles/sand bars; water above ~60F"
+    rig_line: "3/0-4/0 circle, 14-18 in 20-30 lb mono leader, #4 barrel swivel, bead, 1/2-1 oz egg or no-roll sinker slide, chicken liver or cut bait"
+    rig:
+      hook: "3/0-4/0 circle (or #2-1/0 J for kids who can't wait for a circle to set; reasoning)"
+      weight: "1/2-1 oz egg or no-roll on a slide in the Monocacy/upper Potomac pools; 1-2 oz walking/no-roll in stronger current. Surf pyramids are wrong here (reasoning)"
+      leader: "20-30 lb mono, 14-18 in"
+      hardware: "Sinker slider or bare slide, 6 mm bead, #4-#1 barrel swivel"
+      bait_or_lure: "Chicken liver (wrap with thread or use bait mesh), nightcrawler gob, cut sunfish/shad, shrimp; scented baits"
+    switch_to: drift-float-bait
+    switch_trigger: "Snagging rocks every cast, or bait taps but no hookups in 30 min on a riffle-fed run"
+    gear_note: "Fits Matt's 7 ft Crossfire (with 4/0-5/0 circles) or 6'6\" Ugly Stiks (unconfirmed). Rhino 65 lb braid setup is overkill except where flatheads also run"
+    tag: reasoning
+  - id: drift-float-bait
+    when: "Rocky upper-Potomac or Monocacy runs where a bottom rig snags; day or dusk"
+    rig_line: "Slip float set to depth, 3/8 oz egg sinker above swivel, 18 in 20 lb mono, #1-2/0 circle, nightcrawler or cut bait drifted along seams"
+    rig:
+      hook: "#1-2/0 circle"
+      weight: "1/4-3/8 oz egg sinker pegged above a swivel"
+      leader: "20 lb mono, 18 in"
+      hardware: "Slip float, bobber stop, bead, barrel swivel"
+      bait_or_lure: "Nightcrawler, chicken liver, or cut sunfish"
+    switch_to: bottom-slide-bait
+    switch_trigger: "Float drifts too fast or fish are clearly in a deep, slow hole"
+    gear_note: "Light-medium spinning; kid-friendly visual bite indicator"
+    tag: reasoning
+advisory:
+  url: "https://mde.maryland.gov/programs/marylander/fishandshellfish/Pages/fishconsumptionadvisory.aspx"
+  note: "DNR blue catfish page notes MDE advises no more than 2 meals of channel catfish per month for the Choptank; Monocacy/Potomac limits are in MDE county charts and map. Check before keeping"
+  tag: documented
+notes:
+  - "Introduced, naturalized throughout the Potomac watershed (DNR hotspot page). [documented]"
+  - "Habitat: prefer sand, gravel or rubble over mud; young feed in shallow riffles, adults in deeper water just downstream of sand bars; tolerate brackish water (SRAC 180). [documented]"
+  - "Methods are reasoning-based standard catfish rigs; no MD-specific channel catfish rig guidance was found, though DNR blue-catfish rig advice (circle hooks on a slide, pyramid in current) applies. [reasoning]"
+  - "Monocacy channel catfish presence is documented; quality-size catch evidence specific to the Monocacy was not found. Flathead reported by anglers but not collected in DNR Monocacy surveys. [documented/not found]"
+sources:
+  - {url: "https://www.srac.msstate.edu/pdfs/Fact Sheets/180 Channel Catfish- Life History and Biology.pdf", title: "SRAC Pub 180 Channel Catfish: Life History and Biology", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Pages/hotspots/monocacy.aspx", title: "MD DNR Monocacy River hotspot", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx", title: "MD DNR Upper Potomac hotspot", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Documents/2016_Catfish_Summary.pdf", title: "MD DNR 2016 Catfish Summary (upper Potomac)", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Pages/blue-catfish/bcat_fishing.aspx", title: "MD DNR Blue Catfish Fishing", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/10/07/maryland-fishing-report-october-7-2/", title: "MD DNR Fishing Report 2026-10-07", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/08/19/maryland-fishing-report-august-19-2/", title: "MD DNR Fishing Report 2026-08-19", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2024/07/24/maryland-fishing-report-july-24-2/", title: "MD DNR Fishing Report 2024-07-24", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2024/04/17/maryland-fishing-report-april-17-2/", title: "MD DNR Fishing Report 2024-04-17", accessed: 2026-10-14}
+  - {url: "https://onthewater.com/fishing-reports/2025/01/maryland-chesapeake-bay-fishing-report-january-30-2025", title: "On The Water MD report 2025-01-30", accessed: 2026-10-14}
+  - {url: "https://proptalk.com/see-bay-shoreline-fishing-hotspots", title: "PropTalk: Bay shoreline fishing hotspots (2025-03-10)", accessed: 2026-10-14}
+  - {url: "https://www.fishtalkmag.com/blog/7-top-delmarva-piers-and-bridges-beginner-anglers", title: "FishTalk: 7 top Delmarva piers and bridges (undated)", accessed: 2026-10-14}
+  - {url: "https://mde.maryland.gov/programs/marylander/fishandshellfish/Pages/fishconsumptionadvisory.aspx", title: "MDE Fish Consumption Advisory", accessed: 2026-10-14}

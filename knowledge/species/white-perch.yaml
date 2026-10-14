@@ -1,0 +1,127 @@
+key: white-perch
+name: White perch
+kid_friendly: true   # reasoning: small fish, eats grass shrimp/bloodworm/minnow on a simple bottom or bobber rig from piers and docks; Matapeake pier noted for small fish inside the cove
+temp_bands_f:
+  - {band: inactive, max: 45, tag: reasoning, note: "Winter fish sit deep (35 ft+ in Bay channels, OTW 2024-12-19); out of shore reach rather than truly inactive. USFWS profile gives overwintering depths, no feeding cutoff"}
+  - {band: slow, min: 45, max: 54, tag: reasoning, note: "Pre-spawn staging in upper tidal rivers; DNR ties run onset to water near 50F ('Warmer water temperatures at the 50-degree mark', src https://news.maryland.gov/dnr/2026/03/18/maryland-fishing-report-march-18-2/)"}
+  - {band: active, min: 54, max: 57, tag: documented, src: "https://njscuba.net/wp-content/uploads/biology/pdf/usfws_white_perch_0199.pdf", note: "USFWS Species Profile (Stanley & Danie 1983): Chesapeake Bay spawning begins at 12-14C (54-57F). Spawning-run concentration, not a general feeding optimum"}
+  - {band: peak, min: 57, max: 75, tag: reasoning, note: "Broad post-spawn feeding range; USFWS lists preferred temps as 41-90F generally at or above acclimation, too wide to set a peak. Upper bound is reasoning"}
+  - {band: active, min: 75, max: 84, tag: reasoning, note: "Summer: DNR reports good shoreline fishing at morning/evening with Patapsco water ~83F (src https://news.maryland.gov/dnr/2024/07/24/maryland-fishing-report-july-24-2/); fish move shallow at night, deeper by day"}
+  - {band: stressed, min: 84, tag: reasoning, note: "USFWS profile: September-collected fish acclimated to 83F had LD50 of 91F; loss of equilibrium at 93F (acclimated 64F). 84F stress cut is reasoning"}
+season:
+  tidal-potomac:
+    1: poor
+    2: poor
+    3: good
+    4: good
+    5: fair
+    6: fair
+    7: fair
+    8: fair
+    9: fair
+    10: fair
+    11: poor
+    12: poor
+    tag: reasoning
+    note: "Spring run into tidal Potomac tributaries incl. Mattawoman Creek at Mason's Branch (DNR 2026-03-18) and 'tributaries of the tidal Potomac' (src https://news.maryland.gov/dnr/2023/03/29/maryland-fishing-report-march-29/). Summer/fall Potomac shore reports not found; lower Potomac fall/winter fish are on deep oyster lumps (boat). Month ratings are reasoning."
+  upper-bay:
+    1: poor
+    2: poor
+    3: good
+    4: good
+    5: good
+    6: good
+    7: good
+    8: good
+    9: good
+    10: fair
+    11: poor
+    12: poor
+    tag: reasoning
+    note: "Spring run in Bush, Magothy, Chester and lower Susquehanna (DNR 2023-03-29, 2024-03-27). Summer: shoreline structure on high flood tide morning/evening (DNR 2026-08-19). Oct 2026: fish holding near structure in deeper tidal-river water (DNR 2026-10-07). Winter: deep, boat-only. Month ratings are reasoning."
+  middle-bay:
+    1: poor
+    2: poor
+    3: fair
+    4: good
+    5: good
+    6: good
+    7: good
+    8: good
+    9: good
+    10: good
+    11: fair
+    12: poor
+    tag: reasoning
+    note: "Matapeake pier lists white perch as a most-common catch (src https://www.fishtalkmag.com/blog/7-top-delmarva-piers-and-bridges-beginner-anglers); Kent Narrows produces perch on high-low/Sabiki rigs. Choptank run reaches Denton in March (DNR 2026-03-18). Oct 2026: perch at piers, docks, oyster beds, moving deeper as water cools (DNR 2026-10-07). Nov: deep at Bay Bridge rock piles and off Matapeake, mostly a boat bite. Month ratings are reasoning."
+prefs:
+  flow:   {rising: unknown, falling: unknown, high_muddy: minus, low_clear: neutral, tag: reasoning, note: "Tidal species in this app; spring runs follow freshets but no source opened rates flow effect"}
+  light:  {dawn: plus, day: minus, dusk: plus, night: plus, overcast: plus, tag: documented, src: "https://njscuba.net/wp-content/uploads/biology/pdf/usfws_white_perch_0199.pdf", note: "USFWS: in summer fish move to shallow water (3-4 ft) at night and deeper (13-30 ft) by day. DNR repeatedly says morning and evening; largest fish evening and early morning (DNR 2026-08-19). Overcast = plus is reasoning"}
+  tide:   {incoming: plus, outgoing: plus, slack: minus, tag: documented, src: "https://news.maryland.gov/dnr/2026/08/19/maryland-fishing-report-august-19-2/", note: "Upper Bay best 'on a moving tide, especially the high flood tide along shoreline structure'. Slack = minus is reasoning"}
+  front:  {pre_front_falling: unknown, post_front_high_rising: unknown, steady: neutral, tag: reasoning, note: "Not found in sources"}
+methods:
+  - id: bottom-rig-bait
+    when: "Piers, docks, bulkheads, rocky shorelines; moving tide; spring run holes in upper tidal creeks; any season fish are within casting range"
+    rig_line: "Two-hook high-low with #4-#6 baitholder or #6 circle on 12-15 lb mono droppers, 1/2-1 oz bank sinker, grass shrimp or bloodworm piece"
+    rig:
+      hook: "#4-#6 long-shank baitholder or #6-#4 circle (circle for kids, fewer gut hooks; reasoning)"
+      weight: "1/2-1 oz bank sinker on the bottom loop; heavier only if current lifts it (reasoning)"
+      leader: "Pre-tied high-low of 15-20 lb mono, droppers 4-6 in, ~30 in overall"
+      hardware: "Small barrel swivel at the top of the rig"
+      bait_or_lure: "Grass shrimp, bloodworm pieces, peeler crab, or small minnow (DNR 2024-04-17, 2026-10-07). Fishbites bloodworm strips work as a no-mess sub on Sabiki-style rigs (FishTalk Matapeake)"
+    switch_to: slip-bobber-shrimp
+    switch_trigger: "Crabs or small fish strip bait in under 2 min, or fish are tight to pilings/rocks in shallow water"
+    gear_note: "Best on a light 6-7 ft spinning rod with 6-10 lb line; Matt's 6'6\" Ugly Stiks (unconfirmed) work. The Crossfire MH is heavier than ideal but usable"
+    tag: documented
+    src: "https://news.maryland.gov/dnr/2024/04/17/maryland-fishing-report-april-17-2/"
+  - id: slip-bobber-shrimp
+    when: "Summer morning/evening along shoreline structure, dock pilings, bulkheads on a flooding tide"
+    rig_line: "Slip bobber (1/2 oz-rated) on bobber stop and bead, #6 split shot 12 in up, #6 baitholder, grass shrimp or small minnow set 1 ft off bottom"
+    rig:
+      hook: "#6 baitholder or light-wire Aberdeen"
+      weight: "One or two BB/#4 split shot, 12 in above the hook"
+      leader: "None needed; 8-10 lb mono main line or 2 ft 10 lb fluoro off braid"
+      hardware: "Bobber stop knot, 4 mm bead, slip float"
+      bait_or_lure: "Live grass shrimp (2-3 on the hook) or small lip-hooked minnow"
+    switch_to: spinnerbait-cast
+    switch_trigger: "Float sits 15 min with no taps while fish are seen dimpling or chasing bait"
+    gear_note: "Light spinning rod. Kid-friendly: watchable float. Grass shrimp availability locally not verified"
+    tag: documented
+    src: "https://news.maryland.gov/dnr/2026/08/19/maryland-fishing-report-august-19-2/"
+  - id: spinnerbait-cast
+    when: "Morning and evening, shallow structured shorelines in tidal rivers, May-October"
+    rig_line: "1/8-1/4 oz safety-pin spinnerbait or spin-jig (Beetle Spin style), white or chartreuse, tied direct to 6-10 lb line"
+    rig:
+      hook: "Lure's own #2-#4 hook"
+      weight: "Lure only, 1/8-1/4 oz"
+      leader: "Optional 2 ft 10 lb fluoro if on braid"
+      hardware: "None"
+      bait_or_lure: "Small spinnerbait or spin-jig with 2 in grub, white/chartreuse (color reasoning). DNR repeatedly names small spinnerbaits and spin-jigs"
+    switch_to: bottom-rig-bait
+    switch_trigger: "No hits after working 100 yards of shoreline, or sun is up and fish drop deep"
+    gear_note: "Needs light gear Matt has not confirmed owning; too light for the Crossfire MH to cast well"
+    tag: documented
+    src: "https://news.maryland.gov/dnr/2025/08/06/maryland-fishing-report-august-6"
+advisory:
+  url: "https://mde.maryland.gov/programs/marylander/fishandshellfish/Pages/fishconsumptionadvisory.aspx"
+  note: "MDE lists white perch among intensively surveyed species; meal limits are in its species/location charts and map, not on the landing page. Check before keeping"
+  tag: documented
+notes:
+  - "Typical size 7-10 inches, rarely over 1 lb (src https://www.chesapeakebay.net/discover/field-guide/entry/white-perch). Quality = 10 in+ 'jumbo' perch is reasoning. [documented size; quality cut reasoning]"
+  - "Spawning runs start in late March as water warms; adults move upstream to fresh or slightly brackish water, then back downstream (CBP field guide). [documented]"
+  - "Each Bay river likely has its own population (CBP field guide). [documented]"
+  - "Not a realistic shore target in frederick-rivers, upper-potomac (nontidal) or md-coast; omitted. [reasoning]"
+sources:
+  - {url: "https://www.chesapeakebay.net/discover/field-guide/entry/white-perch", title: "Chesapeake Bay Program Field Guide: White Perch", accessed: 2026-10-14}
+  - {url: "https://njscuba.net/wp-content/uploads/biology/pdf/usfws_white_perch_0199.pdf", title: "USFWS FWS/OBS-82/11.7 Species Profile: White Perch (Stanley & Danie 1983), mirror copy", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/03/18/maryland-fishing-report-march-18-2/", title: "MD DNR Fishing Report 2026-03-18", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2023/03/29/maryland-fishing-report-march-29/", title: "MD DNR Fishing Report 2023-03-29", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2024/03/27/maryland-fishing-report-march-27-2", title: "MD DNR Fishing Report 2024-03-27", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2024/04/17/maryland-fishing-report-april-17-2/", title: "MD DNR Fishing Report 2024-04-17", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2024/07/24/maryland-fishing-report-july-24-2/", title: "MD DNR Fishing Report 2024-07-24", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2025/08/06/maryland-fishing-report-august-6", title: "MD DNR Fishing Report 2025-08-06", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/08/19/maryland-fishing-report-august-19-2/", title: "MD DNR Fishing Report 2026-08-19", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/10/07/maryland-fishing-report-october-7-2/", title: "MD DNR Fishing Report 2026-10-07", accessed: 2026-10-14}
+  - {url: "https://onthewater.com/fishing-reports/2024/12/maryland-chesapeake-bay-fishing-report-december-19-2024", title: "On The Water MD report 2024-12-19", accessed: 2026-10-14}
+  - {url: "https://www.fishtalkmag.com/blog/7-top-delmarva-piers-and-bridges-beginner-anglers", title: "FishTalk: 7 top Delmarva piers and bridges (undated)", accessed: 2026-10-14}
+  - {url: "https://mde.maryland.gov/programs/marylander/fishandshellfish/Pages/fishconsumptionadvisory.aspx", title: "MDE Fish Consumption Advisory", accessed: 2026-10-14}

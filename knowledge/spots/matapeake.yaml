@@ -1,0 +1,148 @@
+id: matapeake
+name: Matapeake Fishing Pier (Matapeake Landing, Kent Island)
+status: active
+lat: 38.9563
+lon: -76.3555
+approx: true
+region: middle-bay
+water_type: pier
+bank_faces_deg: 270
+bank_faces_note: "Pier runs out from Kent Island's west shore into the open Bay; angler faces roughly west toward the Western Shore. Reasoning from map position, not a survey."
+bank_faces_tag: reasoning
+luca_ok: true
+luca_note: "County lists restrooms and a lit pier, and a 2025 Proptalk article calls it a family fishing/crabbing spot. Railing height and pier deck height not found, so watch him closely at the rail. No pets allowed."
+luca_tag: reasoning
+stations:
+  usgs:  {id: null}
+  nwps:  {id: null}
+  coops:
+    id: "8572770"
+    name: "Matapeake, MD"
+    lat: 38.9567
+    lon: -76.355
+    distance_mi: 0.0
+    has: [tide_predictions]
+    note: "Harmonic tide prediction station (type R, no reference station) at the pier. Sensor list is null, so it gives no live water temp, pressure or wind."
+    tag: documented
+    src: "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/8572770/tidepredoffsets.json"
+  coops_met:
+    id: "8575512"
+    name: "Annapolis, MD"
+    lat: 38.983883
+    lon: -76.480034
+    distance_mi: 7.0
+    has: [water_level, water_temp, air_temp, barometric_pressure, wind]
+    note: "Western Shore across the Bay, 7.0 mi. Nearest measured CO-OPS water temperature, pressure and wind."
+    tag: documented
+    src: "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/8575512/sensors.json"
+  cbibs:
+    id: AN
+    name: "Annapolis (CBIBS)"
+    lat: 38.9634
+    lon: -76.4469
+    distance_mi: 4.9
+    has: [water_temp, salinity, air_temp, barometric_pressure, wind, wind_gust, wave_height, wave_period, wave_direction]
+    note: "Mid-Bay off the Severn mouth. The buoy is pulled some winters to avoid ice, so expect gaps December to March."
+    tag: documented
+    src: "https://buoybay.noaa.gov/locations/annapolis"
+  ndbc: {id: null}
+flow_ceiling: {value: null, unit: cfs, source: n/a}
+wind_gust_limit_mph: 25
+wind_note: "Pier is fully exposed to west and northwest wind across the open Bay. 25 mph gust limit for pier comfort and safety. Reasoning, Matt's number wins."
+wind_tag: reasoning
+species:
+  striped-bass:
+    presence: verified
+    quality: not_verified
+    evidence:
+      - {text: "DNR angler report: 22 in rockfish 'at the Matapeake Pier'. Catch date not stated.", date: "not found", published: "2013-06-12", tag: documented, src: "https://dnrweb.dnr.state.md.us/fisheries/fishingreport/single-1.asp?ID=3185"}
+      - {text: "Proptalk shoreline-hotspot article lists rockfish at the 650 ft pier, with soft plastic jigs, bloodworms, cut alewife or spot, and razor clams.", date: "not found", published: "2025-03-10", tag: documented, src: "https://proptalk.com/see-bay-shoreline-fishing-hotspots"}
+      - {text: "DNR weekly report: Bay Bridge piers and abutments producing slot-size striped bass on drifted live spot, small white perch, cut bait, live eels, or soft plastics. Moving tides in morning and evening are best. Middle Bay water about 68°F. This is the bridge (about 1 to 2 mi north), mostly a drift fishery, and not shore evidence for the Matapeake pier.", date: "week before 2026-10-07", published: "2026-10-07", tag: documented, src: "https://news.maryland.gov/dnr/2026/10/07/maryland-fishing-report-october-7-2/"}
+    note: "Historical catches only. No dated 2026 catch from the pier itself was found."
+  white-perch:
+    presence: verified
+    quality: not_verified
+    evidence:
+      - {text: "Listed among Matapeake pier species.", date: "not found", published: "2025-03-10", tag: documented, src: "https://proptalk.com/see-bay-shoreline-fishing-hotspots"}
+      - {text: "DNR: white perch moving to deeper water in lower tidal rivers as water cools; large piers, docks and oyster beds with grass shrimp, peeler crab or bloodworms.", date: "week before 2026-10-07", published: "2026-10-07", tag: documented, src: "https://news.maryland.gov/dnr/2026/10/07/maryland-fishing-report-october-7-2/"}
+  bluefish:
+    presence: verified
+    quality: not_verified
+    evidence:
+      - {text: "Listed among Matapeake pier species.", date: "not found", published: "2025-03-10", tag: documented, src: "https://proptalk.com/see-bay-shoreline-fishing-hotspots"}
+    note: "The DNR 2026-10-07 Middle Bay section does not mention bluefish."
+  blue-catfish:
+    presence: not_verified
+    quality: not_verified
+    evidence:
+      - {text: "Article lists 'catfish' at Matapeake without naming the species.", date: "not found", published: "2025-03-10", tag: documented, src: "https://proptalk.com/see-bay-shoreline-fishing-hotspots"}
+  channel-catfish:
+    presence: not_verified
+    quality: not_verified
+    evidence:
+      - {text: "Same unspecified 'catfish' listing.", date: "not found", published: "2025-03-10", tag: documented, src: "https://proptalk.com/see-bay-shoreline-fishing-hotspots"}
+  other:
+    - {species: "red drum, spot, Atlantic croaker", presence: verified, quality: not_verified, text: "Listed as 'puppy drum, spot, croaker'.", published: "2025-03-10", tag: documented, src: "https://proptalk.com/see-bay-shoreline-fishing-hotspots"}
+access:
+  status: verified
+  parking:
+    text: "Pay & Display lot off Route 8 (about 3 mi south of US 50), entered via Marine Academy Dr. $2.50 per hour per vehicle, credit card only since October 2025. Print the receipt and display it face-up, or get a $50 citation. The ramp lot needs a QAC Landing Permit. The lot can fill in peak season; overflow parking is a short walk away."
+    tag: documented
+    src: "https://www.qac.org/facilities/facility/details/matapeakefishingpierandramp-127"
+    src2: "https://www.delmarvatrailsandwaterways.com/kayak-boat-launches/matapeake-pier"
+  walk:
+    text: "Short, flat walk from the lot to the pier. Distance not found."
+    tag: reasoning
+  stand:
+    text: "650 ft lit fishing pier. Fish anywhere along it; the end reaches the deepest water."
+    tag: documented
+    src: "https://www.qac.org/facilities/facility/details/matapeakefishingpierandramp-127"
+  casting:
+    text: "Open water on all sides of the pier, so casting room is good unless it's crowded. Water depth at the end not found."
+    tag: reasoning
+  landing:
+    text: "Pier deck height above water not found. Assume a pier/drop net is needed to land a slot striper or anything over about 2 lb. Don't lift fish on braid."
+    tag: reasoning
+  hours:
+    text: "Fishing pier and boat ramp open 24 hours, year-round; picnic area sunrise to sunset. Pier is lighted."
+    open: 24h
+    close: 24h
+    tag: documented
+    src: "https://www.qac.org/facilities/facility/details/matapeakefishingpierandramp-127"
+  after_dark: allowed
+  after_dark_note: "Pier is open 24 hours and lit. Overnight parking rules are not stated; the lot is pay-by-hour."
+  closures:
+    text: "Precedent: the pier, ramp, beach and grounds closed about 2025-03-06 to 2025-04-06 for DNR dredging and beach replenishment. No 2026 closure found."
+    tag: documented
+    src: "https://chesadelcrier.com/articles/2025/03/temporary-closure-of-several-areas-at-matapeake"
+  rules_on_site:
+    text: "No pets. No other fishing rules listed. Blanket pier license not found, so carry Matt's own Bay license."
+    tag: documented
+    src: "https://www.qac.org/facilities/facility/details/matapeakefishingpierandramp-127"
+jurisdiction:
+  water: tidal
+  state: MD
+  license: "Maryland Chesapeake Bay & Coastal Sport Fishing License (Matt states he holds a MD tidal license; not verified)"
+  flags: ["Striped bass: Chesapeake Bay rules, closed to targeting all of August", "Matapeake is not in a listed spawning river"]
+  tag: documented
+  src: "https://dnr.maryland.gov/Pages/service_fishing_license.aspx"
+crowding: "The lot can fill in peak season (Delmarva Trails). The 2025 article calls it a family fishing and crabbing spot, so expect company on warm weekends. Off-season weekday crowding not found."
+hazards:
+  - "Exposed to west and northwest wind and chop across the open Bay"
+  - "Railing and deck height not found; landing fish from height"
+  - "Shipping channel nearby (a DNR report mentions a channel down from the pier); wakes"
+matt_notes: []
+sources:
+  - {url: "https://www.qac.org/facilities/facility/details/matapeakefishingpierandramp-127", title: "Queen Anne's County — Matapeake Fishing Pier and Ramp", accessed: 2026-10-14}
+  - {url: "https://www.delmarvatrailsandwaterways.com/kayak-boat-launches/matapeake-pier", title: "Delmarva Trails & Waterways — Matapeake Pier", accessed: 2026-10-14}
+  - {url: "https://chesadelcrier.com/articles/2025/03/temporary-closure-of-several-areas-at-matapeake", title: "Temporary Closure of Several Areas at Matapeake", accessed: 2026-10-14}
+  - {url: "https://proptalk.com/see-bay-shoreline-fishing-hotspots", title: "Proptalk — Bay shoreline fishing hotspots (2025-03-10)", accessed: 2026-10-14}
+  - {url: "https://dnrweb.dnr.state.md.us/fisheries/fishingreport/single-1.asp?ID=3185", title: "DNR angler report, Matapeake Pier (posted 2013-06-12)", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/10/07/maryland-fishing-report-october-7-2/", title: "Maryland Fishing Report — October 7, 2026", accessed: 2026-10-14}
+  - {url: "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/8572770.json", title: "NOAA CO-OPS 8572770 Matapeake metadata", accessed: 2026-10-14}
+  - {url: "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/8572770/tidepredoffsets.json", title: "NOAA CO-OPS 8572770 tide prediction offsets (type R)", accessed: 2026-10-14}
+  - {url: "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/8572770/sensors.json", title: "NOAA CO-OPS 8572770 sensors (null)", accessed: 2026-10-14}
+  - {url: "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/8575512.json", title: "NOAA CO-OPS 8575512 Annapolis metadata", accessed: 2026-10-14}
+  - {url: "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/8575512/sensors.json", title: "NOAA CO-OPS 8575512 sensors", accessed: 2026-10-14}
+  - {url: "https://buoybay.noaa.gov/locations/annapolis", title: "CBIBS Annapolis buoy", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/Pages/service_fishing_license.aspx", title: "MD DNR — Sport Fishing & Crabbing Licenses", accessed: 2026-10-14}

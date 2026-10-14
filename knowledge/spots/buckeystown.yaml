@@ -1,0 +1,112 @@
+id: buckeystown
+name: Buckeystown (Buckeystown Community Park)
+status: active
+lat: 39.331
+lon: -77.418
+approx: true
+coords_note: {text: "American Whitewater access 'Take Out - Buckeystown Park' lists 39.3279, -77.4157, about 0.3 mi from the app pin.", tag: documented, src: "https://www.howsyourriver.com/access_sites/take-out-buckeystown-park-md"}
+region: frederick-rivers
+water_type: river
+bank_faces_deg: 90
+bank_faces_note: {text: "Park is on the west bank of the Monocacy; angler faces roughly east. Read from map geometry, not surveyed.", tag: reasoning}
+luca_ok: false
+luca_note: {text: "NPS describes a steep, rocky soft launch and a steep ramp with narrow stairs; Matt reports crowding. Not a clean kid bank.", tag: reasoning}
+stations:
+  usgs:
+    id: "01643580"
+    name: "Monocacy River near Dickerson, MD"
+    lat: 39.263397
+    lon: -77.435742
+    distance_mi: 4.8
+    has: [discharge, gage_height, water_temp, dissolved_oxygen, ph, specific_conductance, turbidity]
+    tag: documented
+    src: "https://waterdata.usgs.gov/monitoring-location/USGS-01643580/all-graphs"
+    coords_src: "https://www.waterqualitydata.us/provider/NWIS/USGS-MD/USGS-01643580/"
+    note: "Downstream, same river, has water temperature. No NWS flood stages published per howsyourriver."
+  usgs_upstream:
+    id: "01643000"
+    name: "Monocacy River at Jug Bridge near Frederick, MD"
+    distance_mi: 5.7
+    has: [discharge, gage_height]
+    tag: documented
+    src: "https://waterdata.usgs.gov/monitoring-location/01643000/all-graphs/"
+  nwps:
+    lid: "FDKM2"
+    name: "Monocacy River near Frederick at Interstate 70"
+    usgs_id: "01643000"
+    distance_mi: 5.7
+    stages_ft: {action: 13, minor: 15, moderate: 17, major: 20}
+    tag: documented
+    src: "https://api.water.noaa.gov/nwps/v1/gauges/FDKM2"
+    note: "Nearest NWS forecast point; upstream at Jug Bridge."
+  coops: {id: null}
+  cbibs: {id: null}
+flow_ceiling: {value: null, unit: cfs, source: ask_matt}
+wind_gust_limit_mph: 30
+wind_gust_note: {text: "River bank default.", tag: reasoning}
+species:
+  smallmouth-bass:
+    presence: verified
+    quality: not_verified
+    evidence:
+      - {text: "MD DNR: smallmouth and largemouth are the most targeted Monocacy sportfish. Catch-and-release for bass from Buckeystown Dam downstream to the Potomac.", date: "undated page", tag: documented, src: "https://dnr.maryland.gov/fisheries/Pages/hotspots/monocacy.aspx"}
+      - {text: "MD DNR weekly: the Monocacy 'also holds good populations of smallmouth bass'. Historical by now.", date: "published 2026-09-02", tag: documented, src: "https://news.maryland.gov/dnr/2026/09/02/maryland-fishing-report-september-2/"}
+  largemouth-bass:
+    presence: verified
+    quality: not_verified
+    evidence:
+      - {text: "MD DNR lists largemouth among the most targeted Monocacy sportfish. River-wide.", date: "undated page", tag: documented, src: "https://dnr.maryland.gov/fisheries/Pages/hotspots/monocacy.aspx"}
+  channel-catfish:
+    presence: verified
+    quality: not_verified
+    evidence:
+      - {text: "MD DNR: channel catfish most common in the lower reaches of the Monocacy (Buckeystown is in the lower half; reasoning).", date: "undated page", tag: documented, src: "https://dnr.maryland.gov/fisheries/Pages/hotspots/monocacy.aspx"}
+  flathead-catfish:
+    presence: not_verified
+    presence_note: "Angler reports only; not collected in DNR standardized Monocacy surveys."
+    quality: not_verified
+    evidence:
+      - {text: "MD DNR: increased angler reports of flathead catfish and northern snakehead, not collected in standardized surveys to date.", date: "undated page", tag: documented, src: "https://dnr.maryland.gov/fisheries/Pages/hotspots/monocacy.aspx"}
+  northern-snakehead:
+    presence: not_verified
+    presence_note: "Angler reports only."
+    quality: not_verified
+    evidence:
+      - {text: "Same DNR statement as flathead.", date: "undated page", tag: documented, src: "https://dnr.maryland.gov/fisheries/Pages/hotspots/monocacy.aspx"}
+access:
+  status: not_verified
+  parking: {text: "Buckeystown Community Park (Frederick County Parks, 7221 Michaels Road listed as contact address): gravel lot for up to 20 vehicles; canoe/kayak access.", tag: documented, src: "https://www.riverexplorer.com/details.php?id=1308"}
+  walk: {text: "NPS: 160 ft portage to a 'somewhat steep and rocky soft launch', or 250 ft carry to a steep ramp (not for vehicles) with narrow staircases on either side.", tag: documented, src: "https://www.nps.gov/articles/000/plan-your-own-adventure-on-the-monocacy-river-water-trail.htm"}
+  stand: {text: "not found. The launch points are documented; a fishable bank is not.", tag: reasoning}
+  casting: {text: "not found", tag: reasoning}
+  landing: {text: "not found. The steep, rocky launch suggests awkward landing (reasoning).", tag: reasoning}
+  hours: {text: "'Hours of operation are 8 AM to sunset.' Third-party listing, not confirmed on a Frederick County page.", open: "08:00", close: "sunset", tag: documented, src: "https://www.riverexplorer.com/details.php?id=1308"}
+  after_dark: prohibited
+  after_dark_note: {text: "Park closes at sunset per riverexplorer; county FAQ says no vehicles after official closing without a permit. No evening session after sunset.", tag: documented, src: "https://recreater.com/m/faq?cat=18"}
+jurisdiction:
+  water: nontidal
+  state: MD
+  license: "Maryland nontidal license (Matt's stated license; not verified here)"
+  flags:
+    - "Bass catch-and-release from Buckeystown Dam downstream to the Potomac (MD DNR hotspot page). Check current regs."
+    - "Frederick County park rules apply."
+  tag: documented
+  src: "https://dnr.maryland.gov/fisheries/Pages/hotspots/monocacy.aspx"
+crowding: "Crowded per Matt (firsthand). Small 20-car lot (riverexplorer)."
+hazards:
+  - "Steep, rocky launch and steep ramp with narrow stairs (NPS, documented)."
+  - "Buckeystown Dam nearby; dams create dangerous currents (reasoning; dam location relative to the park not mapped here)."
+  - "Flooding: FDKM2 upstream action 13 ft, flood 15 ft (documented)."
+matt_notes:
+  - {text: "Buckeystown has been crowded.", src: Matt}
+sources:
+  - {url: "https://www.riverexplorer.com/details.php?id=1308", title: "Potomac River Guide: Buckeystown Community Park", accessed: 2026-10-14}
+  - {url: "https://www.howsyourriver.com/access_sites/take-out-buckeystown-park-md", title: "Take Out - Buckeystown Park", accessed: 2026-10-14}
+  - {url: "https://www.nps.gov/articles/000/plan-your-own-adventure-on-the-monocacy-river-water-trail.htm", title: "NPS Monocacy River Water Trail", accessed: 2026-10-14}
+  - {url: "https://recreater.com/m/faq?cat=18", title: "Frederick County Parks FAQ", accessed: 2026-10-14}
+  - {url: "https://waterdata.usgs.gov/monitoring-location/USGS-01643580/all-graphs", title: "USGS 01643580 Monocacy near Dickerson", accessed: 2026-10-14}
+  - {url: "https://www.waterqualitydata.us/provider/NWIS/USGS-MD/USGS-01643580/", title: "WQP site record USGS-01643580", accessed: 2026-10-14}
+  - {url: "https://waterdata.usgs.gov/monitoring-location/01643000/all-graphs/", title: "USGS 01643000 Monocacy at Jug Bridge", accessed: 2026-10-14}
+  - {url: "https://api.water.noaa.gov/nwps/v1/gauges/FDKM2", title: "NWPS gauge FDKM2", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Pages/hotspots/monocacy.aspx", title: "MD DNR Monocacy River hotspot", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/09/02/maryland-fishing-report-september-2/", title: "Maryland Fishing Report Sept 2 2026", accessed: 2026-10-14}

@@ -1,0 +1,86 @@
+key: smallmouth-bass
+name: Smallmouth bass
+kid_friendly: false   # reasoning: river current, rocky wading/banks and lure fishing; small fish on a worm are possible but not a simple, attainable young-kid outing from typical Potomac/Monocacy banks. Spot-level exceptions possible.
+temp_bands_f:
+  - {band: inactive, max: 50, tag: documented, src: "https://apps.dtic.mil/sti/pdfs/ADA323294.pdf", note: "USFWS HSI (Edwards et al. 1983): at about 10°C (50°F) smallmouth become inactive and seek shelter. DNR Dec 2021 still reported good upper Potomac smallmouth in deeper areas, so slow deep presentations can still catch fish."}
+  - {band: slow, min: 50, max: 55, tag: reasoning}
+  - {band: active, min: 55, max: 68, tag: reasoning, note: "USFWS HSI: nest building/spawning begins at 12.8-21.0°C (55-70°F), most at or above 15°C (59°F) (documented). NPS Obed: spawning when water approaches 60°F. Calling the band 'active' is reasoning."}
+  - {band: peak, min: 68, max: 81, tag: documented, src: "https://apps.dtic.mil/sti/pdfs/ADA323294.pdf", note: "USFWS HSI: field data suggest adults prefer about 21-27°C (70-81°F) in summer; MSU Extension: prefers cool water 68-78°F. Preference temp, not a measured bite curve."}
+  - {band: stressed, min: 81, tag: reasoning, note: "No documented bite-stress figure found; lab optimum growth 26-29°C (HSI). DNR July 2026 Potomac fish kill tied to low water and extreme heat. Reasoning: hot, low, clear summer water pushes the bite to dawn/dusk."}
+season:
+  upper-potomac: {1: poor, 2: poor, 3: fair, 4: good, 5: good, 6: good, 7: fair, 8: fair, 9: good, 10: prime, 11: good, 12: fair, tag: reasoning, note: "Presence and quality documented: DNR calls it the most sought-after gamefish in the nontidal Potomac; Nov 2025 survey found large adults common, catch rates of 14 in+ fish above average at many stations, several 18-20 in. Current bite documented: DNR Oct 7, 2026 - flows stable/normal, clarity good, cooler water should make good smallmouth fishing (tubes, small cranks, swimbaits at current breaks/boulders). Spring high flows (May-June) hurt reproduction (DNR) and can blow out bank fishing. Matt's own access notes (Point of Rocks hard to work) apply at spot level. Months are reasoning."}
+  frederick-rivers: {1: poor, 2: poor, 3: fair, 4: good, 5: good, 6: good, 7: fair, 8: fair, 9: good, 10: good, 11: fair, 12: poor, tag: reasoning, note: "Presence documented: DNR says smallmouth and largemouth are the most targeted sportfish on the Monocacy; DNR Sept 2, 2026 and May 6, 2026 list the Monocacy for smallmouth; juvenile seining completed 2026 (no counts). Quality not found as survey numbers for the Monocacy. Turbidity gets very high in runoff (DNR). Matt reports Pinecliff and Buckeystown crowded (firsthand). Bass regulation below Buckeystown Dam owned by regs file."}
+  upper-bay: {1: absent, 2: absent, 3: poor, 4: fair, 5: fair, 6: poor, 7: poor, 8: poor, 9: poor, 10: fair, 11: fair, 12: poor, tag: reasoning, note: "Only Conowingo pool / lower Susquehanna evidence: DNR Nov 12, 2025 'a few' smallmouth caught there. Not a dependable shore target."}
+prefs:
+  flow: {rising: minus, falling: plus, high_muddy: minus, low_clear: minus, tag: reasoning, note: "Documented context: DNR May 2026 - very low clear flows make fishing difficult, use long casts and light line; DNR Oct 2026 - stable normal flows and good clarity = good fishing; Monocacy turbidity very high during runoff. Directional effects are reasoning."}
+  light: {dawn: plus, day: neutral, dusk: plus, night: unknown, overcast: plus, tag: documented, src: "https://news.maryland.gov/dnr/2026/09/02/maryland-fishing-report-september-2/", note: "DNR Sept 2, 2026: smallmouth best early morning and evening; DNR June 2020: upper Potomac topwater morning and evening. Day 'neutral' in fall/spring is reasoning."}
+  front: {pre_front_falling: plus, post_front_high_rising: minus, steady: neutral, tag: reasoning, note: "No source found; conventional reasoning."}
+methods:
+  - id: tube-or-jig-bottom
+    when: "Water 45-70°F, current breaks, ledges, boulders and eddies; default fall/spring method and best cold-water option"
+    rig_line: "3.5 in root-beer or green-pumpkin tube on a 1/4 oz internal tube jighead, 20 lb braid to 4 ft 10-12 lb fluoro"
+    rig:
+      hook: "1/0 tube jighead (internal), or 1/0-2/0 ball-head jig for a craw/grub"
+      weight: "1/4 oz (1/8 oz in slow water, 3/8 oz in heavy current)"
+      leader: "10-12 lb fluorocarbon, 4 ft (much lighter than Matt's 30 lb inshore leader; clear river water)"
+      hardware: "none; FG or double uni braid-to-fluoro, tie direct"
+      bait_or_lure: "3.5 in tube in root beer or green pumpkin; alt 3 in craw or grub in the same colors"
+    switch_to: small-crank-or-swimbait
+    switch_trigger: "Fish chasing or seen busting bait, stained water, or no bites dragging bottom in 30 min"
+    gear_note: "Workable on the 7 ft Crossfire MH (20 lb braid) with the leader dropped to 10-12 lb; ideal is a 6'6\"-7' medium-light/medium spinning rod with 8-10 lb braid. The unconfirmed 6'6\" Ugly Stik fits with a lighter leader."
+    tag: documented
+    src: "https://news.maryland.gov/dnr/2026/10/07/maryland-fishing-report-october-7-2/"
+    note: "Documented: root beer-colored tubes near current breaks and large boulders (DNR Oct 7, 2026; Sept 2, 2026); green pumpkin tubes and small grubs slowly along the bottom in deeper areas (DNR June 17, 2020); grubs, tubes, live minnows in Dec (DNR 2021). Weights and leader are reasoning."
+  - id: small-crank-or-swimbait
+    when: "Water 55-75°F, active fish, riffle tails, ledges and grass-bed edges"
+    rig_line: "2 in shallow crankbait (crawfish) or 3.5 in paddletail on a 1/8-1/4 oz jighead, 20 lb braid to 4 ft 12 lb fluoro, #1 snap for cranks"
+    rig:
+      hook: "Factory trebles (crank) or 1/0 jighead (swimbait)"
+      weight: "1/8-1/4 oz jighead for the swimbait; none for the crank"
+      leader: "12 lb fluorocarbon, 4 ft"
+      hardware: "#1 round-nose snap for the crankbait"
+      bait_or_lure: "2 in square-bill or shallow crank in crawfish/brown; 3-3.5 in paddletail in smoke, white or green pumpkin"
+    switch_to: topwater-popper
+    switch_trigger: "Low light with calm surface in warm water, or fish boiling on top"
+    gear_note: "Fits the Crossfire MH (light end of its jighead range); a lighter rod casts these better."
+    tag: documented
+    src: "https://news.maryland.gov/dnr/2026/09/16/maryland-fishing-report-september-16-2/"
+    note: "Documented: tubes, swimbaits, paddletails and small crankbaits for upper Potomac smallmouth (DNR Sept 16 & Oct 7, 2026; Nov 12, 2025). Sizes/colors are reasoning."
+  - id: topwater-popper
+    when: "Water 65°F+, early morning or evening, calm surface over grass beds and shallow flats"
+    rig_line: "2.5-3 in popper or small walking bait, 20 lb braid to 4 ft 15 lb mono (floats), #1 snap"
+    rig:
+      hook: "Factory trebles"
+      weight: "none"
+      leader: "12-15 lb monofilament, 4 ft (mono floats, better for topwater than fluoro)"
+      hardware: "#1 round-nose snap"
+      bait_or_lure: "2.5-3 in popper or small Zara Spooky-style walker, bone or shad"
+    switch_to: tube-or-jig-bottom
+    switch_trigger: "Sun up on the water and no topwater blowups for 20 min"
+    gear_note: "Fits the Crossfire MH or the unconfirmed 6'6\" Ugly Stik."
+    tag: documented
+    src: "https://news.maryland.gov/dnr/2026/05/06/maryland-fishing-report-may-6/"
+    note: "Documented: poppers near grass-bed edges in early morning (DNR May 6, 2026); Zara Spooks and poppers in shallow areas morning/evening (DNR June 17, 2020). Sizes are reasoning."
+advisory: {url: "https://mde.maryland.gov/programs/marylander/fishandshellfish/Pages/fishconsumptionadvisory.aspx", note: "MDE page links species/county charts; smallmouth meal advice for the Potomac/Monocacy not opened or verified.", tag: documented}
+notes:
+  - "Profile flag: bass is lower interest for Matt, especially pressured local bass. Recommend only when evidence is compelling. October 2026 is arguably that case on the upper Potomac (DNR Oct 7, 2026 report + strong Nov 2025 size structure)."
+  - "Reproduction has declined from spring high flows; DNR began supplemental stocking in 2019 (planned through 2024) and surveys show more 11 in+ and 14 in+ fish (DNR hotspot page). Big Slack Water restocking paused pending fall 2026 night surveys (DNR July 2026)."
+  - "Tidal Potomac omitted: smallmouth are a nontidal fish there; tidal stretch evidence not found for a shore target."
+  - "Regulations (incl. Monocacy catch-and-release below Buckeystown Dam and any seasonal catch-and-release) owned by rules/regs.yaml."
+sources:
+  - {url: "https://dnr.maryland.gov/fisheries/pages/hotspots/potomac.aspx", title: "MD DNR - Potomac River (Upper Potomac) hotspot", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Pages/hotspots/monocacy.aspx", title: "MD DNR - Monocacy River hotspot", accessed: 2026-10-14}
+  - {url: "https://apps.dtic.mil/sti/pdfs/ADA323294.pdf", title: "USFWS FWS/OBS-82/10.36 Habitat Suitability Information: Smallmouth Bass (1983)", accessed: 2026-10-14}
+  - {url: "https://archive.lib.msu.edu/DMC/extension_publications/4H1386/4H1386.pdf", title: "MSU Extension 4H1386 - Smallmouth bass (archived)", accessed: 2026-10-14}
+  - {url: "https://www.nps.gov/obed/learn/nature/fish.htm", title: "NPS Obed - Fish", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/10/07/maryland-fishing-report-october-7-2/", title: "Maryland Fishing Report Oct 7, 2026", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/09/16/maryland-fishing-report-september-16-2/", title: "Maryland Fishing Report Sept 16, 2026", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/09/02/maryland-fishing-report-september-2/", title: "Maryland Fishing Report Sept 2, 2026", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/05/20/maryland-fishing-report-may-20-2/", title: "Maryland Fishing Report May 20, 2026", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/05/06/maryland-fishing-report-may-6/", title: "Maryland Fishing Report May 6, 2026", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2025/11/12/maryland-fishing-report-november-12/", title: "Maryland Fishing Report Nov 12, 2025", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2021/12/01/maryland-fishing-report-december-1/", title: "Maryland Fishing Report Dec 1, 2021", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2020/06/17/maryland-fishing-report-june-17/", title: "Maryland Fishing Report June 17, 2020", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Documents/Freshwater%20Reports/Freshwater_Monthly_Rept_November2025.pdf", title: "MD DNR Freshwater Monthly Report, Nov 2025", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Documents/Freshwater%20Reports/Freshwater_Monthly_Rept_July2026.pdf", title: "MD DNR Freshwater Monthly Report, July 2026", accessed: 2026-10-14}
+  - {url: "https://mde.maryland.gov/programs/marylander/fishandshellfish/Pages/fishconsumptionadvisory.aspx", title: "MDE Fish Consumption Advisory", accessed: 2026-10-14}

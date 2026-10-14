@@ -1,0 +1,152 @@
+id: black-walnut-point
+name: Black Walnut Point (south tip of Tilghman Island)
+status: active
+lat: 38.68
+lon: -76.333
+approx: true
+region: middle-bay
+water_type: bay
+bank_faces_deg: 225
+bank_faces_note: "Point juts south between the open Bay (west) and the Choptank mouth (east). The Bay-side riprap that sources point to faces roughly west to southwest. Reasoning from map position."
+bank_faces_tag: reasoning
+luca_ok: false
+luca_note: "The only fishable shore documented is riprap (rocks). No clean, flat bank or pier was found. Hunters may be present in season. The site's 9am-5pm hours do keep a family trip in daylight. Re-rate if Matt finds a safe flat spot on site."
+luca_tag: reasoning
+stations:
+  usgs:  {id: null}
+  nwps:  {id: null}
+  coops:
+    id: "8571901"
+    name: "Avalon, Tilghman Island, MD (NOAA lists it as 'AVALON, TILGANAN ISLAND')"
+    lat: 38.71
+    lon: -76.335
+    distance_mi: 2.1
+    has: [tide_predictions]
+    note: "Subordinate prediction station referenced to Baltimore 8574680 (high tide -174 min, low tide -168 min, ratio height offsets). Predictions only, no live sensors confirmed."
+    tag: documented
+    src: "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/8571901/tidepredoffsets.json"
+  coops_met:
+    id: "8571892"
+    name: "Cambridge, MD"
+    lat: 38.5725
+    lon: -76.06167
+    distance_mi: 16.4
+    has: [water_level, water_temp, air_temp, barometric_pressure, wind]
+    note: "Up the Choptank, 16.4 mi. River water temp runs a little off open-Bay water at the point; the DNR 2026-10-07 report gave Middle Bay about 68°F and Choptank at Cambridge about 66°F."
+    tag: documented
+    src: "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/8571892/sensors.json"
+  cbibs:
+    id: GR
+    name: "Gooses Reef (CBIBS)"
+    lat: 38.5563
+    lon: -76.4147
+    distance_mi: 9.6
+    has: [water_temp, salinity, air_temp, barometric_pressure, wind, wind_gust, wave_height, wave_period, wave_direction]
+    note: "Open Bay off the Little Choptank. Best open-water proxy for the point. Sometimes pulled over winter."
+    tag: documented
+    src: "https://buoybay.noaa.gov/locations/gooses-reef"
+  ndbc: {id: null}
+flow_ceiling: {value: null, unit: cfs, source: n/a}
+wind_gust_limit_mph: 25
+wind_note: "Exposed point with open Bay to the west and south and wet riprap underfoot. 25 mph gust limit, lower with a strong westerly onto the rocks. Reasoning."
+wind_tag: reasoning
+species:
+  striped-bass:
+    presence: verified
+    quality: not_verified
+    evidence:
+      - {text: "MD DNR public lands page: fishing permitted for brackish water species such as rockfish, perch, and bluefish.", date: "n/a", published: "not found", tag: documented, src: "https://dnr.maryland.gov/publiclands/Pages/eastern/Black-Walnut-Point.aspx"}
+      - {text: "fishandhuntmaryland.com: 'Fish riprap on the Bay side of the point'; cast the current break directly south of the point. Lists striped bass, bluefish, speckled trout, and white perch. No dated catches.", date: "not found", published: "not found (2026 copyright footer only)", tag: documented, src: "https://fishandhuntmaryland.com/articles/black-walnut-point"}
+    note: "No dated shore catch of striped bass at the point was found, so size and quality are unknown. The current break off the point is a fact from the source; that it holds fish in November is reasoning."
+  white-perch:
+    presence: verified
+    quality: not_verified
+    evidence:
+      - {text: "DNR lists perch as a permitted target; fishandhunt lists white perch.", date: "n/a", published: "not found", tag: documented, src: "https://dnr.maryland.gov/publiclands/Pages/eastern/Black-Walnut-Point.aspx"}
+  bluefish:
+    presence: verified
+    quality: not_verified
+    evidence:
+      - {text: "DNR lists bluefish as a permitted target.", date: "n/a", published: "not found", tag: documented, src: "https://dnr.maryland.gov/publiclands/Pages/eastern/Black-Walnut-Point.aspx"}
+    note: "Bluefish usually leave the Middle Bay in fall, so November presence is doubtful. Reasoning."
+  blue-catfish:
+    presence: verified
+    quality: not_verified
+    evidence:
+      - {text: "DNR angler report: two blue catfish, about a foot each, 'off the rocks' bottom fishing clam at Black Walnut Point, Bayside. Catch date not stated.", date: "not found", published: "2024-05-07", tag: documented, src: "https://dnrweb.dnr.state.md.us/fisheries/fishingreport/single-1.asp?ID=8577"}
+    note: "Small fish. One historical shore report."
+  channel-catfish:
+    presence: not_verified
+    quality: not_verified
+    evidence: []
+    note: "not found"
+  other:
+    - {species: "spotted seatrout", presence: not_verified, text: "fishandhunt lists 'speckled trout'. No date, no catch.", tag: documented, src: "https://fishandhuntmaryland.com/articles/black-walnut-point"}
+access:
+  status: not_verified
+  status_note: "Public fishing is documented. The parking-lot 'fishing area' and Bay-side riprap are public. Whether you can stand on the tip itself is not verified, because the inn's roughly 6 acres around the point are private. Check on site before committing a family trip to the tip."
+  parking:
+    text: "No parking on the DNR facility itself. Park in the Talbot County-maintained 'Black Walnut Point Fishing Area' lot a short distance away at 4787 Black Walnut Point Rd, Tilghman. Capacity conflicts: fishandhunt says the paved lot holds up to five cars; Delmarva Trails calls it 'large'; a Google review quoted by TourTalbot says 'plenty of parking'. Porta-potties. No entry fee."
+    tag: documented
+    src: "https://dnr.maryland.gov/publiclands/Pages/eastern/Black-Walnut-Point.aspx"
+    src2: "https://fishandhuntmaryland.com/articles/black-walnut-point"
+    src3: "https://www.delmarvatrailsandwaterways.com/beaches-piers/black-walnut-point"
+  walk:
+    text: "From the lot (just north of the Navy research station), walk the gravel road south. There is a 0.75 mi nature trail loop in the woods north of the point. Walking distance from the lot to the Bay-side riprap not found."
+    tag: documented
+    src: "https://www.delmarvatrailsandwaterways.com/hiking-nature-trails/black-walnut-point-nrma"
+  stand:
+    text: "Bay-side riprap ('Fish riprap on the Bay side of the point'). Delmarva Trails says the county fishing area is 'not technically a pier, but still available for recreational fishing.' No pier or bulkhead documented. Standing room on the point tip is not verified, because the private inn sits around it."
+    tag: documented
+    src: "https://fishandhuntmaryland.com/articles/black-walnut-point"
+    src2: "https://www.delmarvatrailsandwaterways.com/beaches-piers/black-walnut-point"
+  casting:
+    text: "Open Bay in front of the riprap, so casting room is likely good. The current break 'directly south of the point' may be beyond shore casting range; not verified."
+    tag: reasoning
+  landing:
+    text: "Landing on riprap: footing on wet rock. A long-handled landing net is advised for slot stripers. No drop net needed at shore level."
+    tag: reasoning
+  hours:
+    text: "DNR NRMA open daily, 9 a.m. to 5 p.m. Hours for the county lot are not stated. Plan sessions inside 09:00 to 17:00, so the dawn bite is not available on NRMA land. November sunset is roughly 16:40 to 17:00 (approximate, not looked up), so the close falls near sunset."
+    open: "09:00"
+    close: "17:00"
+    tag: documented
+    src: "https://dnr.maryland.gov/publiclands/Pages/eastern/Black-Walnut-Point.aspx"
+  after_dark: prohibited
+  after_dark_note: "NRMA closes at 5 p.m. After-dark use of the county fishing-area lot itself is not verified."
+  rules_on_site:
+    text: "Pets allowed. Inn property is private and not open to the public. Hunters may be present (Delmarva Trails links to hunting seasons); November is inside fall hunting seasons, so wear blaze orange. Hunting-day closures not found. Contact: Tuckahoe State Park HQ 410-820-1668."
+    tag: documented
+    src: "https://www.delmarvatrailsandwaterways.com/hiking-nature-trails/black-walnut-point-nrma"
+jurisdiction:
+  water: tidal
+  state: MD
+  license: "Maryland Chesapeake Bay & Coastal Sport Fishing License (Matt states he holds a MD tidal license; not verified)"
+  flags:
+    - "Striped bass, Chesapeake Bay rules: November falls inside the Sep 1 to Dec 5 harvest season (1 fish per day, 19 to 24 in). Catch-and-release only Dec 6 to 31."
+    - "The point is at the Choptank mouth, and the Choptank is a listed spawning river closed to targeting Mar 1 to May 31. Whether the point lies inside that boundary is not verified; this matters only in spring."
+  tag: documented
+  src: "https://dnr.maryland.gov/fisheries/Pages/sb_reg_maps.aspx"
+crowding: "not found. A parking lot that one source sizes at about 5 cars would fill fast on a good weekend."
+hazards:
+  - "Slippery riprap footing"
+  - "Exposed point; west and south wind and waves break on the rocks"
+  - "Hunters may be present in season (November)"
+  - "Private inn property next to the point; don't trespass"
+  - "Navy research station next to the parking area; obey posted signs"
+matt_notes:
+  - "Matt plans a November 2026 striped bass trip here with family (from task brief)."
+sources:
+  - {url: "https://dnr.maryland.gov/publiclands/Pages/eastern/Black-Walnut-Point.aspx", title: "MD DNR — Black Walnut Point NRMA", accessed: 2026-10-14}
+  - {url: "https://fishandhuntmaryland.com/articles/black-walnut-point", title: "Fish and Hunt Maryland — Black Walnut Point", accessed: 2026-10-14}
+  - {url: "https://www.delmarvatrailsandwaterways.com/beaches-piers/black-walnut-point", title: "Delmarva Trails & Waterways — Black Walnut Point (fishing)", accessed: 2026-10-14}
+  - {url: "https://www.delmarvatrailsandwaterways.com/hiking-nature-trails/black-walnut-point-nrma", title: "Delmarva Trails & Waterways — Black Walnut Point NRMA trail", accessed: 2026-10-14}
+  - {url: "https://tourtalbot.org/listing-guide/p/black-walnut-point-fishing-area-and-parking-66eb1d393625521b93bcf87b", title: "Tour Talbot — Black Walnut Point Fishing Area and Parking", accessed: 2026-10-14}
+  - {url: "https://proptalk.com/fish-spot-tilghman-island", title: "Proptalk — Fish Spot: Tilghman Island (2017-05-25)", accessed: 2026-10-14}
+  - {url: "https://dnrweb.dnr.state.md.us/fisheries/fishingreport/single-1.asp?ID=8577", title: "DNR angler report, Black Walnut Point (posted 2024-05-07)", accessed: 2026-10-14}
+  - {url: "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/8571901.json", title: "NOAA CO-OPS 8571901 metadata", accessed: 2026-10-14}
+  - {url: "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/8571901/tidepredoffsets.json", title: "NOAA CO-OPS 8571901 offsets", accessed: 2026-10-14}
+  - {url: "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/8571892/sensors.json", title: "NOAA CO-OPS 8571892 Cambridge sensors", accessed: 2026-10-14}
+  - {url: "https://buoybay.noaa.gov/locations/gooses-reef", title: "CBIBS Gooses Reef buoy", accessed: 2026-10-14}
+  - {url: "https://news.maryland.gov/dnr/2026/10/07/maryland-fishing-report-october-7-2/", title: "Maryland Fishing Report — October 7, 2026", accessed: 2026-10-14}
+  - {url: "https://dnr.maryland.gov/fisheries/Pages/sb_reg_maps.aspx", title: "MD DNR — 2026 Striped Bass Regulations Maps", accessed: 2026-10-14}
