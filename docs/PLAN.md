@@ -1,6 +1,8 @@
 # 7Fish Forecast — Build Plan v1.1
 
-Prepared October 14, 2026. Status: planned, not built. v1.1 folds in the independent peer review (see REVIEW.md).
+Prepared October 14, 2026. **Status: v1 built and live, October 14, 2026.** v1.1 folds in the independent peer review (see REVIEW.md).
+
+> **As built (differs from the plan below):** no Anthropic API key. Claude judges only when Matt presses Cast, through the 7 Fish page's `sample` capability on his claude.ai plan. GitHub Actions does all data collection, features, gates, tiers and code-built cards. Artifact pages can't fetch external data, so a small scheduled Claude task ("7Fish data sync", auto-approved, no notifications) copies `data/app/*.json` into the 7 Fish database about 40 minutes after each Actions run. Every Claude card is checked in page code; a failed check falls back to the engine card. Scope shipped: 8 active spots (plus 2 ruled-out), 10 species, Maryland regs, 5-day horizon. See `docs/RUNBOOK.md`.
 
 ## 1. What it is
 
