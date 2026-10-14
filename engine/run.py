@@ -140,6 +140,14 @@ def run(knowledge_dir=None, out_dir=None, offline=None, record=None, now=None) -
                "counts": {"spots": len(spot_results), "candidates": len(cands), "cards": len(cards)}}
     run_log["duration_s"] = round(_time.time() - t0, 1)
     info = output.write(out_dir, latest, run_log, now)
+    try:
+        from . import app_payload
+        app_bytes = app_payload.write(out_dir, output.clean(latest), kn)
+        run_log["app_bytes"] = app_bytes
+        Path(out_dir, "run_log.json").write_text(__import__("json").dumps(output.clean(run_log), indent=1, ensure_ascii=False))
+    except Exception as e:  # never lose the forecast over the app payload
+        run_log.setdefault("notes", []).append(f"app.json failed: {type(e).__name__}: {e}")
+        traceback.print_exc()
     return {"latest": latest, "run_log": run_log, **info}
 
 

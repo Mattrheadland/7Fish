@@ -209,11 +209,43 @@ def build(kn, spot_results: dict, dnr: dict, now: datetime) -> list[dict]:
                     "confidence_note": conf_note, "drive_min": dmin, "trips": trips,
                     "luca_ok": luca_ok(spot, species, w), "reasons": reasons, "methods": methods,
                     "_w": w, "_info": info,
+                    "interest": interest_for(kn.profile, skey), "crowded": crowded(spot),
                 })
     rows.sort(key=sort_key)
     return rows
 
 
+INTEREST_RANK = {"high": 2, "normal": 1, "low": 0}
+
+# Profile interest groups map to species keys (profile lists names like "catfish", "bass").
+INTEREST_KEYS = {
+    "catfish": ["channel-catfish", "blue-catfish", "flathead-catfish"],
+    "snakehead": ["northern-snakehead"], "walleye": ["walleye"], "pike": ["northern-pike"],
+    "musky": ["muskellunge", "tiger-muskellunge"], "gar": ["longnose-gar"], "striped bass": ["striped-bass"],
+    "bass": ["largemouth-bass", "smallmouth-bass"],
+}
+
+
+def interest_for(profile: dict, skey: str) -> str:
+    def keys(names):
+        out = set()
+        for n in names or []:
+            out.update(INTEREST_KEYS.get(str(n).lower(), [str(n).lower().replace(" ", "-")]))
+        return out
+    if skey in keys(profile.get("lower_interest")):
+        return "low"
+    if skey in keys(profile.get("adult_interests")):
+        return "high"
+    return "normal"
+
+
+def crowded(spot: dict) -> bool:
+    text = " ".join([str(spot.get("crowding") or "")] + [str(n) for n in spot.get("matt_notes") or []]).lower()
+    return "crowd" in text
+
+
 def sort_key(r):
-    """Internal ordering only: tier, then confidence, then shorter drive, then earlier window."""
-    return (-TIER_RANK[r["tier"]], -CONF_RANK[r["confidence"]], r["drive_min"], r["_w"]["start"])
+    """Internal ordering only: tier, then Matt's interest, then confidence, then uncrowded,
+    then shorter drive, then earlier window. Interest and crowding never change a tier."""
+    return (-TIER_RANK[r["tier"]], -INTEREST_RANK.get(r.get("interest", "normal"), 1), -CONF_RANK[r["confidence"]],
+            1 if r.get("crowded") else 0, r["drive_min"], r["_w"]["start"])
