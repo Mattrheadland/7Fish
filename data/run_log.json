@@ -1,183 +1,175 @@
 {
- "generated_at": "2026-11-19T01:15:32+00:00",
- "run_time_et": "2026-11-18T20:14-05:00",
- "duration_s": 62.8,
+ "generated_at": "2026-11-19T16:36:19+00:00",
+ "run_time_et": "2026-11-19T11:35-05:00",
+ "duration_s": 19.3,
  "offline": false,
  "sources": {
   "nws": {
    "ok": true,
-   "n_calls": 33,
-   "n_ok": 31,
-   "errors": [
-    "HTTP 503 https://api.weather.gov/gridpoints/PHI/17,16 :: {\n    \"correlationId\": \"2b0b87\",\n    \"title\": \"Service Unavailable\",\n    \"type\": \"https://api.weather.gov/problems/ServiceUnavailable\",\n    \"status\": ",
-    "HTTP 503 https://api.weather.gov/gridpoints/PHI/17,16 :: {\n    \"correlationId\": \"2b8e89\",\n    \"title\": \"Service Unavailable\",\n    \"type\": \"https://api.weather.gov/problems/ServiceUnavailable\",\n    \"status\": "
-   ],
+   "n_calls": 32,
+   "n_ok": 32,
+   "errors": [],
    "shape": null,
    "calls": [
     {
      "url": "https://api.weather.gov/points/38.6800,-76.3330",
      "status": 200,
-     "ms": 816
+     "ms": 425
     },
     {
      "url": "https://api.weather.gov/gridpoints/PHI/17,16",
-     "status": 503,
-     "ms": 10355
-    },
-    {
-     "url": "https://api.weather.gov/gridpoints/PHI/17,16",
-     "status": 503,
-     "ms": 10154
+     "status": 200,
+     "ms": 260
     },
     {
      "url": "https://api.weather.gov/gridpoints/PHI/17,16/forecast/hourly",
      "status": 200,
-     "ms": 463
+     "ms": 367
     },
     {
      "url": "https://api.weather.gov/alerts/active?point=38.6800%2C-76.3330",
      "status": 200,
-     "ms": 391
+     "ms": 253
     },
     {
      "url": "https://api.weather.gov/points/39.3310,-77.4180",
      "status": 200,
-     "ms": 463
+     "ms": 285
     },
     {
      "url": "https://api.weather.gov/gridpoints/LWX/81,89",
      "status": 200,
-     "ms": 312
+     "ms": 463
     },
     {
      "url": "https://api.weather.gov/gridpoints/LWX/81,89/forecast/hourly",
      "status": 200,
-     "ms": 528
+     "ms": 584
     },
     {
      "url": "https://api.weather.gov/alerts/active?point=39.3310%2C-77.4180",
      "status": 200,
-     "ms": 228
+     "ms": 244
     },
     {
      "url": "https://api.weather.gov/points/38.9563,-76.3555",
      "status": 200,
-     "ms": 759
+     "ms": 350
     },
     {
      "url": "https://api.weather.gov/gridpoints/LWX/120,78",
      "status": 200,
-     "ms": 399
+     "ms": 232
     },
     {
      "url": "https://api.weather.gov/gridpoints/LWX/120,78/forecast/hourly",
      "status": 200,
-     "ms": 341
+     "ms": 338
     },
     {
      "url": "https://api.weather.gov/alerts/active?point=38.9563%2C-76.3555",
      "status": 200,
-     "ms": 284
+     "ms": 269
     },
     {
      "url": "https://api.weather.gov/points/39.2438,-77.4750",
      "status": 200,
-     "ms": 1078
+     "ms": 387
     },
     {
      "url": "https://api.weather.gov/gridpoints/LWX/79,85",
      "status": 200,
-     "ms": 1527
+     "ms": 371
     },
     {
      "url": "https://api.weather.gov/gridpoints/LWX/79,85/forecast/hourly",
      "status": 200,
-     "ms": 3224
+     "ms": 659
     },
     {
      "url": "https://api.weather.gov/alerts/active?point=39.2438%2C-77.4750",
      "status": 200,
-     "ms": 1879
+     "ms": 558
     },
     {
      "url": "https://api.weather.gov/points/38.3260,-75.0860",
      "status": 200,
-     "ms": 2819
+     "ms": 259
     },
     {
      "url": "https://api.weather.gov/gridpoints/AKQ/123,123",
      "status": 200,
-     "ms": 1064
+     "ms": 172
     },
     {
      "url": "https://api.weather.gov/gridpoints/AKQ/123,123/forecast/hourly",
      "status": 200,
-     "ms": 1374
+     "ms": 357
     },
     {
      "url": "https://api.weather.gov/alerts/active?point=38.3260%2C-75.0860",
      "status": 200,
-     "ms": 918
+     "ms": 341
     },
     {
      "url": "https://api.weather.gov/points/39.3717,-77.3895",
      "status": 200,
-     "ms": 2907
+     "ms": 338
     },
     {
      "url": "https://api.weather.gov/gridpoints/LWX/81,91",
      "status": 200,
-     "ms": 228
+     "ms": 204
     },
     {
      "url": "https://api.weather.gov/gridpoints/LWX/81,91/forecast/hourly",
      "status": 200,
-     "ms": 930
+     "ms": 357
     },
     {
      "url": "https://api.weather.gov/alerts/active?point=39.3717%2C-77.3895",
      "status": 200,
-     "ms": 743
+     "ms": 280
     },
     {
      "url": "https://api.weather.gov/points/39.2738,-77.5376",
      "status": 200,
-     "ms": 1197
+     "ms": 257
     },
     {
      "url": "https://api.weather.gov/gridpoints/LWX/77,86",
      "status": 200,
-     "ms": 191
+     "ms": 217
     },
     {
      "url": "https://api.weather.gov/gridpoints/LWX/77,86/forecast/hourly",
      "status": 200,
-     "ms": 656
+     "ms": 277
     },
     {
      "url": "https://api.weather.gov/alerts/active?point=39.2738%2C-77.5376",
      "status": 200,
-     "ms": 814
+     "ms": 244
     },
     {
      "url": "https://api.weather.gov/points/38.5573,-77.1867",
      "status": 200,
-     "ms": 2444
+     "ms": 297
     },
     {
      "url": "https://api.weather.gov/gridpoints/LWX/93,55",
      "status": 200,
-     "ms": 1099
+     "ms": 264
     },
     {
      "url": "https://api.weather.gov/gridpoints/LWX/93,55/forecast/hourly",
      "status": 200,
-     "ms": 656
+     "ms": 272
     },
     {
      "url": "https://api.weather.gov/alerts/active?point=38.5573%2C-77.1867",
      "status": 200,
-     "ms": 413
+     "ms": 245
     }
    ],
    "shape_points": {
@@ -211,35 +203,6 @@
      "timeZone",
      "type"
     ]
-   },
-   "shape_hourly": {
-    "type": "dict",
-    "keys": [
-     "@context",
-     "geometry",
-     "properties",
-     "type"
-    ],
-    "property_keys": [
-     "elevation",
-     "forecastGenerator",
-     "generatedAt",
-     "periods",
-     "units",
-     "updateTime",
-     "validTimes"
-    ]
-   },
-   "shape_alerts": {
-    "type": "dict",
-    "keys": [
-     "@context",
-     "features",
-     "title",
-     "type",
-     "updated"
-    ],
-    "n_features": 0
    },
    "shape_grid": {
     "type": "dict",
@@ -292,6 +255,35 @@
      "probabilityOfThunder",
      "probabilityOfTropicalStormWinds"
     ]
+   },
+   "shape_hourly": {
+    "type": "dict",
+    "keys": [
+     "@context",
+     "geometry",
+     "properties",
+     "type"
+    ],
+    "property_keys": [
+     "elevation",
+     "forecastGenerator",
+     "generatedAt",
+     "periods",
+     "units",
+     "updateTime",
+     "validTimes"
+    ]
+   },
+   "shape_alerts": {
+    "type": "dict",
+    "keys": [
+     "@context",
+     "features",
+     "title",
+     "type",
+     "updated"
+    ],
+    "n_features": 0
    }
   },
   "openmeteo": {
@@ -317,37 +309,37 @@
     {
      "url": "https://api.open-meteo.com/v1/forecast?latitude=38.6800&longitude=-76.3330&hourly=pressure_msl%2Ccloud_cover%2Cwind_speed_10m%2Cwind_gusts_10m%2Cwind_direction_10m%2Cprecipitation%2Ctemperature_2m&past_days=3&forecast_days=6&timezone=America%2FNew_York&temperature_unit=fahrenheit&wind_speed_unit=mph",
      "status": 200,
-     "ms": 75
+     "ms": 88
     },
     {
      "url": "https://api.open-meteo.com/v1/forecast?latitude=39.3310&longitude=-77.4180&hourly=pressure_msl%2Ccloud_cover%2Cwind_speed_10m%2Cwind_gusts_10m%2Cwind_direction_10m%2Cprecipitation%2Ctemperature_2m&past_days=3&forecast_days=6&timezone=America%2FNew_York&temperature_unit=fahrenheit&wind_speed_unit=mph",
      "status": 200,
-     "ms": 19
+     "ms": 31
     },
     {
      "url": "https://api.open-meteo.com/v1/forecast?latitude=38.9563&longitude=-76.3555&hourly=pressure_msl%2Ccloud_cover%2Cwind_speed_10m%2Cwind_gusts_10m%2Cwind_direction_10m%2Cprecipitation%2Ctemperature_2m&past_days=3&forecast_days=6&timezone=America%2FNew_York&temperature_unit=fahrenheit&wind_speed_unit=mph",
      "status": 200,
-     "ms": 19
+     "ms": 20
     },
     {
      "url": "https://api.open-meteo.com/v1/forecast?latitude=39.2438&longitude=-77.4750&hourly=pressure_msl%2Ccloud_cover%2Cwind_speed_10m%2Cwind_gusts_10m%2Cwind_direction_10m%2Cprecipitation%2Ctemperature_2m&past_days=3&forecast_days=6&timezone=America%2FNew_York&temperature_unit=fahrenheit&wind_speed_unit=mph",
      "status": 200,
-     "ms": 19
+     "ms": 20
     },
     {
      "url": "https://api.open-meteo.com/v1/forecast?latitude=38.3260&longitude=-75.0860&hourly=pressure_msl%2Ccloud_cover%2Cwind_speed_10m%2Cwind_gusts_10m%2Cwind_direction_10m%2Cprecipitation%2Ctemperature_2m&past_days=3&forecast_days=6&timezone=America%2FNew_York&temperature_unit=fahrenheit&wind_speed_unit=mph",
      "status": 200,
-     "ms": 19
+     "ms": 20
     },
     {
      "url": "https://api.open-meteo.com/v1/forecast?latitude=39.3717&longitude=-77.3895&hourly=pressure_msl%2Ccloud_cover%2Cwind_speed_10m%2Cwind_gusts_10m%2Cwind_direction_10m%2Cprecipitation%2Ctemperature_2m&past_days=3&forecast_days=6&timezone=America%2FNew_York&temperature_unit=fahrenheit&wind_speed_unit=mph",
      "status": 200,
-     "ms": 18
+     "ms": 32
     },
     {
      "url": "https://api.open-meteo.com/v1/forecast?latitude=39.2738&longitude=-77.5376&hourly=pressure_msl%2Ccloud_cover%2Cwind_speed_10m%2Cwind_gusts_10m%2Cwind_direction_10m%2Cprecipitation%2Ctemperature_2m&past_days=3&forecast_days=6&timezone=America%2FNew_York&temperature_unit=fahrenheit&wind_speed_unit=mph",
      "status": 200,
-     "ms": 19
+     "ms": 20
     },
     {
      "url": "https://api.open-meteo.com/v1/forecast?latitude=38.5573&longitude=-77.1867&hourly=pressure_msl%2Ccloud_cover%2Cwind_speed_10m%2Cwind_gusts_10m%2Cwind_direction_10m%2Cprecipitation%2Ctemperature_2m&past_days=3&forecast_days=6&timezone=America%2FNew_York&temperature_unit=fahrenheit&wind_speed_unit=mph",
@@ -370,7 +362,7 @@
      "timeStamp",
      "type"
     ],
-    "n_features": 269,
+    "n_features": 271,
     "feature_property_keys": [
      "approval_status",
      "last_modified",
@@ -389,137 +381,137 @@
     {
      "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01643580&parameter_code=00060&time=P3D&f=json&limit=2000",
      "status": 200,
-     "ms": 179
+     "ms": 412
     },
     {
      "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01643580&parameter_code=00065&time=P3D&f=json&limit=2000",
      "status": 200,
-     "ms": 80
+     "ms": 143
     },
     {
      "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01643580&parameter_code=00010&time=P3D&f=json&limit=2000",
      "status": 200,
-     "ms": 97
+     "ms": 143
     },
     {
      "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01643000&parameter_code=00060&time=P3D&f=json&limit=2000",
      "status": 200,
-     "ms": 82
+     "ms": 136
     },
     {
      "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01643000&parameter_code=00065&time=P3D&f=json&limit=2000",
      "status": 200,
-     "ms": 87
+     "ms": 143
     },
     {
      "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01643000&parameter_code=00010&time=P3D&f=json&limit=2000",
      "status": 200,
-     "ms": 63
+     "ms": 182
     },
     {
-     "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01643000&parameter_code=00010&time=2026-11-16T01%3A14%3A58Z%2F..&f=json&limit=2000",
+     "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01643000&parameter_code=00010&time=2026-11-16T16%3A36%3A05Z%2F..&f=json&limit=2000",
      "status": 200,
-     "ms": 69
+     "ms": 139
     },
     {
      "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01638500&parameter_code=00060&time=P3D&f=json&limit=2000",
      "status": 200,
-     "ms": 116
+     "ms": 229
     },
     {
      "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01638500&parameter_code=00065&time=P3D&f=json&limit=2000",
      "status": 200,
-     "ms": 120
+     "ms": 170
     },
     {
      "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01638500&parameter_code=00010&time=P3D&f=json&limit=2000",
      "status": 200,
-     "ms": 113
+     "ms": 156
     },
     {
      "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01643580&parameter_code=00060&time=P3D&f=json&limit=2000",
      "status": 200,
-     "ms": 75
+     "ms": 131
     },
     {
      "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01643580&parameter_code=00065&time=P3D&f=json&limit=2000",
      "status": 200,
-     "ms": 174
+     "ms": 134
     },
     {
      "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01643580&parameter_code=00010&time=P3D&f=json&limit=2000",
      "status": 200,
-     "ms": 86
+     "ms": 139
     },
     {
      "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01643000&parameter_code=00060&time=P3D&f=json&limit=2000",
      "status": 200,
-     "ms": 82
+     "ms": 136
     },
     {
      "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01643000&parameter_code=00065&time=P3D&f=json&limit=2000",
      "status": 200,
-     "ms": 78
+     "ms": 132
     },
     {
      "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01643000&parameter_code=00010&time=P3D&f=json&limit=2000",
      "status": 200,
-     "ms": 64
+     "ms": 124
     },
     {
-     "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01643000&parameter_code=00010&time=2026-11-16T01%3A15%3A21Z%2F..&f=json&limit=2000",
+     "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01643000&parameter_code=00010&time=2026-11-16T16%3A36%3A13Z%2F..&f=json&limit=2000",
      "status": 200,
-     "ms": 62
+     "ms": 139
     },
     {
      "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01655480&parameter_code=00060&time=P3D&f=json&limit=2000",
      "status": 200,
-     "ms": 62
+     "ms": 141
     },
     {
-     "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01655480&parameter_code=00060&time=2026-11-16T01%3A15%3A29Z%2F..&f=json&limit=2000",
+     "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01655480&parameter_code=00060&time=2026-11-16T16%3A36%3A16Z%2F..&f=json&limit=2000",
      "status": 200,
-     "ms": 68
+     "ms": 120
     },
     {
      "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01655480&parameter_code=00065&time=P3D&f=json&limit=2000",
      "status": 200,
-     "ms": 69
+     "ms": 126
     },
     {
-     "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01655480&parameter_code=00065&time=2026-11-16T01%3A15%3A29Z%2F..&f=json&limit=2000",
+     "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01655480&parameter_code=00065&time=2026-11-16T16%3A36%3A16Z%2F..&f=json&limit=2000",
      "status": 200,
-     "ms": 67
+     "ms": 127
     },
     {
      "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01655480&parameter_code=00010&time=P3D&f=json&limit=2000",
      "status": 200,
-     "ms": 89
+     "ms": 126
     },
     {
-     "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01655480&parameter_code=00010&time=2026-11-16T01%3A15%3A29Z%2F..&f=json&limit=2000",
+     "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01655480&parameter_code=00010&time=2026-11-16T16%3A36%3A16Z%2F..&f=json&limit=2000",
      "status": 200,
-     "ms": 64
+     "ms": 161
     },
     {
      "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01658000&parameter_code=00060&time=P3D&f=json&limit=2000",
      "status": 200,
-     "ms": 131
+     "ms": 179
     },
     {
      "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01658000&parameter_code=00065&time=P3D&f=json&limit=2000",
      "status": 200,
-     "ms": 110
+     "ms": 165
     },
     {
      "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01658000&parameter_code=00010&time=P3D&f=json&limit=2000",
      "status": 200,
-     "ms": 61
+     "ms": 123
     },
     {
-     "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01658000&parameter_code=00010&time=2026-11-16T01%3A15%3A30Z%2F..&f=json&limit=2000",
+     "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?monitoring_location_id=USGS-01658000&parameter_code=00010&time=2026-11-16T16%3A36%3A18Z%2F..&f=json&limit=2000",
      "status": 200,
-     "ms": 66
+     "ms": 123
     }
    ]
   },
@@ -533,32 +525,32 @@
     {
      "url": "https://api.water.noaa.gov/nwps/v1/gauges/FDKM2",
      "status": 200,
-     "ms": 556
+     "ms": 168
     },
     {
      "url": "https://api.water.noaa.gov/nwps/v1/gauges/FDKM2/stageflow",
      "status": 200,
-     "ms": 278
+     "ms": 123
     },
     {
      "url": "https://api.water.noaa.gov/nwps/v1/gauges/PORM2",
      "status": 200,
-     "ms": 209
+     "ms": 12
     },
     {
      "url": "https://api.water.noaa.gov/nwps/v1/gauges/PORM2/stageflow",
      "status": 200,
-     "ms": 250
+     "ms": 193
     },
     {
      "url": "https://api.water.noaa.gov/nwps/v1/gauges/IHDM2",
      "status": 200,
-     "ms": 68
+     "ms": 351
     },
     {
      "url": "https://api.water.noaa.gov/nwps/v1/gauges/IHDM2/stageflow",
      "status": 200,
-     "ms": 229
+     "ms": 205
     }
    ],
    "shape_gauge": {
@@ -618,134 +610,134 @@
    "shape": null,
    "calls": [
     {
-     "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8571901&product=predictions&interval=hilo&datum=MLLW&begin_date=20261117&end_date=20261122",
+     "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8571901&product=predictions&interval=hilo&datum=MLLW&begin_date=20261118&end_date=20261123",
      "status": 200,
-     "ms": 357
+     "ms": 885
     },
     {
-     "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8571892&product=predictions&interval=hilo&datum=MLLW&begin_date=20261117&end_date=20261122",
+     "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8571892&product=predictions&interval=hilo&datum=MLLW&begin_date=20261118&end_date=20261123",
      "status": 200,
-     "ms": 118
+     "ms": 36
     },
     {
      "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8571892&product=water_temperature&date=recent",
      "status": 200,
-     "ms": 72
+     "ms": 230
     },
     {
      "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8571892&product=water_level&date=recent&datum=MLLW",
      "status": 200,
-     "ms": 113
+     "ms": 80
     },
     {
      "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8571892&product=air_pressure&date=recent",
      "status": 200,
-     "ms": 110
+     "ms": 78
     },
     {
      "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8571892&product=wind&date=recent",
      "status": 200,
-     "ms": 104
+     "ms": 57
     },
     {
-     "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8572770&product=predictions&interval=hilo&datum=MLLW&begin_date=20261117&end_date=20261122",
+     "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8572770&product=predictions&interval=hilo&datum=MLLW&begin_date=20261118&end_date=20261123",
      "status": 200,
-     "ms": 114
+     "ms": 40
     },
     {
-     "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8575512&product=predictions&interval=hilo&datum=MLLW&begin_date=20261117&end_date=20261122",
+     "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8575512&product=predictions&interval=hilo&datum=MLLW&begin_date=20261118&end_date=20261123",
      "status": 200,
-     "ms": 154
+     "ms": 36
     },
     {
      "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8575512&product=water_temperature&date=recent",
      "status": 200,
-     "ms": 138
+     "ms": 41
     },
     {
      "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8575512&product=water_level&date=recent&datum=MLLW",
      "status": 200,
-     "ms": 215
+     "ms": 47
     },
     {
      "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8575512&product=air_pressure&date=recent",
      "status": 200,
-     "ms": 111
+     "ms": 44
     },
     {
      "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8575512&product=wind&date=recent",
      "status": 200,
-     "ms": 109
+     "ms": 49
     },
     {
-     "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8570283&product=predictions&interval=hilo&datum=MLLW&begin_date=20261117&end_date=20261122",
+     "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8570283&product=predictions&interval=hilo&datum=MLLW&begin_date=20261118&end_date=20261123",
      "status": 200,
-     "ms": 99
+     "ms": 42
     },
     {
      "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8570283&product=water_temperature&date=recent",
      "status": 200,
-     "ms": 217
+     "ms": 41
     },
     {
      "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8570283&product=water_level&date=recent&datum=MLLW",
      "status": 200,
-     "ms": 101
+     "ms": 44
     },
     {
      "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8570283&product=air_pressure&date=recent",
      "status": 200,
-     "ms": 100
+     "ms": 54
     },
     {
      "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8570283&product=wind&date=recent",
      "status": 200,
-     "ms": 103
+     "ms": 52
     },
     {
-     "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8579381&product=predictions&interval=hilo&datum=MLLW&begin_date=20261117&end_date=20261122",
+     "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8579381&product=predictions&interval=hilo&datum=MLLW&begin_date=20261118&end_date=20261123",
      "status": 200,
-     "ms": 102
+     "ms": 37
     },
     {
      "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8579381&product=water_temperature&date=recent",
      "status": 200,
-     "ms": 81
+     "ms": 22
     },
     {
      "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8579381&product=water_level&date=recent&datum=MLLW",
      "status": 400,
-     "ms": 79
+     "ms": 38
     },
     {
      "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8579381&product=air_pressure&date=recent",
      "status": 200,
-     "ms": 96
+     "ms": 19
     },
     {
      "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8579381&product=wind&date=recent",
      "status": 200,
-     "ms": 95
+     "ms": 25
     },
     {
-     "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8594900&product=predictions&interval=hilo&datum=MLLW&begin_date=20261117&end_date=20261122",
+     "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8594900&product=predictions&interval=hilo&datum=MLLW&begin_date=20261118&end_date=20261123",
      "status": 200,
-     "ms": 106
+     "ms": 49
     },
     {
      "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8594900&product=water_temperature&date=recent",
      "status": 200,
-     "ms": 97
+     "ms": 86
     },
     {
      "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8594900&product=water_level&date=recent&datum=MLLW",
      "status": 200,
-     "ms": 95
+     "ms": 57
     },
     {
      "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?units=english&time_zone=lst_ldt&format=json&application=7Fish&station=8594900&product=wind&date=recent",
      "status": 200,
-     "ms": 98
+     "ms": 61
     }
    ],
    "shape_predictions": {
@@ -819,18 +811,18 @@
     {
      "url": "https://news.maryland.gov/dnr/wp-json/wp/v2/posts?search=fishing+report&per_page=3&_fields=date%2Clink%2Ctitle%2Ccontent",
      "status": 200,
-     "ms": 1140
+     "ms": 501
     }
    ]
   }
  },
  "notes": [
-  "usgs 01643000 00010: no features with time=P3D; retried with time=2026-11-16T01:14:58Z/..",
-  "usgs 01643000 00010: no features with time=P3D; retried with time=2026-11-16T01:15:21Z/..",
-  "usgs 01655480 00060: no features with time=P3D; retried with time=2026-11-16T01:15:29Z/..",
-  "usgs 01655480 00065: no features with time=P3D; retried with time=2026-11-16T01:15:29Z/..",
-  "usgs 01655480 00010: no features with time=P3D; retried with time=2026-11-16T01:15:29Z/..",
-  "usgs 01658000 00010: no features with time=P3D; retried with time=2026-11-16T01:15:30Z/.."
+  "usgs 01643000 00010: no features with time=P3D; retried with time=2026-11-16T16:36:05Z/..",
+  "usgs 01643000 00010: no features with time=P3D; retried with time=2026-11-16T16:36:13Z/..",
+  "usgs 01655480 00060: no features with time=P3D; retried with time=2026-11-16T16:36:16Z/..",
+  "usgs 01655480 00065: no features with time=P3D; retried with time=2026-11-16T16:36:16Z/..",
+  "usgs 01655480 00010: no features with time=P3D; retried with time=2026-11-16T16:36:16Z/..",
+  "usgs 01658000 00010: no features with time=P3D; retried with time=2026-11-16T16:36:18Z/.."
  ],
  "knowledge": {
   "species": [
@@ -872,14 +864,14 @@
  },
  "counts": {
   "spots": 8,
-  "candidates": 336,
+  "candidates": 376,
   "cards": 18
  },
- "latest_bytes": 609643,
+ "latest_bytes": 679768,
  "app_bytes": {
   "meta": 60498,
-  "spots": 86860,
-  "cands": 152986,
-  "cards": 32155
+  "spots": 98568,
+  "cands": 181506,
+  "cards": 35972
  }
 }
